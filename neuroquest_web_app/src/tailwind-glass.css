@@ -1,0 +1,31 @@
+/* Tailwind extension: additional glass & neon effects for RPG look */
+.glass-bg {
+  background: rgba(20,24,40,0.75);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  box-shadow: 0 4px 32px 0 rgba(124,58,237,0.15);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.neon-glow {
+  box-shadow: 0 0 8px #7c3aed, 0 0 24px #7c3aed;
+  text-shadow: 0 0 6px #7c3aed, 0 0 12px #7c3aed;
+  color: #b993ff;
+}
+
+.neon-btn {
+  background: #7c3aed;
+  color: #fff;
+  border: none;
+  border-radius: 32px;
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 10px #7c3aed77;
+  transition: all 0.14s cubic-bezier(.4,0,.2,1);
+}
+.neon-btn:hover {
+  background: #b993ff;
+  color: #1a1e32;
+  box-shadow: 0 0 40px #b993ff99;
+}
