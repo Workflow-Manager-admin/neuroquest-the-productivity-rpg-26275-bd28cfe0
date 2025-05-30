@@ -1,9 +1,18 @@
 import React from "react";
-// Demo fantasy avatar images for wizard/witch/hero. Put fantasy images in /src/assets/ after download.
+/**
+ * Avatar fantasy asset management:
+ * - Current array uses placeholder URLs of fantasy avatars (public domain or open art).
+ * - To use your own: Drop PNGs named wizard_hero_01.png, witch_hero_01.png, knight_hero_01.png, etc. in /src/assets.
+ *   Then update the imports below and remove the public URLs.
+ * - Each <img> has a robust fallback logic.
+ */
 const avatarImages = [
-  "/src/assets/wizard_hero_01.png",
-  "/src/assets/witch_hero_01.png",
-  "/src/assets/knight_hero_01.png",
+  // Example fantasy avatar (OpenGameArt/wikimedia public PNGs as demo)
+  "https://opengameart.org/sites/default/files/styles/medium/public/wizard2_0.png", // Wizard (Opengameart)
+  "https://opengameart.org/sites/default/files/styles/medium/public/women.png",      // Witch/Magician (Opengameart)
+  "https://opengameart.org/sites/default/files/styles/medium/public/armor-2.png",    // Knight (Opengameart)
+  // TODO: Replace above URLs by importing your PNGs like:
+  // require('../assets/wizard_hero_01.png'), ...
 ];
 /**
  * Avatar with RPG/fantasy frame, multi-layer glow, and fantasy styling.
