@@ -1,78 +1,163 @@
-/* Custom layer for neon-glow effect, RPG accent, animated transitions for NeuroQuest */
-
-/* Neon accent glow rework for production neon pop (overrides) */
-.neon-accent, .glow-accent {
-  box-shadow: 0 0 18px 2px #7c3aed88, 0 0 8px 2px #c084fccc, 0 0 38px 4px #9d2aff33;
-  filter: drop-shadow(0 0 13px #c084fcdd);
-  transition: box-shadow 0.35s cubic-bezier(.61,.12,.67,1), filter 0.47s;
+:root {
+  --kavia-orange: #E87A41;
+  --kavia-dark: #1A1A1A;
+  --text-color: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --border-color: rgba(255, 255, 255, 0.1);
 }
 
-.rpg-rounded {
-  border-radius: 16px;
+/* Hero banner style - replaced missing image with fallback gradient */
+.hero-banner {
+  width: 100%;
+  height: 260px;
+  /* background-image: url('./assets/hero_banner_wizard.png'); */
+  background: linear-gradient(120deg, var(--kavia-dark) 50%, var(--kavia-orange) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 1px 10px 0 var(--border-color), 0 0.25rem 2rem 0 #4c19e8b3;
 }
-.rpg-rounded-lg {
-  border-radius: 30px;
+
+/* Additional app global styles (retained original content) */
+body {
+  font-family: 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: var(--kavia-dark);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
 }
-/* Smooth/animated hover/focus states for neon, tabs, and buttons */
-.rpg-tab {
-  border-radius: 12px 12px 6px 6px;
-  box-shadow: 0 2px 20px 0 #a47cee22;
-  transition: background 0.42s, box-shadow 0.26s, color 0.22s;
+
+.main-bg {
+  background: var(--kavia-dark);
+  min-height: 100vh;
 }
-.rpg-tab.active, .rpg-tab:active {
-  background: linear-gradient(90deg, #351f59 25%, #a87ffc99 100%);
-  box-shadow: 0 0 35px 8px #c084fc88;
+
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 2.7rem;
+  margin-top: 0;
+  font-weight: bold;
+  letter-spacing: -0.03em;
+  color: var(--kavia-orange);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin: 0.875rem 0 2rem 0;
+  color: var(--text-secondary);
+}
+
+.description {
+  font-size: 1.065rem;
+  color: var(--text-secondary);
+}
+
+/* Neon button style */
+.btn, .btn-large {
+  display: inline-block;
+  background: var(--kavia-orange);
+  color: var(--kavia-dark);
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.68rem 2rem;
+  font-size: 1.15rem;
+  cursor: pointer;
+  box-shadow: 0 0 12px 2px var(--kavia-orange), 0 2px 4px 0 var(--border-color);
+  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.18s;
+}
+
+.btn:hover, .btn:active, .btn-large:hover, .btn-large:active {
+  background: #ea923a;
   color: #fff;
-}
-.rpg-tab:focus {
-  outline: 2px solid #7c3aedb0;
-  box-shadow: 0 0 10px 1px #7c3aed99;
+  transform: translateY(-2px) scale(1.03) rotate(-1deg);
+  box-shadow: 0 4px 22px 3px #e87a41a0;
 }
 
-.xp-bar {
-  background: linear-gradient(90deg, #7c3aed 0%, #c084fc 80%);
-  height: 18px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #7c3aed77, 0 0 19px #c084fc44;
-  transition: width 0.8s cubic-bezier(.29,1.2,.6,.73);
+.btn-large {
+  font-size: 1.3rem;
+  padding: 1.05rem 2.85rem;
 }
 
-.hp-bar {
-  background: linear-gradient(90deg, #ef4444, #fb7185 80%);
-  height: 18px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #ef444477, 0 0 19px #e935497C;
-  transition: width 0.8s cubic-bezier(.32, 1, .68, .77);
+/* Neon accent text */
+.neon-accent, .text-accent {
+  color: #9f62ff;
+  text-shadow: 0 0 8px #cdaaee, 0 0 8px #723beb38;
 }
 
-/* Animation for tabs transitions */
-@keyframes tabGlow {
-  0% { box-shadow: 0 0 4px 0 #b448f7; }
-  100% { box-shadow: 0 0 30px 6px #e53ef7; }
+/* Card style */
+.card {
+  background: #23213a;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 8px 0 var(--border-color), 0 0.15rem 0.6rem 0 #4c19e860;
+  padding: 1.2rem 2rem;
+  margin-bottom: 2rem;
 }
 
-/* Art overlays and hero/zone banners */
-.hero-fantasy-bg {
-  background: linear-gradient(180deg, #2d2250 44%, #3b2398 88%), url('/src/assets/hero_banner_wizard.png') center top/cover no-repeat;
-  min-height: 180px;
-  border-radius: 18px;
-  box-shadow: 0 0 64px 1px #7c3aed44, 0 8px 24px #34396a14;
+/* Simple nav styles */
+.navbar {
+  background: #1a1532ed;
+  border-bottom: 1.5px solid var(--border-color);
+  border-radius: 0 0 1rem 1rem;
+  padding: 1.13rem 1.5rem 0.68rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
 }
-.rpg-zone-img {
+
+.nav-link {
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-right: 1.5rem;
+  text-decoration: none;
+  transition: color 0.14s;
+}
+.nav-link.active, .nav-link:hover {
+  color: var(--kavia-orange);
+  text-shadow: 0 0 7px #e87a4190;
+}
+
+/* XP/HP bar style */
+.xp-bar, .hp-bar {
+  height: 20px;
+  background: #27244e;
   border-radius: 13px;
-  border: 2.5px solid #7c3aed88;
-  box-shadow: 0 0 25px #c084fc66, 0 0 6px #7c3aed44;
-  background: linear-gradient(135deg, #302753 57%, #ad54f639 100%);
+  margin-bottom: 0.8rem;
+  box-shadow: 0 1.5px 10px 0 #6e30f030;
+}
+.xp-bar > .fill {
+  background: linear-gradient(90deg, #ffb03a, #ba6e38);
+  border-radius: 13px;
+  height: 100%;
+  transition: width 0.35s;
+}
+.hp-bar > .fill {
+  background: linear-gradient(90deg, #ef499b, #b04b8a);
+  border-radius: 13px;
+  height: 100%;
+  transition: width 0.35s;
 }
 
-.avatar-rpg {
-  border-radius: 50%;
-  border: 4px solid #b948f9cc;
-  background: linear-gradient(144deg, #1b0733 80%, #a37ed5cc 120%);
-  box-shadow: 0 0 21px 4px #f3bdff66, 0 0 5px #a36bf733;
+/* Avatar frame style */
+.avatar-frame {
+  border: 3px solid var(--kavia-orange);
+  box-shadow: 0 0 12px 3px #e87a41c0;
+  border-radius: 2.5rem;
+  padding: 7px;
+  background: #291f38c9;
 }
 
-.rpg-glow-anim {
-  animation: neonPulse 3.2s infinite alternate cubic-bezier(.84,0,.29,1);
+::-webkit-scrollbar {
+  width: 10px;
+  background: #1a1a1a;
 }
-/* You can further extend with Tailwind utility classes in JSX */
+::-webkit-scrollbar-thumb {
+  background: #36245b;
+  border-radius: 5px;
+}
