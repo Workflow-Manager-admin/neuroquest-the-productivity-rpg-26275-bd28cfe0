@@ -31,7 +31,26 @@ export default function QuestCard({
     >
       <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center">
         {icon ? (
-          <img src={icon} alt="Zone" className="w-14 h-14 object-cover rpg-rounded" />
+          <img
+            src={icon}
+            alt="Zone"
+            className="w-14 h-14 object-cover rpg-rounded"
+            onError={e => {
+              // Provide scroll icon as backup if quest image fails
+              e.target.onerror = null;
+              e.target.src =
+                "https://opengameart.org/sites/default/files/styles/medium/public/scroll_17.png";
+              // On double-fail, fallback to emoji/text
+              setTimeout(() => {
+                if (e.target.offsetParent && e.target.style.display !== "none") {
+                  e.target.style.display = "none";
+                  e.target.offsetParent.innerHTML +=
+                    `<span style="position:absolute;top:50%;left:17px;font-size:1.1em;color:#ffdbb0;text-shadow:0 0 8px #e7c278">📜</span>`;
+                }
+              }, 400);
+            }}
+            // TODO: Drop a custom PNG quest icon in /src/assets and supply as 'icon' prop for max RPG style!
+          />
         ) : (
           <Avatar size={48} demoIndex={Math.floor(Math.random() * 3)} />
         )}
