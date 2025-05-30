@@ -56,13 +56,24 @@ export default function Avatar({
           zIndex: 4,
         }}
       />
-      {/* Example fantasy art (swap out for real) */}
+      {/* Example fantasy art, fallback if missing image */}
       <img
         src={demoSrc}
         alt={alt}
         className="rounded-full object-cover rpg-glow-anim"
         style={{ width: size - 10, height: size - 10, borderRadius: "50%" }}
         draggable={false}
+        onError={e => {
+          // Avatar fallback logic:
+          e.target.onerror = null;
+          e.target.style.display = "none";
+          if (e.target.parentNode) {
+            e.target.parentNode.innerHTML +=
+              `<span style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:${size *
+                0.44}px;color:#b388ea;font-weight:bold;text-shadow:0 0 12px #6e42c1">🧙</span>`;
+          }
+        }}
+        // TODO: Drop your fantasy avatar PNG/SVG in /src/assets and update avatarImages for production polish
       />
     </div>
   );
