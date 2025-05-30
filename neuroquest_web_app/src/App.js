@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
 
 // Pages (placeholders are lazy-loaded)
-const Login = React.lazy(() => import('./pages/Login'));
+const Login = React.lazy(() => import('./pages/LoginPage'));
 const Onboarding = React.lazy(() => import('./pages/Onboarding'));
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const QuestLog = React.lazy(() => import('./pages/QuestLog'));
