@@ -409,6 +409,19 @@ export default function QuestLog() {
 
   return (
     <div className="w-full max-w-3xl mx-auto pt-0 pb-8">
+      {/* 
+        Fantasy quest log/book Unsplash/PD image for RPG flavor.
+        Devs: swap src as desired for your custom quest journal visual.
+        https://unsplash.com/photos/person-writing-on-white-paper-AX2THeP9prw 
+      */}
+      <img
+        src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=550&q=80"
+        alt="Fantasy quest journal"
+        className="w-full max-w-md mx-auto rounded-xl border-2 border-accent shadow-lg object-cover mt-2 mb-4"
+        onError={e => {e.target.style.display='none'}}
+        style={{background: "#181332"}}
+      />
+      <span className="block text-5xl text-accent my-2" aria-label="Book" style={{display:'none'}}>📖</span>
       <div className="flex items-start justify-between gap-4">
         <h1 className="text-3xl md:text-4xl font-bold text-accent neon-accent mb-2 drop-shadow-sm flex-1">
           <span className="mr-2" role="img" aria-label="Quest Journal">📜</span>
