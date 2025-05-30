@@ -36,6 +36,16 @@ const NotFound = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#1a0137] to-[#150022] flex flex-col items-center justify-center px-4 py-10">
       <div className="w-full max-w-md sm:max-w-xl mx-auto flex flex-col items-center gap-5">
+        {/* Fantasy portal Unsplash/PD image - devs: swap this src to change NotFound hero art!
+            https://unsplash.com/photos/time-lapse-photography-of-castle-during-nighttime-innOwR8D5Dg */}
+        <img
+          src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=550&q=80"
+          alt="Lost mystical portal ruins"
+          className="w-full max-w-sm mx-auto mt-2 mb-4 rounded-xl border-2 border-accent shadow-lg object-cover"
+          onError={e=>{e.target.style.display='none'}}
+          style={{background: "#261239"}}
+        />
+        <span className="block text-5xl text-accent my-2" aria-label="Portal" style={{display:'none'}}>🌀</span>
         {/* Dramatic animated portal */}
         <div
           className="w-[70vw] max-w-[410px] xs:max-w-[300px] mx-auto drop-shadow-lg"

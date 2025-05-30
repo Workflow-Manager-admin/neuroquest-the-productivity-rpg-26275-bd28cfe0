@@ -314,6 +314,22 @@ export default function BossBattle() {
 
   return (
     <div className="min-h-[85vh] flex flex-col items-center justify-center relative z-10 animate-fadeIn">
+      {/* 
+        RPG Boss Battle Hero Art (public Unsplash/PD fantasy dragon) – devs: swap this src for custom boss art if desired!
+        https://unsplash.com/photos/dragon-silhouette-on-body-of-water-during-sunset-oGLgDu90A9U 
+      */}
+      <img
+        src="https://images.unsplash.com/photo-1504881102860-1da75ca5eeff?auto=format&fit=crop&w=700&q=80"
+        alt="Boss battle: dragon silhouette"
+        className="w-full max-w-md sm:max-w-lg mx-auto mb-4 rounded-xl border-2 border-accent shadow-lg object-cover"
+        onError={e => {e.target.style.display='none'}}
+        style={{background: "#120c22"}}
+      />
+      {/* Fallback: Dragon emoji if unavailable */}
+      <span className="block text-6xl text-accent my-3" aria-label="Dragon" style={{display:'none'}}>
+        🐉
+      </span>
+      {/* End boss hero image, devs can replace above for dramatic boss art */}
       <BattleGlow />
       <ResultFeedback />
       <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center z-20 relative py-7 rounded-xl bg-black/70 glass-morph" style={{boxShadow:"0 12px 34px 2px #7c3aed33"}}>
