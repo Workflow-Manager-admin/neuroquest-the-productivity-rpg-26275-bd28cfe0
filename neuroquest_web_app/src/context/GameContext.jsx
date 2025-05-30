@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import { getFirestore, doc, getDoc, setDoc, onSnapshot } from "firebase/firestore";
 import { useUser } from "./UserContext";
 
@@ -96,3 +97,7 @@ export function GameProvider({ children }) {
 
   return <GameContext.Provider value={value}>{children}</GameContext.Provider>;
 }
+
+GameProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
