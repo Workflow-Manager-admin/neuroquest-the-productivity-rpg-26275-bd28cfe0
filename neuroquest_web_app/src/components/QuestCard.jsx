@@ -6,6 +6,9 @@ import Avatar from "./Avatar";
  * @param {string} description - Quest summary/goal.
  * @param {number} xp - XP value.
  * @param {string} icon - Fantasy image/icon (optional).
+ * 
+ * If icon is missing, fallback to a public domain fantasy scroll icon.
+ * TODO: For highest polish, add your PNG/SVG to /src/assets and pass its import as the icon prop!
  * @param {function} onClick - Handler for click/tap.
  * @param {boolean} completed - Status.
  */
