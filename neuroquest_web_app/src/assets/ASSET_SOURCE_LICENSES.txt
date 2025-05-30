@@ -1,0 +1,19 @@
+# Fantasy RPG Open Asset & Placeholder Sources
+
+# Note: These images are public domain (Wikimedia Commons, OpenGameArt), Unsplash, or clear open-use. Replace with your own assets for production as required.
+
+# sword.png: CC0, source: https://opengameart.org/content/sword-icons
+# shield.png: CC0, source: https://opengameart.org/content/shields-8-styles
+# orb.png: CC0, created via DALL·E 3
+# hero_banner.png: unsplash.com/photos/fantasy-character (demo usage, replace for production)
+# wizard_hero_01.png: https://opengameart.org/content/wizard-avatar
+# knight_hero_01.png: https://opengameart.org/content/knight-avatar
+# witch_hero_01.png: https://opengameart.org/content/female-wizard-magician-avatar
+# zone_forest.png: unsplash.com/photos/fantasy-forest (demo usage, replace for production)
+# zone_dungeon.png: opengameart.org/content/dungeon-background
+# zone_hills.png: unsplash.com/photos/fantasy-hills
+# boss_dragon.png: opengameart.org/content/red-dragon-boss
+# quest_scroll.png: opengameart.org/content/scroll-icon
+# lost_portal.png: CC0, made via DALL·E 3
+
+# For full details and ready-to-swap user assets, see README-fantasy-assets.txt.
