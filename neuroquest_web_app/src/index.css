@@ -2,9 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600&display=swap');
+/* Custom fantasy/inter/poppins fonts & fallback */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Poppins:wght@600;900&family=Cinzel+Decorative:wght@900&family=UnifrakturCook:wght@700&display=swap');
 
+/* Fantasy UI and neon glow foundations */
 html,
 body {
   height: 100%;
@@ -13,11 +14,72 @@ body {
   font-family: 'Inter', 'Poppins', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   background: #0f172a;
   color: #f8fafc;
+  min-width: 100vw;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background 0.6s cubic-bezier(.6,0,.43,1), color 0.51s cubic-bezier(.91,.08,.43,1);
+  box-sizing: border-box;
 }
-
-/* Code blocks */
+body {
+  /* neon animated border for mobile app immersion */
+  box-shadow: 0 0 28px #9f63f2cc, 0 0 4px #7252aa99;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', 'Inter', 'Cinzel Decorative', serif;
+  text-shadow: 0 0 14px #a84aff55;
+  letter-spacing: 0.01em;
+  color: #e8d8ff;
+  transition: color 0.35s, text-shadow 0.5s;
+}
+h1 {
+  font-family: 'Cinzel Decorative', 'UnifrakturCook', 'Poppins', serif;
+  text-shadow: 0 0 22px #ffbae1cc, 0 0 90px #ad54f5bb;
+  color: #ffccfa;
+}
+a {
+  color: #b58fff;
+  transition: color 0.3s, text-shadow 0.43s;
+}
+a:hover, a:focus {
+  color: #fff;
+  text-shadow: 0 0 8px #ea1cfb, 0 0 12px #8f39fb;
+}
+input, button, select, textarea {
+  font-family: inherit;
+  background: none;
+}
+button {
+  cursor: pointer;
+  transition: background 0.22s, box-shadow 0.22s, color 0.22s;
+}
+@media (max-width: 640px) {
+  html, body { font-size: 1rem; }
+  h1 { font-size: 2rem !important; }
+  h2 { font-size: 1.4rem !important; }
+}
+::-webkit-scrollbar {
+  width: 8px; background: #2b204a;
+}
+::-webkit-scrollbar-thumb {
+  background: #7c3aed77; border-radius: 6px;
+  box-shadow: 0 0 14px #9464f1;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* Sitewide neon-glow animated effect for immersive touchpoints */
+.neon-glow {
+  filter: drop-shadow(0 0 9px #a36bf7) drop-shadow(0 0 24px #b948c9);
+  animation: neonPulse 3.2s infinite alternate cubic-bezier(.84,0,.29,1);
+}
+@keyframes neonPulse {
+  0% { filter: drop-shadow(0 0 4px #a36bf7) drop-shadow(0 0 18px #b948f9); }
+  100% { filter: drop-shadow(0 0 16px #ad93ff) drop-shadow(0 0 40px #fa87ea); }
+}
+
+/* Smooth color/theme transitions and scroll enhancement */
+body, .bg-primary, .bg-accent, .bg-brand-orange {
+  transition: background 0.6s cubic-bezier(.42,0,.43,1), color 0.44s cubic-bezier(.51,0,.43,1);
 }
