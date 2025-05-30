@@ -1,3 +1,4 @@
+// Dashboard – fantasy hero polish, RPG neon assets, responsive
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
@@ -10,6 +11,10 @@ import FloatingOrb from "../components/FloatingOrb";
 import NeonButton from "../components/NeonButton";
 import ZoneCard from "../components/ZoneCard";
 import classNames from "classnames";
+
+// Add art/asset constants here for stronger fantasy polish
+// Final asset recommended: /src/assets/hero_banner_wizard.png, zone images, and more
+const HERO_BANNER = "/src/assets/hero_banner_wizard.png"; // Add a fantasy wizard/hero
 
 // Demo images (real images should be placed at /src/assets/)
 const ZONES = [
