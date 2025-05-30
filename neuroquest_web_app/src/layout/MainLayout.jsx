@@ -3,6 +3,9 @@ import { Outlet, Link, useLocation } from 'react-router-dom';
 import classNames from 'classnames';
 import '../App.css';
 
+/* RPG hero/fantasy banner image – put final asset at src/assets/hero_banner_wizard.png */
+/* You may swap out the demo image for a final illustration as required. */
+
 // Dummy data (to be replaced by context/providers later)
 const dummyXP = 45; // percent, just for demo
 const dummyHP = 73; // percent
