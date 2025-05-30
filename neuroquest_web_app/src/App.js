@@ -1,36 +1,42 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './layout/MainLayout';
 
+// Pages (placeholders are lazy-loaded)
+const Login = React.lazy(() => import('./pages/Login'));
+const Onboarding = React.lazy(() => import('./pages/Onboarding'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const QuestLog = React.lazy(() => import('./pages/QuestLog'));
+const BossBattle = React.lazy(() => import('./pages/BossBattle'));
+const Focus = React.lazy(() => import('./pages/Focus'));
+const Inventory = React.lazy(() => import('./pages/Inventory'));
+const CalendarSync = React.lazy(() => import('./pages/CalendarSync'));
+const Settings = React.lazy(() => import('./pages/Settings'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
+
+// PUBLIC_INTERFACE
 function App() {
+  /** Main application router using React Router v6+ and suspense for lazy-loaded pages. */
   return (
-    <div className="app">
-      <nav className="navbar">
-        <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
-            <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
-            </div>
-            <button className="btn">Template Button</button>
-          </div>
-        </div>
-      </nav>
-
-      <main>
-        <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">neuroquest_web_app</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
-          </div>
-        </div>
-      </main>
-    </div>
+    <Router>
+      <React.Suspense fallback={<div className="text-accent p-8 text-center neon-accent">Loading...</div>}>
+        <Routes>
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/questlog" element={<QuestLog />} />
+            <Route path="/bossbattle" element={<BossBattle />} />
+            <Route path="/focus" element={<Focus />} />
+            <Route path="/inventory" element={<Inventory />} />
+            <Route path="/calendarsync" element={<CalendarSync />} />
+            <Route path="/settings" element={<Settings />} />
+          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </React.Suspense>
+    </Router>
   );
 }
 
