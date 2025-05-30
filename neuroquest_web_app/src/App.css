@@ -1,25 +1,78 @@
-/* Custom layer for neon-glow effect and RPG accent tweaks for NeuroQuest */
+/* Custom layer for neon-glow effect, RPG accent, animated transitions for NeuroQuest */
 
-.neon-accent {
-  box-shadow: 0 0 16px 2px #7c3aed99, 0 0 4px 2px #7c3aed;
+/* Neon accent glow rework for production neon pop (overrides) */
+.neon-accent, .glow-accent {
+  box-shadow: 0 0 18px 2px #7c3aed88, 0 0 8px 2px #c084fccc, 0 0 38px 4px #9d2aff33;
+  filter: drop-shadow(0 0 13px #c084fcdd);
+  transition: box-shadow 0.35s cubic-bezier(.61,.12,.67,1), filter 0.47s;
 }
 
 .rpg-rounded {
   border-radius: 16px;
 }
+.rpg-rounded-lg {
+  border-radius: 30px;
+}
+/* Smooth/animated hover/focus states for neon, tabs, and buttons */
+.rpg-tab {
+  border-radius: 12px 12px 6px 6px;
+  box-shadow: 0 2px 20px 0 #a47cee22;
+  transition: background 0.42s, box-shadow 0.26s, color 0.22s;
+}
+.rpg-tab.active, .rpg-tab:active {
+  background: linear-gradient(90deg, #351f59 25%, #a87ffc99 100%);
+  box-shadow: 0 0 35px 8px #c084fc88;
+  color: #fff;
+}
+.rpg-tab:focus {
+  outline: 2px solid #7c3aedb0;
+  box-shadow: 0 0 10px 1px #7c3aed99;
+}
 
 .xp-bar {
-  background: linear-gradient(90deg, #7c3aed, #c084fc 80%);
+  background: linear-gradient(90deg, #7c3aed 0%, #c084fc 80%);
   height: 18px;
   border-radius: 8px;
-  box-shadow: 0 0 10px #7c3aed77;
+  box-shadow: 0 0 10px #7c3aed77, 0 0 19px #c084fc44;
+  transition: width 0.8s cubic-bezier(.29,1.2,.6,.73);
 }
 
 .hp-bar {
   background: linear-gradient(90deg, #ef4444, #fb7185 80%);
   height: 18px;
   border-radius: 8px;
-  box-shadow: 0 0 10px #ef444477;
+  box-shadow: 0 0 10px #ef444477, 0 0 19px #e935497C;
+  transition: width 0.8s cubic-bezier(.32, 1, .68, .77);
 }
 
+/* Animation for tabs transitions */
+@keyframes tabGlow {
+  0% { box-shadow: 0 0 4px 0 #b448f7; }
+  100% { box-shadow: 0 0 30px 6px #e53ef7; }
+}
+
+/* Art overlays and hero/zone banners */
+.hero-fantasy-bg {
+  background: linear-gradient(180deg, #2d2250 44%, #3b2398 88%), url('/src/assets/hero_banner_wizard.png') center top/cover no-repeat;
+  min-height: 180px;
+  border-radius: 18px;
+  box-shadow: 0 0 64px 1px #7c3aed44, 0 8px 24px #34396a14;
+}
+.rpg-zone-img {
+  border-radius: 13px;
+  border: 2.5px solid #7c3aed88;
+  box-shadow: 0 0 25px #c084fc66, 0 0 6px #7c3aed44;
+  background: linear-gradient(135deg, #302753 57%, #ad54f639 100%);
+}
+
+.avatar-rpg {
+  border-radius: 50%;
+  border: 4px solid #b948f9cc;
+  background: linear-gradient(144deg, #1b0733 80%, #a37ed5cc 120%);
+  box-shadow: 0 0 21px 4px #f3bdff66, 0 0 5px #a36bf733;
+}
+
+.rpg-glow-anim {
+  animation: neonPulse 3.2s infinite alternate cubic-bezier(.84,0,.29,1);
+}
 /* You can further extend with Tailwind utility classes in JSX */
