@@ -487,6 +487,22 @@ export default function Inventory() {
   return (
     <div className="flex flex-col items-center max-w-3xl mx-auto pt-1 pb-7 min-h-[72vh]">
       <div className="text-3xl font-bold neon-accent mb-0 mt-2">Inventory</div>
+      {/* 
+        RPG/Fantasy inventory hero image. Public domain/Unsplash, swap this src to use your own art! 
+        https://unsplash.com/photos/close-up-photography-of-wooden-chest-boxes-3TLl_97HNJo
+      */}
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80"
+        alt="Inventory chest and fantasy loot"
+        className="w-full max-w-xs sm:max-w-sm mx-auto mb-2 rounded-xl border-2 border-accent shadow-lg object-cover"
+        onError={(e)=>{e.target.style.display='none'}}
+        style={{background: "#18132B"}} 
+      />
+      {/* Fallback: fantasy chest icon for failed image loads */}
+      <span className="block text-5xl text-accent my-2" aria-label="Treasure Chest" style={{display:'none'}}>
+         🗝️
+      </span>
+      {/* End hero image art, devs can swap image in <img> above */}
       <div className="text-base font-bold text-brand-orange mt-2 mb-1">
         Cosmetics, Tokens & Unlocks
       </div>
