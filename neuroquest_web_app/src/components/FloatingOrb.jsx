@@ -1,6 +1,6 @@
 import React from "react";
 /**
- * FloatingOrb - glowing, float-anim (CSS), fantasy orb, optional children.
+ * FloatingOrb - glowing, fantastical float anim, inner glow, RPG orb with child icons or Lottie
  * @param {React.ReactNode} children - Content inside the orb (icon/XP/Lottie etc).
  * @param {number} size - Diameter px.
  * @param {string} color - Neon color (default accent).
@@ -14,14 +14,30 @@ export default function FloatingOrb({ children, size = 72, color = "#7c3aed" }) 
         width: size,
         height: size,
         borderRadius: "100%",
-        background: `radial-gradient(circle at 65% 35%, ${color}bb, #1e1836 90%)`,
-        boxShadow: `0 0 30px 0 ${color}, 0 0 3px 3px #fff2`,
-        border: `3px solid ${color}`,
+        background: `radial-gradient(circle at 70% 30%, ${color}cc 0%, #311657 99%)`,
+        boxShadow: `0 0 44px 2px ${color}99, 0 0 64px 22px #c084fccf, 0 0 20px 3px #fff2`,
+        border: `4px solid ${color}`,
         animation: "orbFloat 2.5s ease-in-out infinite alternate",
         overflow: "visible",
         zIndex: 20,
       }}
     >
+      {/* Fantasy particle/halo effect */}
+      <span
+        aria-hidden
+        className="absolute animate-pulse"
+        style={{
+          left: "50%",
+          top: "46%",
+          transform: "translate(-50%, -50%) scale(1.22)",
+          width: size * 0.83,
+          height: size * 0.83,
+          borderRadius: "100%",
+          background: "radial-gradient(circle, #c084fc66 0%, transparent 90%)",
+          filter: "blur(6px) opacity(0.81)",
+          zIndex: 3,
+        }}
+      />
       <div className="z-30">{children}</div>
       <style>
         {`
