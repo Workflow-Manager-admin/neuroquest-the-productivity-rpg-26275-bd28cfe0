@@ -93,52 +93,41 @@ export default function Dashboard() {
       {/* Floating orb for quick quest (top-right, overlaps) */}
       <QuickQuestOrb />
 
-      {/* Top Section: Avatar + Quick Stats/XP/HP */}
+      {/* Fantasy RPG hero/zone banner */}
       <div
-        className={classNames(
-          "w-full max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-8 mt-0 md:mt-6 z-10 mb-2",
-        )}
+        className="w-full max-w-3xl mx-auto flex flex-col sm:flex-row items-center gap-7 mb-4 px-2 sm:px-5"
       >
-        {/* Avatar with equipped items ring */}
-        <div className="flex flex-col items-center justify-center w-full md:w-1/3 max-w-xs">
-          <div className="mb-3 relative">
+        <div className="flex flex-1 items-center justify-center">
+          <div
+            className="rpg-rounded overflow-hidden hero-fantasy-bg border border-accent/40 shadow-neon-accent flex items-center p-3"
+            style={{
+              minWidth: 120,
+              backgroundImage: `linear-gradient(180deg,#26063b 64%,#8f61e7 150%), url('${HERO_BANNER}')`,
+              backgroundSize: "cover",
+              backgroundPosition: "center top",
+              minHeight: "144px"
+            }}
+          >
             <Avatar
-              size={100}
+              size={90}
               demoIndex={avatarIdx}
-              ringColor="#7c3aed"
-              alt="Your Avatar"
+              ringColor="#a74eff"
+              alt="Hero Avatar"
             />
-            {/* Equipped items overlays - simple demo for now */}
-            {equippedItems?.length > 0 && (
-              <div className="absolute top-0 right-0">
-                <img
-                  src={equippedItems[0]?.image}
-                  alt={equippedItems[0]?.name}
-                  className="w-8 h-8 rpg-rounded border-2 border-accent glowing"
-                  style={{ boxShadow: "0 0 10px #e87a4180" }}
-                  title={equippedItems[0]?.name}
-                />
-              </div>
-            )}
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-accent font-bold text-lg drop-shadow">
-              Level {Level}
-            </span>
-            <div className="min-w-[120px] w-full">
+            <div className="ml-7 flex flex-col items-start justify-center">
+              <span className="font-poppins font-extrabold text-2xl text-accent neon-glow drop-shadow-lg">
+                Level {Level}
+              </span>
               <XPBar xp={XP} maxXp={MaxXP} showPercent={false} />
-            </div>
-            <div className="min-w-[120px] w-full mt-1">
               <HPBar hp={HP} maxHp={MaxHP} showPercent={false} />
-            </div>
-            <div className="font-mono text-sm text-green-400 mt-1">
-              Streak: {Streak}🔥
+              <span className="font-mono text-md text-green-400 mt-1">
+                Streak: {Streak}🔥
+              </span>
             </div>
           </div>
         </div>
-
-        {/* Quick Stats Panel */}
-        <div className="flex flex-col items-center justify-center w-full md:w-1/3 mt-6 md:mt-0">
+        {/* Quick Stats Panel and Actions */}
+        <div className="flex flex-col items-center justify-between gap-2 flex-1 mt-3 sm:mt-0">
           <StatsPanel
             stats={{
               level: Level,
@@ -167,9 +156,9 @@ export default function Dashboard() {
       </div>
 
       {/* Zones Section */}
-      <div className="relative w-full max-w-4xl mt-10 z-10">
+      <div className="relative w-full max-w-4xl mt-8 z-10">
         <div className="flex flex-col md:flex-row gap-5 md:gap-8 justify-center items-stretch w-full">
-          {ZONES.map((zone) => (
+          {ZONES.map((zone, idx) => (
             <div key={zone.name} className="flex-1 min-w-[220px]">
               <ZoneCard
                 name={zone.name}
