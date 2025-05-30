@@ -174,7 +174,8 @@ Final Quest: ... (the last challenge before victory!)
       "Step 1: The questmaster grows tired and refuses to answer.";
     // Parse into array of quest steps
     return text
-      .split(/\n+/)
+      .split(/
++/)
       .map((s) => s.replace(/^\d+\.\s*/, "").replace(/^Step \d+: ?/, "").trim())
       .filter(Boolean);
   }
