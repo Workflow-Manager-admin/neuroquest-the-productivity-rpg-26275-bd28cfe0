@@ -1,0 +1,17 @@
+// The following asset files (placeholders or final) should be downloaded or replaced with your own fantasy PNGs/SVGs:
+
+sword.png              # Fantasy sword (Opengameart)
+shield.png             # RPG shield (Opengameart)
+orb.png                # Magic orb (AI generated)
+wizard_hero_01.png     # Wizard avatar (Opengameart)
+witch_hero_01.png      # Witch avatar (Opengameart)
+knight_hero_01.png     # Knight avatar (Opengameart)
+hero_banner.png        # Hero landing/banner (Unsplash, DALL·E, or own art)
+zone_forest.png        # Fantasy forest landscape (Unsplash, Opengameart)
+zone_dungeon.png       # Dungeon zone bg (Opengameart)
+zone_hills.png         # Fantasy hills (Unsplash)
+boss_dragon.png        # Dragon boss (Opengameart, DALL·E)
+quest_scroll.png       # Scroll/quest icon (Opengameart)
+lost_portal.png        # Portal/404 "lost" art (AI, Lottie, or PNG)
+
+# For best experience, fill in your own PNGs/SVGs here!
