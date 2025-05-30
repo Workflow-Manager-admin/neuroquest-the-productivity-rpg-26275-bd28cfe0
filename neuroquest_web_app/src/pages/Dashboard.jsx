@@ -12,28 +12,34 @@ import NeonButton from "../components/NeonButton";
 import ZoneCard from "../components/ZoneCard";
 import classNames from "classnames";
 
-// Add art/asset constants here for stronger fantasy polish
-// Final asset recommended: /src/assets/hero_banner_wizard.png, zone images, and more
-const HERO_BANNER = "/src/assets/hero_banner_wizard.png"; // Add a fantasy wizard/hero
+/**
+ * Fantasy hero/zones image logic:
+ * - HERO_BANNER: public domain fantasy wizard/forest as example. Replace URL with your own asset for polish.
+ * - ZONES: each uses a fantasy public URL demo image. Drop your own PNGs/SVGs in /src/assets and update here.
+ */
+const HERO_BANNER =
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"; // Fantasy woods/hero (Unsplash, demo)
 
-// Demo images (real images should be placed at /src/assets/)
 const ZONES = [
   {
     name: "Focus Forest",
     description: "Enter deep work, earn XP, defeat distractions.",
-    image: "/src/assets/zone_forest.png",
+    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=320&q=80", // Fantasy forest
+    // TODO: Drop your zone art in /src/assets and update image value for production!
     to: "/focus",
   },
   {
     name: "Deadline Dungeon",
     description: "Face your deadlines in dramatic RPG boss fights.",
-    image: "/src/assets/zone_dungeon.png",
+    image: "https://opengameart.org/sites/default/files/preview_128.png", // Dungeon (Opengameart)
+    // TODO: Swap with /src/assets/zone_dungeon.png if added!
     to: "/bossbattle",
   },
   {
     name: "Daily Hills",
     description: "Complete daily quests for streak and coin rewards.",
-    image: "/src/assets/zone_hills.png",
+    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=320&q=80", // Fantasy hills Unsplash
+    // TODO: Swap with /src/assets/zone_hills.png
     to: "/questlog",
   },
 ];
