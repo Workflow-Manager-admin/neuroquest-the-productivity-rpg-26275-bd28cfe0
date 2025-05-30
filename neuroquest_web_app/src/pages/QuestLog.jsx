@@ -256,8 +256,7 @@ export default function QuestLog() {
         const rewritten = {
           ...quest,
           title: "The Legendary " + quest.title,
-          description: quest.description + "
-(Fantasy flavor added!)",
+          description: quest.description + "(Fantasy flavor added!)",
           gpt: true,
         };
         const newList = quests.map(q => q.id === quest.id ? rewritten : q);
@@ -538,14 +537,13 @@ export default function QuestLog() {
         </div>
       )}
       {/* Some RPG animated styling */}
-      <style>
-        {`
-          .rpg-rounded { border-radius: 16px; }
-          .neon-accent { box-shadow: 0 0 15px 2px #7c3aed44, 0 0 4px 2px #7c3aed; }
-          .border-rpg { border: 2px solid #7c3aed60; }
-          .shadow-xl { box-shadow: 0 4px 36px 2px #7c3aed22, 0 1px 12px #1a181a88; }
-          .transition-transform { transition: transform 0.18s cubic-bezier(.71,0,.27,1); }
-        `}
+      <style>{`
+        .rpg-rounded { border-radius: 16px; }
+        .neon-accent { box-shadow: 0 0 15px 2px #7c3aed44, 0 0 4px 2px #7c3aed; }
+        .border-rpg { border: 2px solid #7c3aed60; }
+        .shadow-xl { box-shadow: 0 4px 36px 2px #7c3aed22, 0 1px 12px #1a181a88; }
+        .transition-transform { transition: transform 0.18s cubic-bezier(.71,0,.27,1); }
+      `}
       </style>
     </div>
   );
