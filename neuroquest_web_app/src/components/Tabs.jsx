@@ -56,7 +56,7 @@ export default function Tabs({
                   ? "animate-pulse rounded-xl bg-accent/10 blur-sm"
                   : "")
               }
-            />
+            ></span>
           </button>
         ))}
       </nav>
