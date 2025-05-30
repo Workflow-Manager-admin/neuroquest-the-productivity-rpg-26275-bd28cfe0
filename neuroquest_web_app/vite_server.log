@@ -278,3 +278,198 @@ ERROR in ./src/firebase.js 7:0-50
 Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
 
 webpack compiled with 20 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 11:0-51
+Module not found: Error: Can't resolve './components/FloatingOrb' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 12:0-49
+Module not found: Error: Can't resolve './components/LottieAnim' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 13:0-53
+Module not found: Error: Can't resolve './assets/lottie/loader.json' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 17:43-66
+Module not found: Error: Can't resolve './pages/Login' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 19:49-77
+Module not found: Error: Can't resolve './pages/Onboarding' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 21:48-75
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 23:47-73
+Module not found: Error: Can't resolve './pages/QuestLog' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 25:49-77
+Module not found: Error: Can't resolve './pages/BossBattle' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 27:51-80
+Module not found: Error: Can't resolve './pages/FocusEngine' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 29:49-76
+Module not found: Error: Can't resolve './pages/Inventory' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 31:52-82
+Module not found: Error: Can't resolve './pages/CalendarSync' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 33:48-74
+Module not found: Error: Can't resolve './pages/Settings' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 35:48-74
+Module not found: Error: Can't resolve './pages/NotFound' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/components/Navbar.js 6:0-53
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in ./src/context/AuthContext.js 12:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/context/AuthContext.js 13:0-49
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/firebase.js 5:0-45
+Module not found: Error: Can't resolve 'firebase/app' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 6:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 7:0-50
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+webpack compiled with 20 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 11:0-51
+Module not found: Error: Can't resolve './components/FloatingOrb' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 12:0-49
+Module not found: Error: Can't resolve './components/LottieAnim' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 13:0-53
+Module not found: Error: Can't resolve './assets/lottie/loader.json' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 17:43-66
+Module not found: Error: Can't resolve './pages/Login' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 19:49-77
+Module not found: Error: Can't resolve './pages/Onboarding' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 21:48-75
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 23:47-73
+Module not found: Error: Can't resolve './pages/QuestLog' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 25:49-77
+Module not found: Error: Can't resolve './pages/BossBattle' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 27:51-80
+Module not found: Error: Can't resolve './pages/FocusEngine' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 29:49-76
+Module not found: Error: Can't resolve './pages/Inventory' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 31:52-82
+Module not found: Error: Can't resolve './pages/CalendarSync' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 33:48-74
+Module not found: Error: Can't resolve './pages/Settings' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 35:48-74
+Module not found: Error: Can't resolve './pages/NotFound' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/components/Navbar.js 6:0-53
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in ./src/context/AuthContext.js 12:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/context/AuthContext.js 13:0-49
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/firebase.js 5:0-45
+Module not found: Error: Can't resolve 'firebase/app' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 6:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 7:0-50
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+webpack compiled with 20 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 11:0-51
+Module not found: Error: Can't resolve './components/FloatingOrb' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 12:0-49
+Module not found: Error: Can't resolve './components/LottieAnim' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 13:0-53
+Module not found: Error: Can't resolve './assets/lottie/loader.json' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 17:43-66
+Module not found: Error: Can't resolve './pages/Login' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 19:49-77
+Module not found: Error: Can't resolve './pages/Onboarding' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 21:48-75
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 23:47-73
+Module not found: Error: Can't resolve './pages/QuestLog' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 25:49-77
+Module not found: Error: Can't resolve './pages/BossBattle' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 27:51-80
+Module not found: Error: Can't resolve './pages/FocusEngine' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 29:49-76
+Module not found: Error: Can't resolve './pages/Inventory' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 31:52-82
+Module not found: Error: Can't resolve './pages/CalendarSync' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 33:48-74
+Module not found: Error: Can't resolve './pages/Settings' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 35:48-74
+Module not found: Error: Can't resolve './pages/NotFound' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/components/Navbar.js 6:0-53
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in ./src/context/AuthContext.js 12:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/context/AuthContext.js 13:0-49
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/firebase.js 5:0-45
+Module not found: Error: Can't resolve 'firebase/app' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 6:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 7:0-50
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+webpack compiled with 20 errors
