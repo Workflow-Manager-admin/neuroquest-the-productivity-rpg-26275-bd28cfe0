@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 /**
- * Tabs – classic RPG/fantasy segment-tabs.
+ * Tabs – animated neon-glow RPG/fantasy tabs, mobile-optimized and immersive.
  * @param {string[]} tabs - Array of tab names.
  * @param {number} defaultIndex
  * @param {function} onChange
  * @param {React.ReactNode[]} children - One child per tab.
+ * @param {string} size - sm, md, lg
  */
  // PUBLIC_INTERFACE
 export default function Tabs({
@@ -16,25 +17,46 @@ export default function Tabs({
 }) {
   const [current, setCurrent] = useState(defaultIndex);
   const tabSize =
-    size === "sm" ? "py-1 px-2 text-sm" : size === "lg" ? "py-3 px-5 text-lg" : "py-2 px-4";
+    size === "sm"
+      ? "py-1 px-2 text-sm"
+      : size === "lg"
+      ? "py-3 px-5 text-lg"
+      : "py-2 px-4";
+
   return (
     <div>
       <nav className="flex gap-2 mb-3">
         {tabs.map((tab, idx) => (
           <button
             key={tab}
-            className={`rpg-rounded font-semibold transition text-accent border-b-2 ${
+            className={`rpg-tab font-semibold transition-neon-colors text-accent border-b-2 ${
               idx === current
-                ? "bg-black/70 neon-accent shadow border-accent"
+                ? "active bg-black/90 neon-accent border-accent rpg-glow-anim"
                 : "bg-neutral-900 text-textFaded border-transparent"
             } ${tabSize}`}
+            style={{
+              fontFamily: "'Poppins','Inter','Cinzel Decorative',serif",
+              letterSpacing: "0.02em"
+            }}
+            tabIndex={0}
             onClick={() => {
               setCurrent(idx);
               onChange && onChange(idx);
             }}
             type="button"
+            aria-selected={idx === current}
           >
-            {tab}
+            <span className="relative z-10">{tab}</span>
+            {/* Fantastical neon flicker on active tab */}
+            <span
+              aria-hidden
+              className={
+                "absolute left-0 top-0 w-full h-full pointer-events-none " +
+                (idx === current
+                  ? "animate-pulse rounded-xl bg-accent/10 blur-sm"
+                  : "")
+              }
+            />
           </button>
         ))}
       </nav>
