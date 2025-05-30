@@ -174,9 +174,14 @@ Final Quest: ... (the last challenge before victory!)
       "Step 1: The questmaster grows tired and refuses to answer.";
     // Parse into array of quest steps
     return text
-      .split(/
-+/)
-      .map((s) => s.replace(/^\d+\.\s*/, "").replace(/^Step \d+: ?/, "").trim())
+      .split(/\n+/)
+      .map((s) =>
+        s
+          .replace(/^\d+\.\s*/, "")
+          .replace(/^Step \d+: ?/, "")
+          .replace(/^Final Quest: ?/, "")
+          .trim()
+      )
       .filter(Boolean);
   }
 
@@ -211,7 +216,7 @@ Final Quest: ... (the last challenge before victory!)
   // RPG stepper – returns stepper button bar, classic RPG fantasy style
   function Stepper({ current }) {
     const steps = [
-      { icon: "🪄", label: "Intro" },
+      { icon: "🦄", label: "Intro" },
       { icon: "🎯", label: "Main Quest" },
       { icon: "🧙", label: "Avatar" },
     ];
@@ -225,8 +230,8 @@ Final Quest: ... (the last challenge before victory!)
               idx === current
                 ? "text-accent font-extrabold scale-110 neon-accent"
                 : idx < current
-                  ? "text-brand-orange"
-                  : "text-textFaded opacity-70",
+                ? "text-brand-orange"
+                : "text-textFaded opacity-70",
             ].join(" ")}
           >
             <div className="text-3xl">{s.icon}</div>
@@ -387,9 +392,10 @@ Final Quest: ... (the last challenge before victory!)
           {!loadingRoadmap && roadmap && (
             <ol className="rpg-rounded text-white/90 text-lg font-poppins px-2 list-decimal space-y-2 transition-all animate-fadeIn">
               {roadmap.map((step, idx) => (
-                <li key={idx} className={idx === roadmap.length - 1
-                    ? "text-accent font-bold"
-                    : "text-brand-orange"
+                <li key={idx} className={
+                    idx === roadmap.length - 1
+                      ? "text-accent font-bold"
+                      : "text-brand-orange"
                   }>
                   {step}
                 </li>
