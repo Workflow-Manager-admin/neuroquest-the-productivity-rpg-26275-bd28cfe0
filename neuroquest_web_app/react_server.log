@@ -7,3 +7,43 @@
 (node:381) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
 Starting the development server...
 
+Failed to compile.
+
+[eslint] No files matching '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/pages/Login.jsx' were found.
+ERROR in [eslint] No files matching '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/pages/Login.jsx' were found.
+
+webpack compiled with 1 error
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve '@lottiefiles/react-lottie-player' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+ERROR in ./src/components/LottieAnim.jsx 5:0-58
+Module not found: Error: Can't resolve '@lottiefiles/react-lottie-player' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in [eslint] 
+src/components/FloatingOrb.jsx
+  Line 9:39:  'children' is missing in props validation  react/prop-types
+  Line 9:49:  'size' is missing in props validation      react/prop-types
+  Line 9:60:  'color' is missing in props validation     react/prop-types
+
+src/components/LottieAnim.jsx
+  Line 12:3:  'src' is missing in props validation       react/prop-types
+  Line 13:3:  'size' is missing in props validation      react/prop-types
+  Line 14:3:  'loop' is missing in props validation      react/prop-types
+  Line 15:3:  'autoplay' is missing in props validation  react/prop-types
+
+src/components/NeonButton.jsx
+  Line 12:3:  'onClick' is missing in props validation   react/prop-types
+  Line 13:3:  'children' is missing in props validation  react/prop-types
+  Line 14:3:  'disabled' is missing in props validation  react/prop-types
+  Line 15:3:  'variant' is missing in props validation   react/prop-types
+
+src/components/Toast.jsx
+  Line 10:33:  'message' is missing in props validation  react/prop-types
+  Line 10:42:  'show' is missing in props validation     react/prop-types
+  Line 10:48:  'onClose' is missing in props validation  react/prop-types
+  Line 10:57:  'type' is missing in props validation     react/prop-types
+
+Search for the keywords to learn more about each error.
+
+webpack compiled with 2 errors
