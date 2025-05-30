@@ -1,6 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import heroBanner from "../assets/hero_banner.png"; // Fantasy RPG hero/landing image
+
+// Fantasy hero banner asset handling
+// TODO: If you drop your own /src/assets/hero_banner.png, swap the src below to: require("../assets/hero_banner.png")
+// Currently, we use a high-quality open/fantasy Unsplash URL (public domain, for demo only).
+const heroBannerUrl =
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"; // Example fantasy woods (Unsplash)
 
 // PUBLIC_INTERFACE
 export default function MainLayout() {
