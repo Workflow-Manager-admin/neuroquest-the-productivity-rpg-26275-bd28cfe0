@@ -1407,3 +1407,198 @@ Error: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 w
     at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
 
 webpack compiled with 17 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 17:43-66
+Module not found: Error: Can't resolve './pages/Login' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 19:49-77
+Module not found: Error: Can't resolve './pages/Onboarding' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 21:48-75
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 23:47-73
+Module not found: Error: Can't resolve './pages/QuestLog' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 25:49-77
+Module not found: Error: Can't resolve './pages/BossBattle' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 27:51-80
+Module not found: Error: Can't resolve './pages/FocusEngine' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 29:49-76
+Module not found: Error: Can't resolve './pages/Inventory' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/components/Navbar.js 6:0-53
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in ./src/context/AuthContext.js 12:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/context/AuthContext.js 13:0-49
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/firebase.js 5:0-45
+Module not found: Error: Can't resolve 'firebase/app' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 6:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 7:0-50
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/pages/NotFound.js 5:0-40
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/pages'
+
+ERROR in ./src/assets/lottie/loader.json
+Module parse failed: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 while parsing near "...ctangle 1\",\n        }\n      ],\n      \"ip..."
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+Error: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 while parsing near "...ctangle 1\",\n        }\n      ],\n      \"ip..."
+    at JsonParser.parse (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/json/JsonParser.js:54:10)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:1310:19
+    at processResult (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:939:11)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:1037:5
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:407:3
+    at iterateNormalLoaders (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:233:10)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:224:4
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:991:15
+    at eval (eval at create (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:12:1)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+webpack compiled with 16 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 17:43-66
+Module not found: Error: Can't resolve './pages/Login' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 19:49-77
+Module not found: Error: Can't resolve './pages/Onboarding' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 21:48-75
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 23:47-73
+Module not found: Error: Can't resolve './pages/QuestLog' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 25:49-77
+Module not found: Error: Can't resolve './pages/BossBattle' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 27:51-80
+Module not found: Error: Can't resolve './pages/FocusEngine' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 29:49-76
+Module not found: Error: Can't resolve './pages/Inventory' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/components/Navbar.js 6:0-53
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in ./src/context/AuthContext.js 12:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/context/AuthContext.js 13:0-49
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/firebase.js 5:0-45
+Module not found: Error: Can't resolve 'firebase/app' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 6:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 7:0-50
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/pages/NotFound.js 5:0-40
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/pages'
+
+ERROR in ./src/assets/lottie/loader.json
+Module parse failed: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 while parsing near "...ctangle 1\",\n        }\n      ],\n      \"ip..."
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+Error: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 while parsing near "...ctangle 1\",\n        }\n      ],\n      \"ip..."
+    at JsonParser.parse (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/json/JsonParser.js:54:10)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:1310:19
+    at processResult (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:939:11)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:1037:5
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:407:3
+    at iterateNormalLoaders (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:233:10)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:224:4
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:991:15
+    at eval (eval at create (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:12:1)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+webpack compiled with 16 errors
+Compiling...
+Failed to compile.
+
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+ERROR in ./src/App.js 6:0-84
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 17:43-66
+Module not found: Error: Can't resolve './pages/Login' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 19:49-77
+Module not found: Error: Can't resolve './pages/Onboarding' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 21:48-75
+Module not found: Error: Can't resolve './pages/Dashboard' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 23:47-73
+Module not found: Error: Can't resolve './pages/QuestLog' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 25:49-77
+Module not found: Error: Can't resolve './pages/BossBattle' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 27:51-80
+Module not found: Error: Can't resolve './pages/FocusEngine' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/App.js 29:49-76
+Module not found: Error: Can't resolve './pages/Inventory' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/components/Navbar.js 6:0-53
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/components'
+
+ERROR in ./src/context/AuthContext.js 12:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/context/AuthContext.js 13:0-49
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/context'
+
+ERROR in ./src/firebase.js 5:0-45
+Module not found: Error: Can't resolve 'firebase/app' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 6:0-60
+Module not found: Error: Can't resolve 'firebase/auth' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/firebase.js 7:0-50
+Module not found: Error: Can't resolve 'firebase/firestore' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src'
+
+ERROR in ./src/pages/NotFound.js 5:0-40
+Module not found: Error: Can't resolve 'react-router-dom' in '/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/src/pages'
+
+ERROR in ./src/assets/lottie/loader.json
+Module parse failed: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 while parsing near "...ctangle 1\",\n        }\n      ],\n      \"ip..."
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+Error: Cannot parse JSON: Unexpected token "}" (0x7D) in JSON at position 1094 while parsing near "...ctangle 1\",\n        }\n      ],\n      \"ip..."
+    at JsonParser.parse (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/json/JsonParser.js:54:10)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:1310:19
+    at processResult (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:939:11)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:1037:5
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:407:3
+    at iterateNormalLoaders (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:233:10)
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/loader-runner/lib/LoaderRunner.js:224:4
+    at /home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/webpack/lib/NormalModule.js:991:15
+    at eval (eval at create (/home/kavia/workspace/code-generation/neuroquest-the-productivity-rpg-26275-bd28cfe0/neuroquest_web_app/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:12:1)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+
+webpack compiled with 16 errors
