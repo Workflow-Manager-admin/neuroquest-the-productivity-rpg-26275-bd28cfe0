@@ -1,498 +1,352 @@
-import React, { useEffect, useState } from "react";
-import NeonButton from "../components/NeonButton";
-import FloatingOrb from "../components/FloatingOrb";
-import LottieAnim from "../components/LottieAnim";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../context/UserContext";
+import { GameContext } from "../context/GameContext";
 import Modal from "../components/Modal";
+import LottieAnim from "../components/LottieAnim";
+import NeonButton from "../components/NeonButton";
 import Toast from "../components/Toast";
-import { useUser } from "../context/UserContext";
-import { useGame } from "../context/GameContext";
+// Import fantasy/scifi assets below as you add them (e.g., import fantasyBackdrop from "../assets/fantasy_bg.svg";)
+// Required Firebase dependencies
+import { getAuth, signOut } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 
-/**
- * RPG-inspired themed settings panel for NeuroQuest RPG
- * - Toggle dark/light mode, animations
- * - Change goal (shows modal)
- * - Log out using Firebase
- * - All settings persist to Firestore/context
- * - Modals and animated feedback for critical actions
- * - Visual neon RPG polish, Lottie, fully responsive
- * - Accessible and mobile-friendly
- */
-
-// Lottie asset paths (replace with your Lottie JSONs as desired)
-const SETTINGS_LOTTIE = "/src/assets/settings-cog.json";
-const CONFIRM_LOTTIE = "/src/assets/confirm-magic.json";
-const SUCCESS_LOTTIE = "/src/assets/success-glow.json";
-const DARK_LOTTIE = "/src/assets/dark-mode-orb.json";
-const GOAL_LOTTIE = "/src/assets/magic-scroll.json";
-
-const DEMO_AVATAR =
-  "/src/assets/wizard_hero_01.png"; // fallback for header
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+// Neon Effect helpers
+function neonGlow(color = "#7c3aed", blur = 12) {
+  return {
+    boxShadow: `0 0 ${blur}px 2px ${color}, 0 0 ${blur * 2}px 0px ${color}`,
+    textShadow: `0 0 0.6em ${color}, 0 0 1.5em ${color}`,
+    border: `2px solid ${color}`,
+  };
 }
 
+// Fancy switch (toggle) for RPG
+function NeonSwitch({ checked, onChange, label, asset, color = "#a5b4fc" }) {
+  return (
+    <label className="flex items-center gap-4 cursor-pointer group select-none" style={{ padding: 8 }}>
+      <div className="relative w-14 h-8">
+        <input
+          type="checkbox"
+          checked={checked}
+          onChange={onChange}
+          className="sr-only peer"
+        />
+        <div
+          className="absolute inset-0 rounded-full bg-gradient-to-r from-violet-900 to-cyan-700 shadow-lg opacity-90"
+          style={neonGlow(color, 16)}
+        ></div>
+        <div
+          className={`absolute left-1 top-1 w-6 h-6 rounded-full transition-all duration-300
+            ${checked ? "translate-x-6 bg-cyan-300" : "bg-violet-400"} 
+            shadow-lg`}
+          style={neonGlow(checked ? "#22d3ee" : "#a5b4fc")}
+        >
+          {asset && (
+            <img 
+              src={asset}
+              alt={label}
+              className="w-5 h-5 object-contain mx-auto my-auto"
+              style={{ filter: "drop-shadow(0 0 4px #fff5)" }}
+            />
+          )}
+        </div>
+      </div>
+      <span
+        className="ml-2 text-xl font-bold tracking-wider"
+        style={{
+          color: checked ? "#60f7f9" : "#a5b4fc",
+          ...neonGlow(checked ? "#60f7f9" : "#a5b4fc"),
+        }}
+      >
+        {label}
+      </span>
+    </label>
+  );
+}
+
+// Main Settings Page
 // PUBLIC_INTERFACE
 export default function Settings() {
-  // Context state
-  const { game, updateGame, setTheme } = useGame();
-  const { user, profile, updateProfile, logout } = useUser();
+  // User and global preferences context
+  const { user, logout: contextLogout } = useContext(UserContext);
+  const { preferences, setPreferences } = useContext(GameContext);
 
-  // UI state
+  // Local state for toggles/modals
+  const [darkMode, setDarkMode] = useState(preferences.darkMode ?? false);
+  const [animations, setAnimations] = useState(preferences.animations ?? true);
   const [showGoalModal, setShowGoalModal] = useState(false);
-  const [showLogoutModal, setShowLogoutModal] = useState(false);
-  const [showAnimModal, setShowAnimModal] = useState(false);
-  const [showThemeModal, setShowThemeModal] = useState(false);
+  const [goalInput, setGoalInput] = useState(preferences.majorGoal || "");
+  const [isSaving, setIsSaving] = useState(false);
+  const [toast, setToast] = useState({ show: false, msg: "", lottie: null });
+  const [goalConfirmModal, setGoalConfirmModal] = useState(false);
 
-  const [saving, setSaving] = useState(false);
-  const [toast, setToast] = useState({ show: false, msg: "", type: "accent" });
+  // Firebase
+  const db = getFirestore();
+  const auth = getAuth();
 
-  // Preferences: derive from context (fallback to defaults)
-  const [theme, setThemeState] = useState(game?.theme || "auto"); // 'dark' | 'light' | 'auto'
-  const [animations, setAnimations] = useState(
-    profile?.preferences?.animations ?? true
-  );
-  const [goal, setGoal] = useState(profile?.onboarding?.goal ?? "");
-  const [goalInput, setGoalInput] = useState(goal);
-  const [goalSaving, setGoalSaving] = useState(false);
+  // Neon-glow feedback
+  function showFeedback(msg, lottie) {
+    setToast({ show: true, msg, lottie });
+    setTimeout(() => setToast({ show: false, msg: "", lottie: null }), 2500);
+  }
 
-  // Reflect context changes
-  useEffect(() => {
-    setThemeState(game?.theme || "auto");
-  }, [game?.theme]);
-  useEffect(() => {
-    setAnimations(profile?.preferences?.animations ?? true);
-    setGoal(profile?.onboarding?.goal ?? "");
-    setGoalInput(profile?.onboarding?.goal ?? "");
-  }, [profile]);
+  // Update preferences in context and Firestore
+  async function savePreferences(updates) {
+    setIsSaving(true);
+    try {
+      // Merge updates into local state/context
+      const newPrefs = { ...preferences, ...updates };
+      setPreferences(newPrefs);
+      // Save to Firestore
+      if (user?.uid) {
+        await setDoc(doc(db, "users", user.uid), { preferences: newPrefs }, { merge: true });
+      }
+      showFeedback("Preferences saved!", "sparkle");
+    } catch (err) {
+      showFeedback("Failed to save. Check connection.", "error");
+    } finally {
+      setIsSaving(false);
+    }
+  }
 
-  // --- Preference Toggles ---
-  const handleThemeToggle = (val) => {
-    setThemeState(val);
-    setShowThemeModal(true);
-    setTheme(val);
-    updateGame({ theme: val });
-    setToast({
-      show: true,
-      msg:
-        val === "dark"
-          ? "Embraced the shadow realm! (Dark Mode)"
-          : val === "light"
-            ? "Blessed by sunlight! (Light Mode)"
-            : "Theme set to auto.",
-      type: "accent",
+  // Toggle handlers
+  const handleDarkToggle = () => {
+    setDarkMode((prev) => {
+      const next = !prev;
+      savePreferences({ darkMode: next });
+      document.documentElement.classList.toggle("dark", next); // Immediately toggle
+      return next;
     });
-    setTimeout(() => setShowThemeModal(false), 1200);
   };
-
-  const handleAnimationsToggle = async (val) => {
-    setAnimations(val);
-    setShowAnimModal(true);
-    await updateProfile({
-      preferences: { ...(profile?.preferences || {}), animations: val },
-    });
-    setTimeout(() => setShowAnimModal(false), 1200);
-    setToast({
-      show: true,
-      msg: val
-        ? "Enchanted animations activated! ✨"
-        : "Animations disabled. The world grows still.",
-      type: "accent",
+  const handleAnimationsToggle = () => {
+    setAnimations((prev) => {
+      const next = !prev;
+      savePreferences({ animations: next });
+      return next;
     });
   };
 
-  // --- Change Goal ---
+  // Goal changing logic
   const handleGoalSave = async () => {
-    if (!goalInput.trim() || goalInput === goal) {
-      setShowGoalModal(false);
-      return;
-    }
-    setGoalSaving(true);
-    try {
-      await updateProfile({
-        onboarding: {
-          ...profile?.onboarding,
-          goal: goalInput,
-        },
-      });
-      setGoal(goalInput);
-      setToast({
-        show: true,
-        msg: "Main quest updated!",
-        type: "success",
-      });
-      setShowGoalModal(false);
-    } catch (e) {
-      setToast({
-        show: true,
-        msg: "Failed to update quest. Try again.",
-        type: "error",
-      });
-    }
-    setGoalSaving(false);
+    // Confirmation modal step
+    setGoalConfirmModal(true);
+  };
+  const reallyChangeGoal = async () => {
+    setShowGoalModal(false);
+    setGoalConfirmModal(false);
+    await savePreferences({ majorGoal: goalInput });
+    showFeedback("Quest goal updated!", "levelup"); // Fun RPG Lottie
   };
 
-  // --- Logout ---
+  // Logout
   const handleLogout = async () => {
-    setSaving(true);
+    setIsSaving(true);
     try {
-      await logout();
-      setToast({
-        show: true,
-        msg: "You have left the realm. Come back soon, hero!",
-        type: "success",
-      });
-      setShowLogoutModal(false);
-      // Optionally, redirect or reload app here.
-    } catch (e) {
-      setToast({
-        show: true,
-        msg: "Logout failed.",
-        type: "error",
-      });
+      await signOut(auth);
+      contextLogout && contextLogout();
+      showFeedback("Logged out!", "logoff");
+      // Could also redirect to /login if router available
+    } catch {
+      showFeedback("Logout failed.", "error");
+    } finally {
+      setIsSaving(false);
     }
-    setSaving(false);
   };
 
-  // == Panels ==
+  // Panel backgrounds & assets
+  const panelStyle = (color) => ({
+    borderRadius: "1rem",
+    padding: "2rem",
+    marginBottom: "2rem",
+    position: "relative",
+    background:
+      "linear-gradient(135deg, rgba(23,22,50,0.88) 80%, rgba(23,132,255,0.12) 100%)",
+    border: "2.5px solid #7c3aed55",
+    ...neonGlow(color, 20),
+    minWidth: 280,
+  });
 
-  // Toggle switch: RPG neon
-  function NeonSwitch({ checked, onChange, label, icon, accent }) {
-    return (
-      <button
-        onClick={() => onChange(!checked)}
-        className={classNames(
-          "w-full flex items-center justify-between rpg-rounded px-5 py-3 my-2 bg-black/60 neon-accent border-2 transition shadow",
-          checked
-            ? accent
-              ? `shadow-[0_0_16px_${accent}] border-accent`
-              : "border-accent"
-            : "border-accent/30"
-        )}
-        type="button"
-        tabIndex={0}
-        aria-pressed={checked}
+  // Responsive/fantasy header
+  return (
+    <div
+      className="min-h-screen px-2 md:px-10 py-10 flex flex-col items-center bg-gradient-to-bl from-gray-950/90 to-violet-900/80"
+      style={{
+        backgroundImage: `radial-gradient(circle at 60% 20%, #4f36e9bb 0%, transparent 65%), radial-gradient(circle at 10% 80%, #22d3ee66 0%, transparent 66% )`,
+      }}
+    >
+      {/* RPG Title */}
+      <h1
+        className="text-4xl lg:text-5xl font-fantasy text-center pb-8 select-none"
+        style={{
+          color: "#7c3aed",
+          ...neonGlow("#7c3aed", 32),
+          letterSpacing: "0.07em",
+        }}
       >
-        <span className="flex items-center gap-2 font-bold text-accent text-lg">
-          {icon && (
-            <span
-              className="text-xl"
-              style={{ textShadow: "0 0 5px #fff, 0 0 10px #a78bfa" }}
-            >
-              {icon}
-            </span>
-          )}
-          {label}
+        <span>
+          <span className="hidden md:inline">⚙️&nbsp;&nbsp;</span>
+          Settings <span className="text-accent">Sanctum</span>
         </span>
-        <span
-          className={classNames(
-            "inline-flex ml-2 w-12 h-7 rpg-rounded neon-accent cursor-pointer relative transition",
-            checked ? "bg-accent/80" : "bg-gray-700"
-          )}
-        >
-          <span
-            className={classNames(
-              "absolute left-1 top-[4px] w-4 h-4 rpg-rounded transition-all duration-200",
-              checked
-                ? "translate-x-5 bg-brand-orange shadow-[0_0_8px_2px_#e87a41]"
-                : "bg-white"
-            )}
-            style={{
-              transition: "transform 0.21s cubic-bezier(0.7,0,.21,1)",
-              transform: checked ? "translateX(22px)" : "translateX(0)",
-            }}
-          />
-        </span>
-      </button>
-    );
-  }
+      </h1>
 
-  // Theme select block: RPG style
-  function ThemeSelector() {
-    return (
-      <div className="flex flex-col items-stretch gap-2 my-3">
-        <div className="font-bold text-brand-orange text-lg mb-2">
-          Theme: <span className="text-accent">{themeLabel(theme)}</span>
+      {/* Main Settings Sections */}
+      <div className="w-full max-w-2xl space-y-10">
+        {/* Theme toggle */}
+        <div style={panelStyle("#60f7f9")}>
+          <div className="flex items-center gap-6 mb-3">
+            <img
+              src={"https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f31a.svg"}
+              alt="Moon"
+              className="w-10 h-10"
+              draggable={false}
+            />
+            <h2 className="text-2xl font-semibold" style={neonGlow("#60f7f9")}>
+              Appearance
+            </h2>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-5 mt-2">
+            <NeonSwitch
+              checked={darkMode}
+              onChange={handleDarkToggle}
+              label="Dark Mode"
+              asset="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f319.svg"
+              color="#6475fa"
+            />
+            <NeonSwitch
+              checked={animations}
+              onChange={handleAnimationsToggle}
+              label="Battle Animations"
+              asset="https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/2728.svg"
+              color="#69ffe3"
+            />
+          </div>
         </div>
-        <div className="flex flex-wrap gap-3">
-          {["auto", "light", "dark"].map((t) => (
-            <button
-              key={t}
-              onClick={() => handleThemeToggle(t)}
-              disabled={theme === t}
-              className={classNames(
-                "font-bold px-5 py-2 rpg-rounded neon-accent border-2 shadow transition",
-                theme === t
-                  ? "bg-accent text-white ring-2 ring-brand-orange"
-                  : "bg-black/70 text-accent hover:bg-accent/20",
-                "flex-1 min-w-[90px]"
-              )}
-              aria-pressed={theme === t}
-              tabIndex={0}
-              type="button"
-            >
-              {t === "auto" ? (
-                <>
-                  <span className="mr-2">🪄</span>Auto
-                </>
-              ) : t === "dark" ? (
-                <>
-                  <span className="mr-2">🌌</span>Dark
-                </>
-              ) : (
-                <>
-                  <span className="mr-2">🌞</span>Light
-                </>
-              )}
-            </button>
-          ))}
+
+        {/* Major goal panel */}
+        <div style={panelStyle("#7c3aed")}>
+          <div className="flex items-center gap-6 mb-3">
+            <img
+              src={"https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f3af.svg"}
+              alt=""
+              className="w-10 h-10"
+              draggable={false}
+            />
+            <h2 className="text-2xl font-semibold" style={neonGlow("#a56bff")}>
+              Current Quest
+            </h2>
+          </div>
+          <p className="text-base text-white/80 mb-3">
+            <span className="font-bold" style={neonGlow("#fff7")}>Goal:</span>{" "}
+            <span className="text-cyan-200 font-semibold">{preferences.majorGoal || "Unspecified"}</span>
+          </p>
+          <NeonButton
+            onClick={() => setShowGoalModal(true)}
+            color="#ba63f9"
+            className="mt-2"
+          >
+            Change Quest Goal
+          </NeonButton>
+        </div>
+
+        {/* Logout & Danger Zone */}
+        <div style={panelStyle("#f87171")}>
+          <div className="flex items-center gap-6 mb-3">
+            <img
+              src={"https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f47b.svg"}
+              alt="Ghost/Logout"
+              className="w-10 h-10"
+              draggable={false}
+            />
+            <h2 className="text-2xl font-semibold" style={neonGlow("#f87171")}>
+              Account
+            </h2>
+          </div>
+          <NeonButton
+            onClick={handleLogout}
+            color="#f87171"
+            className="mt-2"
+          >
+            <span>Logout of Guild</span>
+          </NeonButton>
         </div>
       </div>
-    );
-  }
 
-  // Goal panel (show/change)
-  function GoalPanel() {
-    return (
-      <div className="w-full flex flex-col gap-2 rpg-rounded bg-[#150e3231] border border-accent/30 neon-accent p-4 shadow mt-2 mb-3">
-        <div className="font-bold text-accent mb-1 flex items-center gap-2">
-          <span className="text-lg">🎯</span> Main Quest
-        </div>
-        <div className="text-brand-orange font-semibold mb-1">{goal ? goal : "No quest set."}</div>
-        <NeonButton onClick={() => setShowGoalModal(true)} variant="accent" className="px-4 py-2 mt-0 max-w-xs">
-          <span className="mr-1">📝</span>Change Main Quest
-        </NeonButton>
-      </div>
-    );
-  }
-
-  // Logout panel
-  function LogoutPanel() {
-    return (
-      <div className="flex justify-center my-6">
-        <NeonButton
-          onClick={() => setShowLogoutModal(true)}
-          variant="orange"
-          className="px-7 py-3 font-bold text-lg"
-        >
-          <span className="mr-2">🚪</span>Logout
-        </NeonButton>
-      </div>
-    );
-  }
-
-  // ======= Modals =======
-
-  function AnimateModal({ open, onClose, type }) {
-    let lottie = null, text = "", accent = "#7c3aed", icon = null;
-    if (type === "theme") {
-      lottie = DARK_LOTTIE;
-      accent = theme === "dark" ? "#2e19df" : "#fae264";
-      text =
-        theme === "dark"
-          ? "Darkness engulfs your journey…"
-          : theme === "light"
-            ? "Radiance lights your path!"
-            : "Magic will decide your theme!";
-      icon = theme === "dark" ? "🌌" : theme === "light" ? "🌞" : "🪄";
-    } else if (type === "animations") {
-      lottie = CONFIRM_LOTTIE;
-      text = animations
-        ? "Mystic animations are now ON!"
-        : "All animations muted. Reality stabilizes.";
-      accent = "#c084fc";
-      icon = "✨";
-    }
-    return (
-      <Modal open={open} onClose={onClose}>
-        <div className="flex flex-col items-center gap-2 text-center">
-          <FloatingOrb size={78} color={accent}>
-            <LottieAnim src={lottie} size={66} loop autoplay />
-          </FloatingOrb>
-          <div className="text-2xl font-bold text-accent my-2">{icon} {text}</div>
-        </div>
-      </Modal>
-    );
-  }
-
-  function GoalModal() {
-    return (
-      <Modal open={showGoalModal} onClose={() => setShowGoalModal(false)} title="Change Main Quest">
-        <div className="flex flex-col gap-2 items-center mt-2">
-          <LottieAnim src={GOAL_LOTTIE} size={54} autoplay loop={false} />
-          <div className="text-accent font-bold text-xl mb-1">Edit your main quest:</div>
+      {/* Goal modal & confirmation */}
+      <Modal
+        open={showGoalModal}
+        onClose={() => setShowGoalModal(false)}
+        title="Change Quest Goal"
+        style={{ minWidth: 320, ...neonGlow("#7c3aed") }}
+      >
+        <div className="text-center pb-3">
+          <LottieAnim name="quest" style={{ maxWidth: 160, margin: "auto" }} />
+          <p className="mb-4 text-white/75">
+            Set your new major goal—this will reboot your questline!
+          </p>
           <input
-            type="text"
-            className="w-full px-4 py-2 rpg-rounded border-2 border-accent/30 bg-black/60 text-white font-medium text-lg placeholder:text-textFaded shadow-sm mt-2"
-            style={{ maxWidth: 380 }}
+            className="w-full px-4 py-2 rounded-lg mb-4 border-2 border-accent focus:ring-2 outline-none text-xl bg-black/70"
+            placeholder="Enter your new Quest goal..."
             value={goalInput}
-            onChange={e => setGoalInput(e.target.value.slice(0, 128))}
-            placeholder="Describe your epic quest…"
-            maxLength={128}
+            onChange={e => setGoalInput(e.target.value)}
+            maxLength={120}
             autoFocus
           />
-          <div className="flex flex-row w-full justify-between gap-2 mt-3">
-            <NeonButton
-              variant="orange"
-              onClick={() => setShowGoalModal(false)}
-              className="flex-1"
-              type="button"
-            >Cancel</NeonButton>
-            <NeonButton
-              variant="accent"
-              onClick={handleGoalSave}
-              className="flex-1"
-              disabled={goalInput.trim() === "" || goalInput === goal || goalSaving}
-              type="button"
-            >
-              {goalSaving ? "Saving…" : "Save"}
-            </NeonButton>
-          </div>
+        </div>
+        <div className="flex gap-3 justify-center">
+          <NeonButton onClick={() => setShowGoalModal(false)} color="#888">
+            Cancel
+          </NeonButton>
+          <NeonButton
+            onClick={handleGoalSave}
+            color="#7c3aed"
+            disabled={!goalInput || goalInput.trim().length < 3}
+          >
+            Confirm Change
+          </NeonButton>
         </div>
       </Modal>
-    );
-  }
-
-  function LogoutModal() {
-    return (
-      <Modal open={showLogoutModal} onClose={() => setShowLogoutModal(false)} title="Confirm Logout">
-        <div className="flex flex-col items-center gap-4 mt-2">
-          <LottieAnim src={CONFIRM_LOTTIE} size={72} autoplay loop={false} />
-          <div className="text-xl font-bold text-red-400 mb-1">
-            Are you sure you want to logout?
-          </div>
-          <div className="text-textFaded text-sm">
-            Your journey is always saved. You can return anytime!
-          </div>
-          <div className="flex flex-row w-full gap-2 mt-1">
-            <NeonButton
-              variant="orange"
-              onClick={() => setShowLogoutModal(false)}
-              className="flex-1">Cancel</NeonButton>
-            <NeonButton
-              variant="accent"
-              onClick={handleLogout}
-              className="flex-1"
-              disabled={saving}>
-              {saving ? "Exiting…" : "Logout"}
-            </NeonButton>
-          </div>
+      <Modal
+        open={goalConfirmModal}
+        onClose={() => setGoalConfirmModal(false)}
+        title="Are you sure?"
+        style={{ minWidth: 320, ...neonGlow("#a5b4fc") }}
+      >
+        <div className="text-center pb-1">
+          <LottieAnim name="warning" style={{ maxWidth: 120, margin: "auto" }} />
+          <p className="mb-3 text-white/80">
+            Changing your quest will reset your current progress.<br />
+            <span className="text-accent font-bold">Continue?</span>
+          </p>
+        </div>
+        <div className="flex gap-3 justify-center">
+          <NeonButton onClick={() => setGoalConfirmModal(false)} color="#888">
+            Cancel
+          </NeonButton>
+          <NeonButton
+            onClick={reallyChangeGoal}
+            color="#7c3aed"
+          >
+            Start New Quest
+          </NeonButton>
         </div>
       </Modal>
-    );
-  }
 
-  // == Label helpers ==
-  function themeLabel(t) {
-    if (t === "auto") return "Auto";
-    if (t === "dark") return "Dark";
-    if (t === "light") return "Light";
-    return "Auto";
-  }
+      {/* Toast/animated feedback */}
+      <Toast show={toast.show} lottie={toast.lottie}>
+        <span className="font-fantasy text-xl text-glow">{toast.msg}</span>
+      </Toast>
 
-  // =========== RENDER ===========
-
-  return (
-    <div className="flex flex-col items-center min-h-[70vh] w-full max-w-2xl mx-auto animate-fadeIn pb-8">
-      {/* RPG Header */}
-      <div className="w-full flex flex-col items-center gap-2 mt-4 mb-4 select-none">
-        <div className="flex items-center justify-center mb-2">
-          <FloatingOrb size={68} color="#c084fc">
-            <LottieAnim src={SETTINGS_LOTTIE} size={54} autoplay loop />
-          </FloatingOrb>
-          <span className="ml-3 text-3xl font-extrabold neon-accent text-accent drop-shadow-lg tracking-wide font-poppins">
-            Settings
-          </span>
+      {/* Saving spinner overlay */}
+      {isSaving && (
+        <div className="fixed z-[100] inset-0 flex justify-center items-center bg-black/30 pointer-events-none">
+          <LottieAnim name="progress" style={{ width: 120, minHeight: 120 }} />
         </div>
-        <div className="text-brand-orange font-bold text-md -mt-0.5 text-center">
-          Tune your journey, hero. Everything syncs to your profile!
-        </div>
-      </div>
-      {/* Profile quick-bar (if exists) */}
-      <div className="flex items-center gap-4 bg-black/60 neon-accent px-5 py-2 rpg-rounded border border-accent/40 mb-6">
-        {profile?.onboarding?.avatarIdx != null ? (
-          <img
-            src={
-              [
-                "/src/assets/wizard_hero_01.png",
-                "/src/assets/witch_hero_01.png",
-                "/src/assets/knight_hero_01.png",
-              ][profile.onboarding.avatarIdx % 3] || DEMO_AVATAR
-            }
-            alt="Hero avatar"
-            className="w-14 h-14 rounded-full border-2 border-accent drop-shadow-md object-cover"
-            draggable={false}
-          />
-        ) : (
-          <img
-            src={DEMO_AVATAR}
-            alt="Avatar"
-            className="w-14 h-14 rounded-full border-2 border-accent"
-            draggable={false}
-          />
-        )}
-        <div className="flex flex-col font-bold text-white">
-          <span>
-            {profile?.displayName
-              ? profile.displayName
-              : (user && user.email ? user.email.split("@")[0] : "Adventurer")}
-          </span>
-          <span className="text-accent text-xs">
-            Level {game?.level ?? 1} • XP {game?.xp ?? 0}
-          </span>
-        </div>
-      </div>
+      )}
 
-      {/* Settings panels */}
-      <div className="w-full max-w-xl flex flex-col gap-4">
-        {/* Theme selector */}
-        <ThemeSelector />
-        {/* Animation toggle */}
-        <NeonSwitch
-          checked={animations}
-          onChange={handleAnimationsToggle}
-          label="Animations"
-          icon="✨"
-          accent="#c084fc"
-        />
-        {/* Main Quest goal */}
-        <GoalPanel />
-        {/* Logout */}
-        <LogoutPanel />
-      </div>
-
-      {/* Animate modals */}
-      <AnimateModal
-        open={showThemeModal}
-        onClose={() => setShowThemeModal(false)}
-        type="theme"
-      />
-      <AnimateModal
-        open={showAnimModal}
-        onClose={() => setShowAnimModal(false)}
-        type="animations"
-      />
-      {/* Confirm modals */}
-      <GoalModal />
-      <LogoutModal />
-
-      {/* Toast for feedback */}
-      <Toast
-        show={toast.show}
-        message={toast.msg}
-        type={toast.type}
-        onClose={() => setToast((t) => ({ ...t, show: false }))}
-      />
-
-      {/* RPG ANIM/CSS */}
-      <style>
-        {`
-        .rpg-rounded { border-radius: 16px; }
-        .neon-accent { box-shadow: 0 0 15px 2px #7c3aed44, 0 0 4px 2px #7c3aed; }
-        .animate-fadeIn { animation: fadeInSettings .66s cubic-bezier(.65,0,.35,1) both;}
-        @keyframes fadeInSettings { 0%{opacity:0;transform:translateY(36px) scale(.979);} 100%{opacity:1;transform:translateY(0) scale(1);} }
-        `}
-      </style>
+      {/* Decorative ambient assets (example) */}
+      <div className="pointer-events-none fixed left-0 bottom-0 w-screen h-48 opacity-35 select-none" style={{
+        background: "radial-gradient(circle at 90% 60%, #a56bff 0%, transparent 90%)",
+        zIndex: 1,
+      }}></div>
     </div>
   );
 }
