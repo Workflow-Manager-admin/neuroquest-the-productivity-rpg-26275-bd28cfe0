@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Player } from "@lottiefiles/react-lottie-player";
 // PUBLIC_INTERFACE
 /**
@@ -25,3 +26,10 @@ export default function LottieAnim({
     </div>
   );
 }
+
+LottieAnim.propTypes = {
+  src: PropTypes.string,
+  size: PropTypes.number,
+  loop: PropTypes.bool,
+  autoplay: PropTypes.bool,
+};
