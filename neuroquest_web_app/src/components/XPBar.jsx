@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 // PUBLIC_INTERFACE
 /**
@@ -27,3 +28,9 @@ export default function XPBar({ xp, maxXp, showPercent = true }) {
     </div>
   );
 }
+
+XPBar.propTypes = {
+  xp: PropTypes.number.isRequired,
+  maxXp: PropTypes.number.isRequired,
+  showPercent: PropTypes.bool
+};
