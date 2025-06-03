@@ -4,6 +4,7 @@ import Lottie from "lottie-react"; // Ensure 'lottie-react' is installed in your
 import lostPortal from "../assets/lostPortal.json";
 
 // NeonButton: import first tries shared button, fallback to local.
+import PropTypes from "prop-types";
 let NeonButton;
 try {
   // Try to import global NeonButton component if available
@@ -27,6 +28,11 @@ try {
       `}</style>
     </button>
   );
+  NeonButton.propTypes = {
+    children: PropTypes.node,
+    onClick: PropTypes.func,
+    className: PropTypes.string,
+  };
 }
 
 const NotFound = () => {
@@ -112,5 +118,6 @@ const NotFound = () => {
     </div>
   );
 };
+NotFound.displayName = "NotFound";
 
 export default NotFound;

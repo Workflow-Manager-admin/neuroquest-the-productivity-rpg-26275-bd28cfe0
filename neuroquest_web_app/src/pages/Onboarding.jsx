@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 import { useUser } from "../context/UserContext";
@@ -251,6 +252,10 @@ Final Quest: ... (the last challenge before victory!)
     );
   }
 
+  Stepper.propTypes = {
+    current: PropTypes.number.isRequired,
+  };
+
   // Step 1: Animated RPG Intro
   function StepIntro() {
     return (
@@ -277,6 +282,10 @@ Final Quest: ... (the last challenge before victory!)
       </div>
     );
   }
+
+  Stepper.propTypes = {
+    current: PropTypes.number.isRequired,
+  };
 
   // Step 2: Goal & Deadline UI
   function StepGoal() {
@@ -335,6 +344,10 @@ Final Quest: ... (the last challenge before victory!)
       </div>
     );
   }
+
+  Stepper.propTypes = {
+    current: PropTypes.number.isRequired,
+  };
 
   // Step 3: AvatarPicker + Roadmap Preview + Complete
   function StepAvatar() {
@@ -430,6 +443,10 @@ Final Quest: ... (the last challenge before victory!)
       </div>
     );
   }
+
+  Stepper.propTypes = {
+    current: PropTypes.number.isRequired,
+  };
 
   return (
     <div className="min-h-[83vh] flex flex-col items-center justify-center bg-gradient-to-b from-[#251947] via-[#120743] to-background pt-2 pb-4 py-7">

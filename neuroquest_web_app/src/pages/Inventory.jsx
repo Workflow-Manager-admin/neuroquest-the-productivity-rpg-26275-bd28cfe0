@@ -474,6 +474,19 @@ export default function Inventory() {
     );
   }
 
+  InventoryGrid.propTypes = {
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string,
+        image: PropTypes.string,
+        rarity: PropTypes.string,
+        unlocked: PropTypes.bool,
+        equipped: PropTypes.bool,
+        slot: PropTypes.string,
+      })
+    ),
+  };
+
   // Token panel (Soul tokens, etc)
   function TokenPanel() {
     const tokens = mergedInventory.filter((i) => i.slot === "token");
