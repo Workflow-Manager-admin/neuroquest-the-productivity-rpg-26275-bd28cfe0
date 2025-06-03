@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 /**
  * NeonButton – glowing, animated, responsive, disabled/variant support; fantasy pop with neon aura and ripple.
@@ -47,3 +48,11 @@ export default function NeonButton({
     </button>
   );
 }
+
+NeonButton.propTypes = {
+  onClick: PropTypes.func,
+  children: PropTypes.node.isRequired,
+  disabled: PropTypes.bool,
+  variant: PropTypes.string,
+  className: PropTypes.string,
+};

@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 /**
  * Avatar fantasy asset management:
  * - Current array uses placeholder URLs of fantasy avatars (public domain or open art).
@@ -78,3 +79,11 @@ export default function Avatar({
     </div>
   );
 }
+
+Avatar.propTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  size: PropTypes.number,
+  ringColor: PropTypes.string,
+  demoIndex: PropTypes.number,
+};
