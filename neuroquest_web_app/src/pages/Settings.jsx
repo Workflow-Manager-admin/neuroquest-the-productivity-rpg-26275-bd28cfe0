@@ -20,7 +20,9 @@ function neonGlow(color = "#7c3aed", blur = 12) {
   };
 }
 
-// Fancy switch (toggle) for RPG
+/**
+ * NeonSwitch - Toggle switch with neon styling.
+ */
 function NeonSwitch({ checked, onChange, label, asset, color = "#a5b4fc" }) {
   return (
     <label className="flex items-center gap-4 cursor-pointer group select-none" style={{ padding: 8 }}>
@@ -63,6 +65,14 @@ function NeonSwitch({ checked, onChange, label, asset, color = "#a5b4fc" }) {
     </label>
   );
 }
+
+NeonSwitch.propTypes = {
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  label: PropTypes.string.isRequired,
+  asset: PropTypes.string,
+  color: PropTypes.string,
+};
 
 // Main Settings Page
 // PUBLIC_INTERFACE
