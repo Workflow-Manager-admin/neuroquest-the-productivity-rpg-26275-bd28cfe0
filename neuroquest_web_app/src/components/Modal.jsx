@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 /**
  * Modal - Neon fantasy modal.
  * @param {boolean} open - Show/hide.
@@ -27,3 +28,10 @@ export default function Modal({ open, onClose, children, title }) {
     </div>
   );
 }
+
+Modal.propTypes = {
+  open: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  children: PropTypes.node,
+  title: PropTypes.string
+};
