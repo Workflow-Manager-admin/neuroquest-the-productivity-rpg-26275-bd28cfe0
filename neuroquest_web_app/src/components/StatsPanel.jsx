@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 /**
  * StatsPanel – compact grid: LV, Streak, XP, Coins.
  * @param {object} stats – { level, streak, xp, coins }
  */
- // PUBLIC_INTERFACE
+// PUBLIC_INTERFACE
 export default function StatsPanel({ stats }) {
   const { level, streak, xp, coins } = stats || {};
   return (
@@ -27,3 +28,12 @@ export default function StatsPanel({ stats }) {
     </div>
   );
 }
+
+StatsPanel.propTypes = {
+  stats: PropTypes.shape({
+    level: PropTypes.number,
+    streak: PropTypes.number,
+    xp: PropTypes.number,
+    coins: PropTypes.number
+  })
+};

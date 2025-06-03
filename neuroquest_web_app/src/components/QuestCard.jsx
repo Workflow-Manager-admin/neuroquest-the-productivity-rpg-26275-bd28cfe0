@@ -1,5 +1,6 @@
 import React from "react";
 import Avatar from "./Avatar";
+import PropTypes from "prop-types";
 /**
  * QuestCard - show quest title, XP, summary, optional art/zone/fantasy accent.
  * @param {string} title - Quest title.
@@ -12,7 +13,7 @@ import Avatar from "./Avatar";
  * @param {function} onClick - Handler for click/tap.
  * @param {boolean} completed - Status.
  */
- // PUBLIC_INTERFACE
+// PUBLIC_INTERFACE
 export default function QuestCard({
   title,
   description,
@@ -70,3 +71,12 @@ export default function QuestCard({
     </div>
   );
 }
+
+QuestCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  xp: PropTypes.number.isRequired,
+  icon: PropTypes.string,
+  onClick: PropTypes.func,
+  completed: PropTypes.bool
+};
