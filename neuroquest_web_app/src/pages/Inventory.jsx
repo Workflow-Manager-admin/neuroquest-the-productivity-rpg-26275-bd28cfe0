@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import { useGame } from "../context/GameContext";
 import { useUser } from "../context/UserContext";
 import NeonButton from "../components/NeonButton";
@@ -252,6 +253,32 @@ export default function Inventory() {
     );
   }
 
+  UnlockModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    lottie: PropTypes.string,
+    item: PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.string,
+      rarity: PropTypes.string,
+    }),
+    onClose: PropTypes.func.isRequired,
+  };
+
+  ItemModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    item: PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.string,
+      rarity: PropTypes.string,
+      description: PropTypes.string,
+      unlockReq: PropTypes.string,
+      unlocked: PropTypes.bool,
+      equipped: PropTypes.bool,
+      slot: PropTypes.string,
+    }),
+    onClose: PropTypes.func.isRequired,
+  };
+
   // Unlock/FX animation modal (Lottie)
   function UnlockModal({ open, lottie, item, onClose }) {
     if (!open || !lottie) return null;
@@ -290,6 +317,32 @@ export default function Inventory() {
       </Modal>
     );
   }
+
+  UnlockModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    lottie: PropTypes.string,
+    item: PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.string,
+      rarity: PropTypes.string,
+    }),
+    onClose: PropTypes.func.isRequired,
+  };
+
+  ItemModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    item: PropTypes.shape({
+      name: PropTypes.string,
+      image: PropTypes.string,
+      rarity: PropTypes.string,
+      description: PropTypes.string,
+      unlockReq: PropTypes.string,
+      unlocked: PropTypes.bool,
+      equipped: PropTypes.bool,
+      slot: PropTypes.string,
+    }),
+    onClose: PropTypes.func.isRequired,
+  };
 
   // Rarity selector
   function RarityFilters() {
