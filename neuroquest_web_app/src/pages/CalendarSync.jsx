@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import NeonButton from "../components/NeonButton";
 import Toast from "../components/Toast";
@@ -45,7 +46,6 @@ function loadGapiScript() {
   });
 }
 
-import PropTypes from "prop-types";
 // Fantasy RPG event card
 function RPGEventCard({ event, color, onBoss, bossStatus, pushing }) {
   return (
@@ -513,22 +513,3 @@ export default function CalendarSync() {
     </div>
   );
 }
-
-RPGEventCard.propTypes = {
-  event: PropTypes.shape({
-    summary: PropTypes.string,
-    startStr: PropTypes.string,
-    endStr: PropTypes.string,
-    location: PropTypes.string,
-    isBossBattle: PropTypes.bool,
-    canPush: PropTypes.bool,
-    pushToCalendar: PropTypes.func,
-    description: PropTypes.string,
-    id: PropTypes.any,
-    color: PropTypes.string,
-  }).isRequired,
-  color: PropTypes.string.isRequired,
-  onBoss: PropTypes.func.isRequired,
-  bossStatus: PropTypes.string,
-  pushing: PropTypes.bool,
-};
