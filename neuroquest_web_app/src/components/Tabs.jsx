@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 /**
  * Tabs – animated neon-glow RPG/fantasy tabs, mobile-optimized and immersive.
  * @param {string[]} tabs - Array of tab names.
@@ -64,3 +65,11 @@ export default function Tabs({
     </div>
   );
 }
+
+Tabs.propTypes = {
+  tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
+  defaultIndex: PropTypes.number,
+  onChange: PropTypes.func,
+  children: PropTypes.node,
+  size: PropTypes.string
+};
