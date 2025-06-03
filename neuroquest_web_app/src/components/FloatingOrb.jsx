@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 /**
  * FloatingOrb - glowing, fantastical float anim, inner glow, RPG orb with child icons or Lottie
  * @param {React.ReactNode} children - Content inside the orb (icon/XP/Lottie etc).
@@ -53,3 +54,9 @@ export default function FloatingOrb({ children, size = 72, color = "#7c3aed" }) 
     </div>
   );
 }
+
+FloatingOrb.propTypes = {
+  children: PropTypes.node,
+  size: PropTypes.number,
+  color: PropTypes.string,
+};
