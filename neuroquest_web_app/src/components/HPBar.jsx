@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 // PUBLIC_INTERFACE
 /**
  * HPBar RPG-style, neon-glow, with %/abs support and animated.
@@ -25,3 +26,9 @@ export default function HPBar({ hp, maxHp = 100, showPercent = true }) {
     </div>
   );
 }
+
+HPBar.propTypes = {
+  hp: PropTypes.number.isRequired,
+  maxHp: PropTypes.number,
+  showPercent: PropTypes.bool
+};
