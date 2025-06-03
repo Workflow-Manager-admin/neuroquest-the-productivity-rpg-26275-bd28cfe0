@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 /**
  * ZoneCard – RPG fantasy zone: glow frame, zone art bg, responsive, immersive.
  * @param {string} name - Name of the zone
@@ -63,3 +64,10 @@ export default function ZoneCard({ name, description, image, onClick }) {
     </div>
   );
 }
+
+ZoneCard.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.string,
+  onClick: PropTypes.func
+};
