@@ -13,21 +13,24 @@ try {
   NeonButton = require("../components/NeonButton").default;
 } catch {
   // Fallback: define a local neon button if the shared isn't available
-  NeonButton = ({ children, onClick, className = "", ...props }) => (
-    <button
-      className={`px-7 py-3 bg-gradient-to-tr from-violet-700 to-fuchsia-600 border-2 border-fuchsia-300 rounded-lg neon-glow text-fuchsia-100 shadow-xl transition-all focus:outline-none hover:brightness-125 focus:ring-2 focus:ring-fuchsia-400 font-bold text-lg ${className}`}
-      onClick={onClick}
-      {...props}
-    >
-      {children}
-      <style>{`
-      .neon-glow {
-        box-shadow: 0 0 12px #910ad9, 0 0 32px #910ad97c, 0 0 2px #fff inset;
-        text-shadow: 0 0 6px #fc86ff, 0 0 12px #9663db;
-      }
-      `}</style>
-    </button>
-  );
+  NeonButton = function NeonButton({ children, onClick, className = "", ...props }) {
+    return (
+      <button
+        className={`px-7 py-3 bg-gradient-to-tr from-violet-700 to-fuchsia-600 border-2 border-fuchsia-300 rounded-lg neon-glow text-fuchsia-100 shadow-xl transition-all focus:outline-none hover:brightness-125 focus:ring-2 focus:ring-fuchsia-400 font-bold text-lg ${className}`}
+        onClick={onClick}
+        {...props}
+      >
+        {children}
+        <style>{`
+        .neon-glow {
+          box-shadow: 0 0 12px #910ad9, 0 0 32px #910ad97c, 0 0 2px #fff inset;
+          text-shadow: 0 0 6px #fc86ff, 0 0 12px #9663db;
+        }
+        `}</style>
+      </button>
+    );
+  };
+  NeonButton.displayName = "NeonButton";
   NeonButton.propTypes = {
     children: PropTypes.node,
     onClick: PropTypes.func,
