@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
-import { UserContext } from "../context/UserContext";
-import { GameContext } from "../context/GameContext";
+import React, { useState } from "react";
+import { useUser } from "../context/UserContext";
+import { useGame } from "../context/GameContext";
 import Modal from "../components/Modal";
 import LottieAnim from "../components/LottieAnim";
 import NeonButton from "../components/NeonButton";
@@ -67,8 +67,15 @@ function NeonSwitch({ checked, onChange, label, asset, color = "#a5b4fc" }) {
 // PUBLIC_INTERFACE
 export default function Settings() {
   // User and global preferences context
-  const { user, logout: contextLogout } = useContext(UserContext);
-  const { preferences, setPreferences } = useContext(GameContext);
+  const { user, logout: contextLogout } = useUser();
+  const { game, updateGame, loading: gameLoading, ...gameRest } = useGame();
+  // Preferences may come from game or separate mechanism:
+  // (for now retain original variable logic, fallback if undefined)
+  const preferences = game && game.preferences ? game.preferences : {};
+  const setPreferences = (newPrefs) => {
+    // fallback setter if needed
+    updateGame({ preferences: newPrefs });
+  };
 
   // Local state for toggles/modals
   const [darkMode, setDarkMode] = useState(preferences.darkMode ?? false);
