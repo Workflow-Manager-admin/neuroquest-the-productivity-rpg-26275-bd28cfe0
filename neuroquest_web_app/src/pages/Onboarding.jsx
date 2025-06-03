@@ -174,13 +174,13 @@ Final Quest: ... (the last challenge before victory!)
       "Step 1: The questmaster grows tired and refuses to answer.";
     // Parse into array of quest steps
     return text
-      .split(/
-+/)
+      // Split by newlines for safety; fix any unterminated regex by being explicit:
+      .split(/\n+/g)
       .map((s) =>
         s
-          .replace(/^\d+\.\s*/, "")
-          .replace(/^Step \d+: ?/, "")
-          .replace(/^Final Quest: ?/, "")
+          .replace(/^(\d+)\.\s*/, "")
+          .replace(/^Step\s*\d+:?\s*/, "")
+          .replace(/^Final Quest:?\s*/, "")
           .trim()
       )
       .filter(Boolean);
