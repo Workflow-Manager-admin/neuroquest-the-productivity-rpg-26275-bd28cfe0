@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { useUser } from "../context/UserContext";
 import { useGame } from "../context/GameContext";
 import Modal from "../components/Modal";

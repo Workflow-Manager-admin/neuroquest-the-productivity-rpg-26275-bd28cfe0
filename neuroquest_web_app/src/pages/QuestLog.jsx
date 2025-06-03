@@ -406,6 +406,20 @@ export default function QuestLog() {
     );
   }
 
+  QuestModal.propTypes = {
+    open: PropTypes.bool.isRequired,
+    onClose: PropTypes.func.isRequired,
+    quest: PropTypes.shape({
+      id: PropTypes.string,
+      section: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      xp: PropTypes.number,
+    }),
+    onSave: PropTypes.func.isRequired,
+    onDelete: PropTypes.func.isRequired,
+  };
+
   // ========== Render ==========
 
   return (
