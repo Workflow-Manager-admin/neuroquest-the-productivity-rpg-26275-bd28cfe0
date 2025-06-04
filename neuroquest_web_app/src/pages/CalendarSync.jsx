@@ -5,6 +5,7 @@ import Toast from "../components/Toast";
 import FloatingOrb from "../components/FloatingOrb";
 import Modal from "../components/Modal";
 import { useGame } from "../context/GameContext";
+import { useAudio } from "../components/AudioPlayer";
 
 // Google APIs
 // Note: OAuth is not persisted for long, so refresh if page reloads.
@@ -140,13 +141,18 @@ RPGEventCard.propTypes = {
   pushing: PropTypes.bool,
 };
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 /**
  * CalendarSync - RPG themed Google Calendar bi-directional sync
  */
 export default function CalendarSync() {
   // removed gapiLoaded, user, db (no-unused-vars)
   const [authInst, setAuthInst] = useState(null);
+  const { switchTheme } = useAudio();
+  useEffect(() => {
+    switchTheme("dashboard");
+    // eslint-disable-next-line
+  }, []);
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(false);
