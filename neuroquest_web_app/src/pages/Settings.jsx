@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useUser } from "../context/UserContext";
 import { useGame } from "../context/GameContext";
+import { useApiKey } from "../context/ApiKeyContext";
 import Modal from "../components/Modal";
 import LottieAnim from "../components/LottieAnim";
 import NeonButton from "../components/NeonButton";
 import Toast from "../components/Toast";
-// Import fantasy/scifi assets below as you add them (e.g., import fantasyBackdrop from "../assets/fantasy_bg.svg";)
-// Required Firebase dependencies
 import { getAuth, signOut } from "firebase/auth";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
 
@@ -74,17 +73,19 @@ NeonSwitch.propTypes = {
   color: PropTypes.string,
 };
 
-// Main Settings Page
 // PUBLIC_INTERFACE
+/**
+ * Settings page including Theme, Quest Goal, Logout and API Key management.
+ */
 export default function Settings() {
   // User and global preferences context
   const { user, logout: contextLogout } = useUser();
-  const { game, updateGame, loading: gameLoading, ...gameRest } = useGame();
-  // Preferences may come from game or separate mechanism:
-  // (for now retain original variable logic, fallback if undefined)
+  const { game, updateGame, loading: gameLoading } = useGame();
+  const { apiKey, setApiKey, clearApiKey, getKey } = useApiKey();
+
+  // Preferences from context/game
   const preferences = game && game.preferences ? game.preferences : {};
   const setPreferences = (newPrefs) => {
-    // fallback setter if needed
     updateGame({ preferences: newPrefs });
   };
 
@@ -97,9 +98,13 @@ export default function Settings() {
   const [toast, setToast] = useState({ show: false, msg: "", lottie: null });
   const [goalConfirmModal, setGoalConfirmModal] = useState(false);
 
-  // Firebase
-  const db = getFirestore();
-  const auth = getAuth();
+  // === API KEY STATE
+  // Store UI textbox value separately for controlled edit UX
+  const [apiKeyInput, setApiKeyInput] = useState(apiKey ?? "");
+  const [apiKeyTouched, setApiKeyTouched] = useState(false);
+  const [apiKeyError, setApiKeyError] = useState("");
+  const [apiKeySaveSuccess, setApiKeySaveSuccess] = useState(false);
+  const [apiKeyShow, setApiKeyShow] = useState(false); // For "show/hide" toggle
 
   // Neon-glow feedback
   function showFeedback(msg, lottie) {
@@ -111,11 +116,10 @@ export default function Settings() {
   async function savePreferences(updates) {
     setIsSaving(true);
     try {
-      // Merge updates into local state/context
       const newPrefs = { ...preferences, ...updates };
       setPreferences(newPrefs);
-      // Save to Firestore
       if (user?.uid) {
+        const db = getFirestore();
         await setDoc(doc(db, "users", user.uid), { preferences: newPrefs }, { merge: true });
       }
       showFeedback("Preferences saved!", "sparkle");
@@ -143,26 +147,25 @@ export default function Settings() {
     });
   };
 
-  // Goal changing logic
+  // Goal change logic
   const handleGoalSave = async () => {
-    // Confirmation modal step
     setGoalConfirmModal(true);
   };
   const reallyChangeGoal = async () => {
     setShowGoalModal(false);
     setGoalConfirmModal(false);
     await savePreferences({ majorGoal: goalInput });
-    showFeedback("Quest goal updated!", "levelup"); // Fun RPG Lottie
+    showFeedback("Quest goal updated!", "levelup");
   };
 
   // Logout
   const handleLogout = async () => {
     setIsSaving(true);
     try {
+      const auth = getAuth();
       await signOut(auth);
       contextLogout && contextLogout();
       showFeedback("Logged out!", "logoff");
-      // Could also redirect to /login if router available
     } catch {
       showFeedback("Logout failed.", "error");
     } finally {
@@ -170,7 +173,7 @@ export default function Settings() {
     }
   };
 
-  // Panel backgrounds & assets
+  // RPG theme for setting section panel
   const panelStyle = (color) => ({
     borderRadius: "1rem",
     padding: "2rem",
@@ -183,7 +186,179 @@ export default function Settings() {
     minWidth: 280,
   });
 
-  // Responsive/fantasy header
+  // === API KEY HANDLER LOGIC ===
+  // Trim, basic validation - accepts OpenAI/user variants ("sk-...", minimum 20 chars)
+  function validateKey(key) {
+    if (!key) return "";
+    if (!/^sk-\w{16,}/.test(key.trim())) return "Enter a valid OpenAI API key (sk-...).";
+    if (key.trim().length < 20) return "API key too short.";
+    if (key.match(/[\s\t\n]/)) return "API key cannot contain spaces.";
+    return "";
+  }
+
+  const handleApiKeyInput = (e) => {
+    const val = e.target.value;
+    setApiKeyInput(val);
+    setApiKeyTouched(true);
+    setApiKeyError(validateKey(val));
+    setApiKeySaveSuccess(false);
+  };
+
+  // Save key to context/localStorage via ApiKeyContext
+  const handleApiKeySave = () => {
+    const clean = apiKeyInput.trim();
+    const err = validateKey(clean);
+    setApiKeyError(err);
+    setApiKeyTouched(true);
+    setApiKeySaveSuccess(false);
+    if (!err) {
+      setApiKey(clean);
+      setApiKeySaveSuccess(true);
+      showFeedback("API key saved! You are ready for magic.", "sparkle");
+    }
+  };
+
+  // Clear/remove API key and revert to .env fallback
+  const handleApiKeyClear = () => {
+    clearApiKey();
+    setApiKeyInput("");
+    setApiKeyTouched(false);
+    setApiKeyError("");
+    setApiKeySaveSuccess(true);
+    showFeedback("API key cleared. Now using default key.", "levelup");
+  };
+
+  // Masked value for current key
+  function maskedApiKeyValue(key) {
+    if (!key) return "";
+    const shown = key.slice(0, 4) + "-****-****-" + key.slice(-4);
+    return shown;
+  }
+
+  // RPG UI panel for API key upload/management
+  function ApiKeyPanel() {
+    const effectiveKey = getKey();
+    return (
+      <div style={panelStyle("#4ade80")}>
+        <div className="flex items-center gap-6 mb-3">
+          <img
+            src={"https://cdn.jsdelivr.net/gh/twitter/twemoji/assets/svg/1f528.svg"}
+            alt="Magic Key"
+            className="w-10 h-10"
+            draggable={false}
+          />
+          <h2 className="text-2xl font-semibold" style={neonGlow("#26e1b3")}>
+            AI Magic Key
+          </h2>
+        </div>
+        <div className="mb-2 text-white/80 text-base">
+          Enter your personal <span className="text-accent font-bold">OpenAI API Key</span>.<br />
+          Stored only in your browser. Never leaves your device. Switchable at any time!
+        </div>
+        <form
+          className="flex flex-col gap-3 mt-4"
+          onSubmit={e => { e.preventDefault(); handleApiKeySave(); }}
+          autoComplete="off"
+        >
+          <div className="relative mb-2">
+            <label
+              htmlFor="apikey-box"
+              className="block text-accent text-lg font-bold mb-1"
+            >
+              {apiKey ? "Your API Key" : "Enter API Key"}
+            </label>
+            <input
+              type={apiKeyShow ? "text" : "password"}
+              id="apikey-box"
+              name="apikey"
+              placeholder="sk-..."
+              value={apiKeyInput}
+              onChange={handleApiKeyInput}
+              minLength={20}
+              autoFocus={apiKey == null}
+              autoComplete="off"
+              className={`w-full px-5 py-3 rpg-rounded border-2 ${
+                apiKeyError ? "border-red-500" : "border-accent/60"
+              } bg-black/80 text-white font-mono text-lg focus:border-accent transition placeholder:text-textFaded`}
+              style={neonGlow(apiKeyError ? "#f87171" : "#74efc4", 10)}
+              onBlur={() => setApiKeyTouched(true)}
+              spellCheck={false}
+            />
+            {/* Show/hide password button */}
+            <button
+              type="button"
+              onClick={() => setApiKeyShow(s => !s)}
+              aria-label={apiKeyShow ? "Hide" : "Show"}
+              tabIndex={0}
+              className="absolute right-2 top-1/2 -translate-y-1/2 rounded p-1 text-accent bg-black/30 hover:bg-accent/30"
+            >
+              {apiKeyShow ? "🙈" : "👁️"}
+            </button>
+          </div>
+          {/* Validation/Error/Success Message */}
+          {apiKeyTouched && apiKeyError && (
+            <div className="text-red-400 font-bold text-sm mb-1 animate-pulse">{apiKeyError}</div>
+          )}
+          {apiKeySaveSuccess && (
+            <div className="text-green-400 font-bold text-md mb-1 animate-bounce">
+              Saved! Your key unlocks full AI quest magic. 🪄
+            </div>
+          )}
+          <div className="flex flex-row gap-4 justify-center mt-2">
+            <NeonButton
+              type="submit"
+              variant="accent"
+              disabled={!!apiKeyError || !apiKeyInput.trim()}
+              className="px-7 py-2 font-semibold text-lg"
+              style={{ minWidth: 115 }}
+            >
+              Save Key
+            </NeonButton>
+            <NeonButton
+              type="button"
+              variant="orange"
+              color="#e87a41"
+              disabled={!apiKey}
+              className={"px-5 py-2 font-semibold text-lg"}
+              onClick={handleApiKeyClear}
+              style={{ minWidth: 115, marginLeft: 2 }}
+            >
+              Clear Key
+            </NeonButton>
+          </div>
+        </form>
+        {/* RPG-style effective key (masked) */}
+        {effectiveKey && (
+          <div className="mt-4 text-white/70 text-sm text-center">
+            <span className="font-bold text-accent" style={{ letterSpacing: "0.05em" }}>
+              Using Key:&nbsp;
+            </span>
+            <span className="font-mono select-all text-green-300">
+              {maskedApiKeyValue(effectiveKey)}
+            </span>
+            {apiKey ? (
+              <span className="ml-2 text-brand-orange font-semibold">(Yours)</span>
+            ) : (
+              <span className="ml-2 text-cyan-300 font-semibold">(Default key)</span>
+            )}
+          </div>
+        )}
+        <div className="text-xs text-brand-orange mt-5 italic text-center">
+          For OpenAI/AI features only. Never share your key! &nbsp;
+          <a
+            href="https://platform.openai.com/account/api-keys"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-accent hover:text-white font-bold"
+          >
+            Get an API Key
+          </a>
+        </div>
+      </div>
+    );
+  }
+
+  // ==== COMPONENT RENDER ====
   return (
     <div
       className="min-h-screen px-2 md:px-10 py-10 flex flex-col items-center bg-gradient-to-bl from-gray-950/90 to-violet-900/80"
@@ -208,7 +383,7 @@ export default function Settings() {
 
       {/* Main Settings Sections */}
       <div className="w-full max-w-2xl space-y-10">
-        {/* Theme toggle */}
+        {/* Theme toggle panel */}
         <div style={panelStyle("#60f7f9")}>
           <div className="flex items-center gap-6 mb-3">
             <img
@@ -238,6 +413,9 @@ export default function Settings() {
             />
           </div>
         </div>
+
+        {/* API Key Upload Panel (NEW) */}
+        <ApiKeyPanel />
 
         {/* Major goal panel */}
         <div style={panelStyle("#7c3aed")}>
