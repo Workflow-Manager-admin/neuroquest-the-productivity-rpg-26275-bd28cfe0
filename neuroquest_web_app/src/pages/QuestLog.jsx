@@ -252,10 +252,9 @@ export default function QuestLog() {
     setAiLoading(true);
     const prompt = `Rewrite this productivity quest as an epic fantasy RPG objective. Keep it motivating, concise, and full of magic:
 "${quest.title}: ${quest.description}"`;
-    // REQUIRED: Set REACT_APP_OPENAI_API_KEY in your .env for OpenAI GPT features.
-    // Example: REACT_APP_OPENAI_API_KEY=sk-xxxx...
-    // No window/global fallback is provided.
-    let apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
+    // Securely get the key using the required pattern: from runtime context (user-supplied if present), with fallback to .env, via getKey().
+    let apiKey = getKey();
     if (!apiKey) {
       // Dev fallback—just add "The Legendary" to title
       setTimeout(() => {
