@@ -54,7 +54,7 @@ export function GameProvider({ children }) {
         }
         setLoading(false);
       },
-      (err) => {
+      () => {
         // If Firestore is unreachable, fall back to localStorage
         const cached = window.localStorage.getItem("game");
         if (cached) setGame(JSON.parse(cached));

@@ -61,7 +61,9 @@ export function ApiKeyProvider({ children }) {
       try {
         const ls = window.localStorage.getItem(STORAGE_KEY);
         if (ls && typeof ls === "string") return ls;
-      } catch {}
+      } catch (err) {
+        // Swallow error if localStorage is not accessible
+      }
     }
     return "";
   });
@@ -72,7 +74,9 @@ export function ApiKeyProvider({ children }) {
       try {
         const ls = window.localStorage.getItem(STORAGE_KEY);
         if (ls && typeof ls === "string") setApiKeyState(ls);
-      } catch {}
+      } catch (err) {
+        // Ignore localStorage hydration failure
+      }
     }
     // No deps: runs once
     // eslint-disable-next-line
@@ -87,7 +91,9 @@ export function ApiKeyProvider({ children }) {
         } else {
           window.localStorage.removeItem(STORAGE_KEY);
         }
-      } catch {}
+      } catch (err) {
+        // Ignore localStorage set failure
+      }
     }
   }, [apiKey]);
 
