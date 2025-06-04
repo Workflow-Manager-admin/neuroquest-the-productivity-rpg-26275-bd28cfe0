@@ -110,3 +110,55 @@ src/pages/LoginPage.jsx
   Line 1:11:  'setTimeout' is already defined as a built-in global variable  no-redeclare
 
 webpack compiled with 2 warnings
+Compiling...
+Compiled with warnings.
+
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+[eslint] 
+src/context/UserContext.jsx
+  Line 119:3:  'firebaseApp' is assigned a value but never used  no-unused-vars
+
+src/pages/LoginPage.jsx
+  Line 1:11:  'setTimeout' is already defined as a built-in global variable  no-redeclare
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./src/context/UserContext.jsx 32:37-48
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+WARNING in [eslint] 
+src/context/UserContext.jsx
+  Line 119:3:  'firebaseApp' is assigned a value but never used  no-unused-vars
+
+src/pages/LoginPage.jsx
+  Line 1:11:  'setTimeout' is already defined as a built-in global variable  no-redeclare
+
+webpack compiled with 2 warnings
+Compiling...
+Compiled with warnings.
+
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+[eslint] 
+src/context/UserContext.jsx
+  Line 119:3:  'firebaseApp' is assigned a value but never used  no-unused-vars
+
+src/pages/LoginPage.jsx
+  Line 1:11:  'setTimeout' is already defined as a built-in global variable  no-redeclare
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in ./src/context/UserContext.jsx 32:37-48
+Critical dependency: Accessing import.meta directly is unsupported (only property access or destructuring is supported)
+
+WARNING in [eslint] 
+src/context/UserContext.jsx
+  Line 119:3:  'firebaseApp' is assigned a value but never used  no-unused-vars
+
+src/pages/LoginPage.jsx
+  Line 1:11:  'setTimeout' is already defined as a built-in global variable  no-redeclare
+
+webpack compiled with 2 warnings

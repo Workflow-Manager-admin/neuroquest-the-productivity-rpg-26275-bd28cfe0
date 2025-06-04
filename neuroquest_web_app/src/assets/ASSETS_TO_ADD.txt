@@ -1,17 +1,2801 @@
-// The following asset files (placeholders or final) should be downloaded or replaced with your own fantasy PNGs/SVGs:
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+T# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+y# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+y# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+P# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+N# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+G# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+S# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+V# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+G# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+:# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
 
-sword.png              # Fantasy sword (Opengameart)
-shield.png             # RPG shield (Opengameart)
-orb.png                # Magic orb (AI generated)
-wizard_hero_01.png     # Wizard avatar (Opengameart)
-witch_hero_01.png      # Witch avatar (Opengameart)
-knight_hero_01.png     # Knight avatar (Opengameart)
-hero_banner.png        # Hero landing/banner (Unsplash, DALL·E, or own art)
-zone_forest.png        # Fantasy forest landscape (Unsplash, Opengameart)
-zone_dungeon.png       # Dungeon zone bg (Opengameart)
-zone_hills.png         # Fantasy hills (Unsplash)
-boss_dragon.png        # Dragon boss (Opengameart, DALL·E)
-quest_scroll.png       # Scroll/quest icon (Opengameart)
-lost_portal.png        # Portal/404 "lost" art (AI, Lottie, or PNG)
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
 
-# For best experience, fill in your own PNGs/SVGs here!
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+F# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+y# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+R# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+P# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+G# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+M# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+A# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+I# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+z# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+0# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+1# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+W# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+z# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+v# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+0# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+1# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+W# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+v# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+k# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+0# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+1# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+K# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+v# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+H# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+U# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+D# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+A# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+L# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+L# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+·# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+E# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+z# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+F# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+y# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+U# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+z# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+D# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+z# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+z# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+F# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+y# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+U# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+d# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+D# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+D# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+A# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+L# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+L# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+·# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+E# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+q# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+S# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+q# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+O# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+m# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+_# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+.# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+g# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+P# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+4# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+0# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+4# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+"# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+"# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+a# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+(# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+A# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+I# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+L# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+P# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+N# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+G# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+)# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+## For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+F# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+b# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+t# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+x# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+p# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+c# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+,# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+f# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+l# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+i# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+y# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+u# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+o# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+w# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+n# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+P# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+N# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+G# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+/# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+S# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+V# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+G# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+s# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+ # For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+h# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+r# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+e# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+!# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
+
+# For global looping RPG background music, add your fantasy/epic mp3 here.
+# Example: bg_rpg_theme.mp3
+# Update DEFAULT_BGM in /src/components/AudioPlayer.jsx if file name is different.
