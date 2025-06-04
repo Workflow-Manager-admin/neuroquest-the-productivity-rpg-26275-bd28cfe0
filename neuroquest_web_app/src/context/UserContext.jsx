@@ -4,29 +4,36 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
-/*
- * REQUIRED: Set all required Firebase values in your .env file!
- * Example:
- *   REACT_APP_FIREBASE_API_KEY=... 
- *   REACT_APP_FIREBASE_AUTH_DOMAIN=...
- *   REACT_APP_FIREBASE_PROJECT_ID=...
- *   REACT_APP_FIREBASE_STORAGE_BUCKET=...
- *   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=...
- *   REACT_APP_FIREBASE_APP_ID=...
+/**
+ * Firebase configuration for NeuroQuest.
+ * 
+ * REQUIRED: You must set the following variables in your .env before running the app:
+ * - REACT_APP_FIREBASE_API_KEY
+ * - REACT_APP_FIREBASE_AUTH_DOMAIN
+ * - REACT_APP_FIREBASE_PROJECT_ID
+ * - REACT_APP_FIREBASE_STORAGE_BUCKET
+ * - REACT_APP_FIREBASE_MESSAGING_SENDER_ID
+ * - REACT_APP_FIREBASE_APP_ID
+ * - (optional for analytics) REACT_APP_FIREBASE_MEASUREMENT_ID
+ * 
+ * These should be copied from your Firebase Console, never hardcoded.
  */
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY, // required
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN, // required
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID, // required
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET, // required
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID, // required
+  appId: process.env.REACT_APP_FIREBASE_APP_ID, // required
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID, // optional (for analytics)
 };
+
+// Initialize Firebase app (singleton)
 let firebaseApp;
 try {
   firebaseApp = initializeApp(firebaseConfig);
 } catch (e) {
-  // Already initialized
+  // App may already be initialized; ignore error.
 }
 const auth = getAuth();
 const db = getFirestore();
