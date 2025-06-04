@@ -1,6 +1,7 @@
+/* global fetch, setTimeout */
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import { getFirestore, doc, setDoc, getDoc, updateDoc, deleteField } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import { useGame } from "../context/GameContext";
 import { useUser } from "../context/UserContext";
 import QuestCard from "../components/QuestCard";

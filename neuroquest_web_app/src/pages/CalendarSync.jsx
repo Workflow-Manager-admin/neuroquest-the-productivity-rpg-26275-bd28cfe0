@@ -1,3 +1,4 @@
+/* global process */
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import NeonButton from "../components/NeonButton";
@@ -6,7 +7,6 @@ import FloatingOrb from "../components/FloatingOrb";
 import Modal from "../components/Modal";
 import { useUser } from "../context/UserContext";
 import { useGame } from "../context/GameContext";
-import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 // Google APIs
 // Note: OAuth is not persisted for long, so refresh if page reloads.

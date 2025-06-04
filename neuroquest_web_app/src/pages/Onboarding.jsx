@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
+/* global setTimeout, clearTimeout, fetch, process */
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { getFirestore, doc, setDoc } from "firebase/firestore";
