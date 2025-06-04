@@ -14,10 +14,11 @@ const SCOPES =
   "https://www.googleapis.com/auth/calendar.events https://www.googleapis.com/auth/calendar.readonly";
 const DISCOVERY_DOC =
   "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest";
-const CLIENT_ID =
-  process.env.REACT_APP_GOOGLE_CLIENT_ID ||
-  window.GCAL_CLIENT_ID ||
-  "your-google-client-id.apps.googleusercontent.com"; // <-- Replace with production value.
+/*
+ * REQUIRED: Set REACT_APP_GOOGLE_CLIENT_ID in your .env for Google Calendar sync features.
+ * Example: REACT_APP_GOOGLE_CLIENT_ID=xxxx-xxxxxxxxxxxxx.apps.googleusercontent.com
+ */
+const CLIENT_ID = process.env.REACT_APP_GOOGLE_CLIENT_ID;
 
 // Fantasy themed color palette for events
 const EVENT_COLORS = [

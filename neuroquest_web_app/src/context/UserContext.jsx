@@ -4,15 +4,23 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
-// Initialize Firebase (replace with env/config if present)
+/*
+ * REQUIRED: Set all required Firebase values in your .env file!
+ * Example:
+ *   REACT_APP_FIREBASE_API_KEY=... 
+ *   REACT_APP_FIREBASE_AUTH_DOMAIN=...
+ *   REACT_APP_FIREBASE_PROJECT_ID=...
+ *   REACT_APP_FIREBASE_STORAGE_BUCKET=...
+ *   REACT_APP_FIREBASE_MESSAGING_SENDER_ID=...
+ *   REACT_APP_FIREBASE_APP_ID=...
+ */
 const firebaseConfig = {
-  // TODO: Replace with env vars or config object if available
-  apiKey: "dummy",
-  authDomain: "dummy",
-  projectId: "dummy",
-  storageBucket: "dummy",
-  messagingSenderId: "dummy",
-  appId: "dummy"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 let firebaseApp;
 try {
