@@ -8,7 +8,7 @@ import PropTypes from "prop-types";
  * @param {React.ReactNode[]} children - One child per tab.
  * @param {string} size - sm, md, lg
  */
- // PUBLIC_INTERFACE
+// PUBLIC_INTERFACE
 export default function Tabs({
   tabs,
   defaultIndex = 0,
@@ -26,7 +26,7 @@ export default function Tabs({
 
   return (
     <div>
-      <nav className="flex gap-2 mb-3">
+      <nav className="flex gap-2 mb-3" role="tablist">
         {tabs.map((tab, idx) => (
           <button
             key={tab}
@@ -45,7 +45,10 @@ export default function Tabs({
               onChange && onChange(idx);
             }}
             type="button"
+            role="tab"
             aria-selected={idx === current}
+            aria-controls={`tabpanel-${idx}`}
+            id={`tab-${idx}`}
           >
             <span className="relative z-10">{tab}</span>
             {/* Fantastical neon flicker on active tab */}
@@ -61,7 +64,14 @@ export default function Tabs({
           </button>
         ))}
       </nav>
-      <div>{Array.isArray(children) ? children[current] : children}</div>
+      <div
+        id={`tabpanel-${current}`}
+        role="tabpanel"
+        tabIndex={0}
+        aria-labelledby={`tab-${current}`}
+      >
+        {Array.isArray(children) ? children[current] : children}
+      </div>
     </div>
   );
 }
