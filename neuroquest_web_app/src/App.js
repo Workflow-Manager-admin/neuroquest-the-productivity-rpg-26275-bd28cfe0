@@ -5,6 +5,7 @@ import MainLayout from './layout/MainLayout';
 // Global Theme and Audio customization providers
 import { ThemeProvider } from "./theme/ThemeProvider";
 import { AudioProvider } from "./components/AudioPlayer";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 // Pages (placeholders are lazy-loaded)
 const Login = React.lazy(() => import('./pages/LoginPage'));
@@ -29,23 +30,25 @@ function App() {
     <ThemeProvider>
       <AudioProvider>
         <Router>
-          <React.Suspense fallback={<div className="text-accent p-8 text-center neon-accent">Loading...</div>}>
-            <Routes>
-              <Route element={<MainLayout />}>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/questlog" element={<QuestLog />} />
-                <Route path="/bossbattle" element={<BossBattle />} />
-                <Route path="/focus" element={<Focus />} />
-                <Route path="/inventory" element={<Inventory />} />
-                <Route path="/calendarsync" element={<CalendarSync />} />
-                <Route path="/settings" element={<Settings />} />
-              </Route>
-              <Route path="/login" element={<Login />} />
-              <Route path="/onboarding" element={<Onboarding />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </React.Suspense>
+          <ErrorBoundary>
+            <React.Suspense fallback={<div className="text-accent p-8 text-center neon-accent">Loading...</div>}>
+              <Routes>
+                <Route element={<MainLayout />}>
+                  <Route path="/" element={<ErrorBoundary><Dashboard /></ErrorBoundary>} />
+                  <Route path="/dashboard" element={<ErrorBoundary><Dashboard /></ErrorBoundary>} />
+                  <Route path="/questlog" element={<ErrorBoundary><QuestLog /></ErrorBoundary>} />
+                  <Route path="/bossbattle" element={<ErrorBoundary><BossBattle /></ErrorBoundary>} />
+                  <Route path="/focus" element={<ErrorBoundary><Focus /></ErrorBoundary>} />
+                  <Route path="/inventory" element={<ErrorBoundary><Inventory /></ErrorBoundary>} />
+                  <Route path="/calendarsync" element={<ErrorBoundary><CalendarSync /></ErrorBoundary>} />
+                  <Route path="/settings" element={<ErrorBoundary><Settings /></ErrorBoundary>} />
+                </Route>
+                <Route path="/login" element={<ErrorBoundary><Login /></ErrorBoundary>} />
+                <Route path="/onboarding" element={<ErrorBoundary><Onboarding /></ErrorBoundary>} />
+                <Route path="*" element={<ErrorBoundary><NotFound /></ErrorBoundary>} />
+              </Routes>
+            </React.Suspense>
+          </ErrorBoundary>
         </Router>
       </AudioProvider>
     </ThemeProvider>
