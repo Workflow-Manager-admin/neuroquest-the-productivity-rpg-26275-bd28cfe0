@@ -382,14 +382,67 @@ export default function Inventory() {
     );
   }
 
-  // Inventory grid (cosmetic/tokens)
+  // Inventory grid (cosmetic/tokens) with optional drag-and-drop-to-equip support
   function InventoryGrid({ items }) {
+    const [draggedItem, setDraggedItem] = useState(null);
+    const [dragOverIdx, setDragOverIdx] = useState(null);
+
     if (!items || items.length === 0)
       return (
         <div className="text-center text-textFaded italic my-7 font-bold opacity-80">
           Nothing found. Try a different filter!
         </div>
       );
+
+    // Handler for drag start
+    function handleDragStart(e, item) {
+      setDraggedItem(item);
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("application/json", JSON.stringify(item));
+      // Fancy visual feedback for neon/fantasy theme
+      e.target.classList.add("animate-glowPulse", "drag-shadow-neon");
+    }
+
+    // Handler for drag end (cleanup)
+    function handleDragEnd(e) {
+      setDraggedItem(null);
+      setDragOverIdx(null);
+      e.target.classList.remove("animate-glowPulse", "drag-shadow-neon");
+    }
+
+    // Handler when dragged item enters another tile
+    function handleDragEnter(e, idx) {
+      setDragOverIdx(idx);
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // Handler for drag over (required for onDrop to fire)
+    function handleDragOver(e) {
+      e.preventDefault();
+    }
+
+    // Handler for drop (equip/unequip)
+    function handleDrop(e, targetItem, idx) {
+      e.preventDefault();
+      e.stopPropagation();
+      setDragOverIdx(null);
+      try {
+        const dropped = JSON.parse(e.dataTransfer.getData("application/json"));
+        // Only support equip if not already equipped & unlocked
+        if (
+          dropped &&
+          dropped.slot === targetItem.slot &&
+          dropped.name !== targetItem.name &&
+          dropped.unlocked
+        ) {
+          handleEquip(dropped);
+        }
+      } catch {
+        // Fail quietly if not valid
+      }
+    }
+
     return (
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 w-full mt-3 auto-rows-auto">
         {items.map((item, idx) => (
@@ -397,6 +450,10 @@ export default function Inventory() {
             key={item.name + idx}
             className={`relative flex flex-col items-center rpg-rounded bg-black/75 neon-accent py-4 px-2 shadow-lg border-2 border-accent/30 hover:scale-105 transition-all duration-150 cursor-pointer ${
               item.equipped ? "ring-4 ring-accent" : ""
+            } ${
+              draggedItem && dragOverIdx === idx
+                ? "bg-accent/30 shadow-neon-accent animate-glowPulse"
+                : ""
             }`}
             title={item.name}
             style={{
@@ -412,12 +469,19 @@ export default function Inventory() {
                   ? "linear-gradient(120deg,#dbc0fa22 5%,#c084fc33 96%)"
                   : "rgba(16,10,32,.94)",
             }}
+            draggable={item.unlocked}
+            onDragStart={item.unlocked ? (e) => handleDragStart(e, item) : undefined}
+            onDragEnd={item.unlocked ? handleDragEnd : undefined}
+            onDragEnter={item.unlocked ? (e) => handleDragEnter(e, idx) : undefined}
+            onDragOver={item.unlocked ? handleDragOver : undefined}
+            onDrop={item.unlocked ? (e) => handleDrop(e, item, idx) : undefined}
             onClick={() => {
               setSelected(item);
               setModalOpen(true);
             }}
             tabIndex={0}
             aria-label={"View " + item.name}
+            // Touch/keyboard accessible: click-to-equip fallback
           >
             <img
               src={item.image}
