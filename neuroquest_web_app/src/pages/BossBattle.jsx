@@ -1,23 +1,28 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGame } from "../context/GameContext";
-import LottieAnim from "../components/LottieAnim";
 import HPBar from "../components/HPBar";
 import XPBar from "../components/XPBar";
 import NeonButton from "../components/NeonButton";
 import FloatingOrb from "../components/FloatingOrb";
+import LottieAnim from "../components/LottieAnim";
 import Toast from "../components/Toast";
 
+/**
+ * Constants for Boss Battle (can be refactored for future extensibility)
+ * Boss can be made dynamic (various types), but for now, single "Deadline Dragon".
+ */
 const BOSS_ANIM = "/src/assets/boss-dragon.json";
+const BOSS_COMBAT_TIME = 60;
 const BOSS_MUSIC = "/src/assets/boss_theme.mp3";
 const VICTORY_SOUND = "/src/assets/victory-bling.mp3";
 const FAILURE_SOUND = "/src/assets/fail-hit.mp3";
 
 const BOSS_CONFIG = {
   name: "Deadline Dragon",
-  maxHp: 150,
   anim: BOSS_ANIM,
-  combatTime: 60, // seconds for the battle
+  maxHp: 150,
+  combatTime: BOSS_COMBAT_TIME,
   intro: "Face your greatest foe! Can you beat the deadline and save the realm?",
   victoryText: "You defeated the Deadline Dragon! Legendary Focus and XP earned!",
   failText: "The boss overwhelmed you. Dust off and try again!",
@@ -25,33 +30,48 @@ const BOSS_CONFIG = {
   hurtHP: 27
 };
 
-function playSound(src, volume = 1.0) {
-  const audio = new window.Audio(src);
-  audio.volume = volume;
-  audio.loop = false;
-  audio.play();
-  return audio;
+/**
+ * Stub for sound FX; can later add complex event-driven sound manager.
+ */
+function playSoundStub(src, volume = 1.0) {
+  if (!src) return;
+  try {
+    const audio = new window.Audio(src);
+    audio.volume = volume;
+    audio.loop = false;
+    audio.play();
+    return audio;
+  } catch (e) {
+    // Silent stub fail
+  }
 }
 
-// PUBLIC_INTERFACE
-/** BossBattle.jsx: Intense RPG dungeon/boss fight with Lottie boss, timer, music, themed visuals, live XP/HP, rewarding/failure logic. */
+/**
+ * PUBLIC_INTERFACE
+ * BossBattle.jsx – Fully immersive, animated, dynamic boss battle experience.
+ * Features:
+ * - Countdown timer
+ * - Animated Lottie RPG boss
+ * - Neon glowing HP/XP bars
+ * - Event-driven sound FX stub
+ * - Responsive and mobile-first
+ * - Dramatic neon/fantasy CSS effects
+ * - Placeholder for Lottie FX overlays
+ */
 export default function BossBattle() {
   const { game, updateGame } = useGame();
-  // const { user } = useUser(); // Unused variable
   const navigate = useNavigate();
-
   const [timer, setTimer] = useState(BOSS_CONFIG.combatTime);
   const [bossHp, setBossHp] = useState(BOSS_CONFIG.maxHp);
   const [bossDead, setBossDead] = useState(false);
   const [playerActing, setPlayerActing] = useState(false);
   const [battleEnded, setBattleEnded] = useState(false);
-  const [result, setResult] = useState(null); // "win"|"fail"
+  const [result, setResult] = useState(null); // 'win' | 'fail'
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-
   const audioRef = useRef(null);
 
-  // Timer logic
+  // Countdown timer effect
   useEffect(() => {
     if (battleEnded || bossDead) return;
     if (timer <= 0) {
@@ -59,21 +79,20 @@ export default function BossBattle() {
       doBattleEnd();
       return;
     }
-    const interval = setInterval(() => setTimer((t) => t - 1), 1000);
-    return () => clearInterval(interval);
+    const i = setInterval(() => setTimer((t) => t - 1), 1000);
+    return () => clearInterval(i);
     // eslint-disable-next-line
   }, [timer, battleEnded, bossDead]);
 
-  // Music: Play/stop boss theme
+  // Boss music (ambient loop)
   useEffect(() => {
-    if (!battleEnded) {
-      if (typeof window !== "undefined") {
+    if (!battleEnded && BOSS_MUSIC) {
+      try {
         audioRef.current = new window.Audio(BOSS_MUSIC);
-        // Silently fail if not found
-        audioRef.current.volume = 0.36;
+        audioRef.current.volume = 0.33;
         audioRef.current.loop = true;
-        audioRef.current.play().catch(() => null);
-      }
+        audioRef.current.play().catch(() => {});
+      } catch {}
       return () => {
         if (audioRef.current) {
           audioRef.current.pause();
@@ -81,14 +100,22 @@ export default function BossBattle() {
         }
       };
     }
-    // eslint-disable-next-line
   }, [battleEnded]);
 
-  // Player action: "Attack" with animation
+  // Clean up music on unmount
+  useEffect(() => () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+  }, []);
+
+  // Attack player action
   function handleAttack() {
     if (playerActing || bossDead || battleEnded) return;
     setPlayerActing(true);
-    const hit = Math.min(Math.floor(Math.random() * 30) + 14, bossHp);
+    // Randomized but dramatic attack
+    const hit = Math.min(Math.round(Math.random() * 25) + 11, bossHp);
     setTimeout(() => {
       setBossHp((hp) => Math.max(0, hp - hit));
       setPlayerActing(false);
@@ -100,28 +127,28 @@ export default function BossBattle() {
         setToastMsg(`You strike! -${hit} HP to the boss.`);
         setShowToast(true);
       }
-    }, 630);
+      // Dramatic hit sound (stub)
+      playSoundStub(FAILURE_SOUND, 0.28);
+    }, 530);
   }
 
-  // End of battle: Victory or Defeat → Update Firestore (XP/HP)
+  // End battle: Victory/failure, update player XP/HP
   async function doBattleEnd() {
     if (battleEnded) return;
     if (bossDead || bossHp <= 0) {
       setResult("win");
       setToastMsg(BOSS_CONFIG.victoryText);
       setShowToast(true);
-      playSound(VICTORY_SOUND, 0.9);
-      // Grant XP
+      playSoundStub(VICTORY_SOUND, 0.91);
       const xpGained = BOSS_CONFIG.rewardXP;
       await updateGame({ xp: (game.xp || 0) + xpGained });
     } else {
       setResult("fail");
       setToastMsg(BOSS_CONFIG.failText);
       setShowToast(true);
-      playSound(FAILURE_SOUND, 0.85);
-      // Take HP penalty
+      playSoundStub(FAILURE_SOUND, 1.0);
       const hpLost = BOSS_CONFIG.hurtHP;
-      await updateGame({ hp: Math.max(0, (game.hp || 100) - hpLost) });
+      await updateGame({ hp: Math.max(0, (game.hp ?? 100) - hpLost) });
     }
     if (audioRef.current) {
       audioRef.current.pause();
@@ -129,75 +156,37 @@ export default function BossBattle() {
     }
   }
 
-  // Themed styling: neon/dungeon/animated overlay
-  function BattleGlow() {
+  // Neon/fantasy themed background glow/accent
+  function BattleGlowBg() {
     return (
       <div
-        className="absolute top-0 left-0 w-full h-full z-[-2] pointer-events-none"
+        className="absolute top-0 left-0 w-full h-full pointer-events-none z-[0]"
         style={{
-          background: "radial-gradient(circle at 50% 20%, #a855f71d, #7c3aed55 40%, #150f31 90%)",
-          WebkitBackdropFilter: "blur(0.5px)",
-          backdropFilter: "blur(0.5px)",
-          opacity: 0.91,
+          background:
+            "radial-gradient(circle at 50% 15%, #a855f769 0%, #271755ee 80%, #0f172a 100%)",
+          opacity: 0.94,
         }}
+        aria-hidden
       />
     );
   }
 
-  function BossStats() {
+  // Boss visual + neon/neumorphic frame
+  function BossVisual() {
     return (
-      <div className="flex flex-col gap-3 items-center w-full max-w-[350px] mx-auto neon-accent glass-morph p-5 border-2 border-accent/50 rpg-rounded shadow">
-        <div className="flex items-center gap-3 justify-between w-full">
-          <span className="font-bold text-accent text-xl">{BOSS_CONFIG.name}</span>
-          <FloatingOrb size={38} color="#ef4444">
-            <span className="text-2xl">🐲</span>
-          </FloatingOrb>
-        </div>
-        <div className="mt-2 w-full">
-          <HPBar hp={bossHp} maxHp={BOSS_CONFIG.maxHp} showPercent={false} />
-        </div>
-        <div className="flex items-center justify-between w-full mt-2 gap-2">
-          <div className="text-white text-xs">
-            Time Left: <span className={`font-bold ${timer < 8 ? "text-red-400 animate-pulse" : "text-accent"}`}>{timer}s</span>
-          </div>
-          <div className="font-mono text-brand-orange text-xs">Reward: +{BOSS_CONFIG.rewardXP} XP</div>
-        </div>
-      </div>
-    );
-  }
-
-  function PlayerStats() {
-    return (
-      <div className="flex flex-col gap-1 items-center mt-2 mb-1 w-full max-w-[340px] neon-accent glass-morph p-4 border border-accent/30 rpg-rounded">
-        <div className="w-full">
-          <XPBar xp={game.xp || 0} maxXp={game.maxXp || 1000} />
-        </div>
-        <div className="mt-1 w-full">
-          <HPBar hp={game.hp || 100} maxHp={game.maxHp || 100} />
-        </div>
-        <div className="font-bold text-brand-orange text-xs mt-1 mb-0">
-          Level {game.level ?? 1}
-          <span className="mx-2 text-accent">•</span>
-          HP: {game.hp ?? 100}
-        </div>
-      </div>
-    );
-  }
-
-  function MainBoss() {
-    return (
-      <div className="relative flex flex-col items-center mt-3">
-        <div className="relative flex justify-center mb-1 z-10">
+      <div className="relative flex flex-col items-center mt-4 mb-2 animate-fadeIn">
+        <div className="relative">
           <LottieAnim
             src={BOSS_CONFIG.anim}
-            size={210}
+            size={218}
             loop={!bossDead && !battleEnded}
             autoplay
           />
           {bossDead && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <FloatingOrb size={120} color="#7c3aed">
-                <span className="text-5xl animate-bounce">✨</span>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              {/* Victory effect: floating sparkles orb */}
+              <FloatingOrb size={130} color="#a78bfa">
+                <span className="text-6xl animate-bounce">✨</span>
               </FloatingOrb>
             </div>
           )}
@@ -206,6 +195,55 @@ export default function BossBattle() {
     );
   }
 
+  // Timer, Boss HP, Reward info card
+  function BossStatsPanel() {
+    return (
+      <div className="flex flex-col gap-3 items-center w-full max-w-[350px] mx-auto neon-accent glass-morph p-6 border-2 border-accent/60 rpg-rounded shadow">
+        <div className="flex items-center gap-3 justify-between w-full">
+          <span className="font-bold text-accent text-xl">{BOSS_CONFIG.name}</span>
+          <FloatingOrb size={38} color="#ff5d51">
+            <span className="text-2xl">🐲</span>
+          </FloatingOrb>
+        </div>
+        <div className="w-full mt-2">
+          <HPBar hp={bossHp} maxHp={BOSS_CONFIG.maxHp} showPercent={false} />
+        </div>
+        <div className="flex justify-between items-center w-full mt-2 text-xs">
+          <div>
+            Time Left:{" "}
+            <span
+              className={`font-bold ${
+                timer < 10 ? "text-red-400 animate-pulse" : "text-accent"
+              }`}
+            >
+              {timer}s
+            </span>
+          </div>
+          <div className="font-mono text-brand-orange">
+            Reward: +{BOSS_CONFIG.rewardXP} XP
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Player stats panel (XP/HP/Level)
+  function PlayerPanel() {
+    return (
+      <div className="flex flex-col gap-1 items-center w-full max-w-[340px] neon-accent glass-morph p-4 border border-accent/30 rpg-rounded mt-3">
+        <XPBar xp={game.xp || 0} maxXp={game.maxXp || 1000} />
+        <div className="mt-1 w-full">
+          <HPBar hp={game.hp ?? 100} maxHp={game.maxHp ?? 100} />
+        </div>
+        <div className="font-bold text-brand-orange text-xs mt-1 mb-0">
+          Level {game.level ?? 1}
+          <span className="mx-2 text-accent">•</span> HP: {game.hp ?? 100}
+        </div>
+      </div>
+    );
+  }
+
+  // Main action button (Attack)
   function ActionButton() {
     return (
       <NeonButton
@@ -220,9 +258,9 @@ export default function BossBattle() {
         variant="accent"
         style={{
           textShadow: "0 0 5px #fff, 0 0 20px #c084fc",
-          boxShadow: "0 0 18px 4px #7c3aed99, 0 0 4px 2px #7c3aed",
+          boxShadow: "0 0 18px 4px #a78bfa99, 0 0 4px 2px #a78bfa",
         }}
-        aria-label="Attack the boss"
+        aria-label="Attack"
       >
         {bossDead
           ? "Victory!"
@@ -235,13 +273,14 @@ export default function BossBattle() {
     );
   }
 
+  // Result/feedback overlay: victory/failure, return/try again
   function ResultFeedback() {
     if (!result) return null;
     return (
-      <div className="absolute top-[20dvh] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-center animate-fadeIn px-4">
+      <div className="absolute top-[21dvh] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center text-center animate-fadeIn px-4">
         {result === "win" ? (
           <>
-            <div className="text-5xl font-bold text-brand-orange mb-2 drop-shadow-lg animate-bounce">🏆</div>
+            <div className="text-6xl font-bold text-brand-orange mb-2 drop-shadow-lg animate-bounce">🏆</div>
             <div className="text-3xl text-accent font-bold mb-2 neon-accent">{BOSS_CONFIG.victoryText}</div>
             <div className="text-lg text-white mt-3">+{BOSS_CONFIG.rewardXP} XP</div>
             <NeonButton
@@ -281,42 +320,33 @@ export default function BossBattle() {
     );
   }
 
-  // Neon/ambient battle effects (CSS keyframes)
+  // Dramatic RPG/fantasy neon-glow CSS injection for immersive polish
   useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `
-      .glass-morph { background: rgba(22, 14, 50, 0.78); border-radius: 18px; backdrop-filter: blur(7px);}
+      .glass-morph { background: rgba(23, 17, 44, 0.825); border-radius: 19px; backdrop-filter: blur(9px);}
       .glowingBtn, .animate-glowPulse {
-        animation: pulseNeon 1.1s infinite alternate cubic-bezier(.64,0,.38,1);
+        animation: pulseNeon 1.13s infinite alternate cubic-bezier(.68,0,.34,1);
       }
       @keyframes pulseNeon {
-        0% { box-shadow: 0 0 18px 5px #7c3aed99, 0 0 4px 1.7px #7c3aed; }
-        100% { box-shadow: 0 0 32px 11px #8b5cf6bb, 0 0 7px 1px #c084fc; }
+        0% { box-shadow: 0 0 18px 6px #a78bfa88, 0 0 4px 2px #7c3aed; }
+        100% { box-shadow: 0 0 34px 16px #c084fcbb, 0 0 12px 2px #c084fc; }
       }
-      .animate-fadeIn { animation: fadeInDungeon .75s cubic-bezier(.67,0,.28,1) both;}
-      @keyframes fadeInDungeon {
-        0% { opacity:0; transform:translateY(27px) scale(.96);}
+      .animate-fadeIn { animation: fadeInBattle .65s cubic-bezier(.67,0,.28,1) both;}
+      @keyframes fadeInBattle {
+        0% { opacity:0; transform:translateY(29px) scale(.97);}
         100%{opacity:1; transform:translateY(0) scale(1);}
       }
     `;
     document.body.appendChild(style);
     return () => document.body.removeChild(style);
   }, []);
-  
-  // Stop music on unmount
-  useEffect(() => () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-  }, []);
 
   return (
-    <div className="min-h-[85vh] flex flex-col items-center justify-center relative z-10 animate-fadeIn">
-      {/* 
-        RPG Boss Battle Hero Art (public Unsplash/PD fantasy dragon) – devs: swap this src for custom boss art if desired!
-        https://unsplash.com/photos/dragon-silhouette-on-body-of-water-during-sunset-oGLgDu90A9U 
-      */}
+    <div className="relative min-h-[80vh] flex flex-col items-center justify-center z-10 animate-fadeIn pb-12">
+      {/* Boss battle dramatic background */}
+      <BattleGlowBg />
+      {/* Top: Dragon hero art */}
       <img
         src="https://images.unsplash.com/photo-1504881102860-1da75ca5eeff?auto=format&fit=crop&w=700&q=80"
         alt="Boss battle: dragon silhouette"
@@ -324,20 +354,23 @@ export default function BossBattle() {
         onError={e => {e.target.style.display='none'}}
         style={{background: "#120c22"}}
       />
-      {/* Fallback: Dragon emoji if unavailable */}
-      <span className="block text-6xl text-accent my-3" aria-label="Dragon" style={{display:'none'}}>
-        🐉
-      </span>
-      {/* End boss hero image, devs can replace above for dramatic boss art */}
-      <BattleGlow />
+      {/* Fallback dragon emoji for failed image */}
+      <span className="block text-6xl text-accent my-3" aria-label="Dragon" style={{display:'none'}}>🐉</span>
+      {/* Overlay result feedback (centered over everything, dramatic) */}
       <ResultFeedback />
-      <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center z-20 relative py-7 rounded-xl bg-black/70 glass-morph" style={{boxShadow:"0 12px 34px 2px #7c3aed33"}}>
+      {/* Main card: boss stats, boss visual, attack button, player stats */}
+      <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center z-20 relative py-6 rounded-xl bg-black/70 glass-morph" style={{boxShadow:"0 12px 34px 2px #7c3aed33"}}>
         <div className="mb-2 font-bold text-2xl text-brand-orange drop-shadow-sm text-center select-none">{BOSS_CONFIG.intro}</div>
-        <BossStats />
-        <MainBoss />
+        <BossStatsPanel />
+        <BossVisual />
         {timer > 0 && !battleEnded && !bossDead && <ActionButton />}
-        <PlayerStats />
+        <PlayerPanel />
+        {/* Lottie animation placeholder for special FX (e.g. particle burst, boss death) */}
+        <div className="pointer-events-none mt-1 mb-0" aria-hidden>
+          {/* <LottieAnim src="/src/assets/victory-fx.json" size={76} loop={false} autoplay /> */}
+        </div>
       </div>
+      {/* Toast: Dramatic RPG feedback */}
       <Toast
         show={showToast}
         onClose={() => setShowToast(false)}
