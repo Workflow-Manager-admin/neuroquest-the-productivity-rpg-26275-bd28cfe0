@@ -7,25 +7,26 @@ import { initializeApp } from "firebase/app";
 /**
  * Firebase configuration for NeuroQuest.
  * 
- * REQUIRED: You must set the following variables in your .env before running the app:
- * - REACT_APP_FIREBASE_API_KEY
- * - REACT_APP_FIREBASE_AUTH_DOMAIN
- * - REACT_APP_FIREBASE_PROJECT_ID
- * - REACT_APP_FIREBASE_STORAGE_BUCKET
- * - REACT_APP_FIREBASE_MESSAGING_SENDER_ID
- * - REACT_APP_FIREBASE_APP_ID
- * - (optional for analytics) REACT_APP_FIREBASE_MEASUREMENT_ID
+ * REQUIRED: You must set the following variables in your .env (Vite requires VITE_ prefix) before running the app:
+ * - VITE_FIREBASE_API_KEY
+ * - VITE_FIREBASE_AUTH_DOMAIN
+ * - VITE_FIREBASE_PROJECT_ID
+ * - VITE_FIREBASE_STORAGE_BUCKET
+ * - VITE_FIREBASE_MESSAGING_SENDER_ID
+ * - VITE_FIREBASE_APP_ID
+ * - (optional for analytics) VITE_FIREBASE_MEASUREMENT_ID
  * 
  * These should be copied from your Firebase Console, never hardcoded.
+ * IMPORTANT: If your variables started with REACT_APP_, rename them to VITE_ (see docs).
  */
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY, // required
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN, // required
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID, // required
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET, // required
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID, // required
-  appId: process.env.REACT_APP_FIREBASE_APP_ID, // required
-  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID, // optional (for analytics)
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY, // required
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN, // required
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID, // required
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET, // required
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID, // required
+  appId: import.meta.env.VITE_FIREBASE_APP_ID, // required
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID, // optional (for analytics)
 };
 
 // Initialize Firebase app (singleton)
