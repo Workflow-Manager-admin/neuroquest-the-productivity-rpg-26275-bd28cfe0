@@ -12,7 +12,7 @@ import Tabs from "../Tabs";
 import Toast from "../Toast";
 import ZoneCard from "../ZoneCard";
 // If you add Lottie assets, use import demoAnim from "../../assets/demo-lottie.json";
-import LottieAnim from "../LottieAnim";
+// import LottieAnim from "../LottieAnim";
 
 // Demo assets
 const zoneImg = "/src/assets/zone_forest.png";
