@@ -2,7 +2,7 @@
   Dashboard (The Kingdom) – fantasy RPG dashboard with XP/HP bars, glowing avatar, core zones (Focus Forest, Deadline Dungeon, Daily Hills),
   floating quest orb, and RPG neon/fantasy visuals. Responsive and mobile-ready.
 */
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
@@ -14,6 +14,7 @@ import StatsPanel from "../components/StatsPanel";
 import FloatingOrb from "../components/FloatingOrb";
 import NeonButton from "../components/NeonButton";
 import ZoneCard from "../components/ZoneCard";
+import { useAudio } from "../components/AudioPlayer";
 
 /*
   ASSET NOTE:
@@ -92,7 +93,7 @@ function DashboardHeader() {
   );
 }
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 /**
  * Dashboard – RPG home: XPBar, HPBar, Avatar, Stats, Zones, floating quest orb.
  */
@@ -100,6 +101,12 @@ export default function Dashboard() {
   const navigate = useNavigate();
   const { profile } = useUser();
   const { game } = useGame();
+  const { switchTheme } = useAudio();
+
+  useEffect(() => {
+    switchTheme("dashboard");
+    // eslint-disable-next-line
+  }, []);
 
   // Essential stats, with default fallbacks
   const XP = game?.xp ?? 0;

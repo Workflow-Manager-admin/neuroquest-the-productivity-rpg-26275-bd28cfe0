@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useAudio } from '../components/AudioPlayer';
 // PUBLIC_INTERFACE
 export default function Focus() {
+  const { switchTheme } = useAudio();
+  useEffect(() => {
+    switchTheme("focus");
+    // eslint-disable-next-line
+  }, []);
   /** Focus engine page placeholder */
   return (
     <div className="flex flex-col items-center justify-center h-[50vh]">

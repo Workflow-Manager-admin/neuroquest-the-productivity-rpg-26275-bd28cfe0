@@ -1,6 +1,7 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGame } from "../context/GameContext";
+import { useAudio } from "../components/AudioPlayer";
 import HPBar from "../components/HPBar";
 import XPBar from "../components/XPBar";
 import NeonButton from "../components/NeonButton";
@@ -61,6 +62,7 @@ function playSoundStub(src, volume = 1.0) {
 export default function BossBattle() {
   const { game, updateGame } = useGame();
   const navigate = useNavigate();
+  const { switchTheme } = useAudio();
   const [timer, setTimer] = useState(BOSS_CONFIG.combatTime);
   const [bossHp, setBossHp] = useState(BOSS_CONFIG.maxHp);
   const [bossDead, setBossDead] = useState(false);
@@ -69,7 +71,11 @@ export default function BossBattle() {
   const [result, setResult] = useState(null); // 'win' | 'fail'
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-  const audioRef = useRef(null);
+
+  useEffect(() => {
+    switchTheme("boss");
+    // eslint-disable-next-line
+  }, []);
 
   // Countdown timer effect
   useEffect(() => {
@@ -83,32 +89,6 @@ export default function BossBattle() {
     return () => clearInterval(i);
     // eslint-disable-next-line
   }, [timer, battleEnded, bossDead]);
-
-  // Boss music (ambient loop)
-  useEffect(() => {
-    if (!battleEnded && BOSS_MUSIC) {
-      try {
-        audioRef.current = new window.Audio(BOSS_MUSIC);
-        audioRef.current.volume = 0.33;
-        audioRef.current.loop = true;
-        audioRef.current.play().catch(() => {});
-      } catch {}
-      return () => {
-        if (audioRef.current) {
-          audioRef.current.pause();
-          audioRef.current.currentTime = 0;
-        }
-      };
-    }
-  }, [battleEnded]);
-
-  // Clean up music on unmount
-  useEffect(() => () => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-  }, []);
 
   // Attack player action
   function handleAttack() {
