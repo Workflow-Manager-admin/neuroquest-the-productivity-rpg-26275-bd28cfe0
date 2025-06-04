@@ -19,19 +19,38 @@ import { initializeApp } from "firebase/app";
  * These should be copied from your Firebase Console, never hardcoded.
  * IMPORTANT: If your variables started with REACT_APP_, rename them to VITE_ (see docs).
  *
- * This file now includes runtime checks and diagnostics for environment variables.
+ * This file now includes robust runtime checks and diagnostics for environment variables.
  */
 
-// Debug: log the entire env object for easier diagnostics
-if (typeof window !== "undefined" && import.meta && import.meta.env) {
-  // You may comment this console log for production if desired.
+// Runtime DEBUG log for all env variables before Firebase setup
+if (
+  typeof window !== "undefined" &&
+  typeof import !== "undefined" &&
+  import.meta &&
+  import.meta.env
+) {
+  // This log helps developers see which env keys are injected at runtime.
+  // Comment this out before production if desired.
   // eslint-disable-next-line
-  console.debug("Firebase ENV config at runtime:", import.meta.env);
+  console.debug("[NeuroQuest][Firebase] import.meta.env at runtime:", import.meta.env);
 }
 
-// Collect essential keys
-const getFirebaseEnvVal = (key) => import.meta.env[key];
-// List required keys
+// Helper: Get variable, warn if missing, with defensive fallback.
+function getFirebaseEnvVal(key) {
+  const val = import.meta.env[key];
+  if (typeof val === "undefined") {
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line
+      console.warn(
+        `[NeuroQuest] ENV WARNING: ${key} is undefined at runtime (import.meta.env). Check your .env file, and verify you are launching Vite from the correct folder and with .env present.`
+      );
+    }
+    return "";
+  }
+  return val;
+}
+
+// REQUIRED Firebase keys for config (strict for stability)
 const REQUIRED_FIREBASE_KEYS = [
   "VITE_FIREBASE_API_KEY",
   "VITE_FIREBASE_AUTH_DOMAIN",
@@ -41,53 +60,83 @@ const REQUIRED_FIREBASE_KEYS = [
   "VITE_FIREBASE_APP_ID",
 ];
 
-let anyMissing = false;
-const firebaseConfig = {};
-for (const key of REQUIRED_FIREBASE_KEYS) {
-  let value = getFirebaseEnvVal(key);
-  if (typeof value === "undefined") {
-    anyMissing = true;
-    // Fallback to empty string and warn.
-    value = "";
-    if (typeof window !== "undefined") {
-      // eslint-disable-next-line
-      console.warn(
-        `[NeuroQuest] ENV WARNING: The environment variable ${key} is undefined at runtime. Please verify your .env file. Firebase may fail to initialize.`
-      );
-    }
-  }
-  firebaseConfig[
-    key.replace("VITE_FIREBASE_", "").replace(/_/g, "").replace("MESSAGINGSENDERID", "messagingSenderId").replace("APPID", "appId") // for clarity
-  ] = value;
-}
-// Explicit map to required Firebase config field names
-firebaseConfig.apiKey = getFirebaseEnvVal("VITE_FIREBASE_API_KEY") || "";
-firebaseConfig.authDomain = getFirebaseEnvVal("VITE_FIREBASE_AUTH_DOMAIN") || "";
-firebaseConfig.projectId = getFirebaseEnvVal("VITE_FIREBASE_PROJECT_ID") || "";
-firebaseConfig.storageBucket = getFirebaseEnvVal("VITE_FIREBASE_STORAGE_BUCKET") || "";
-firebaseConfig.messagingSenderId = getFirebaseEnvVal("VITE_FIREBASE_MESSAGING_SENDER_ID") || "";
-firebaseConfig.appId = getFirebaseEnvVal("VITE_FIREBASE_APP_ID") || "";
-firebaseConfig.measurementId = getFirebaseEnvVal("VITE_FIREBASE_MEASUREMENT_ID") || "";
+const firebaseConfig = {
+  // Always set each required field using helper. If missing, safe fallback to "".
+  apiKey: getFirebaseEnvVal("VITE_FIREBASE_API_KEY"),
+  authDomain: getFirebaseEnvVal("VITE_FIREBASE_AUTH_DOMAIN"),
+  projectId: getFirebaseEnvVal("VITE_FIREBASE_PROJECT_ID"),
+  storageBucket: getFirebaseEnvVal("VITE_FIREBASE_STORAGE_BUCKET"),
+  messagingSenderId: getFirebaseEnvVal("VITE_FIREBASE_MESSAGING_SENDER_ID"),
+  appId: getFirebaseEnvVal("VITE_FIREBASE_APP_ID"),
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "",
+};
 
-// Throw if any are critically missing to avoid silent misconfig
-if (anyMissing) {
-  // For dev, warn not crash; change to throw if you prefer hard fail
+// Check for missing required Firebase config keys BEFORE initialization
+const missingKeys = REQUIRED_FIREBASE_KEYS.filter(
+  (key) => !import.meta.env[key]
+);
+
+if (missingKeys.length > 0) {
+  // Always log the whole env for clarity, then provide a clear error/warning:
   if (typeof window !== "undefined") {
     // eslint-disable-next-line
     console.error(
-      "[NeuroQuest] Firebase configuration is incomplete! At least one required environment variable is missing. See console warnings for details and check your .env."
+      `[NeuroQuest] CRITICAL: Missing environment variables for Firebase!`,
+      { missing: missingKeys, envVars: import.meta.env }
     );
+    // eslint-disable-next-line
+    console.warn(
+      `[NeuroQuest] You must set all required VITE_FIREBASE_* keys in your .env at the project root and restart the dev server. Missing: ${missingKeys.join(", ")}`
+    );
+    // Optionally: Display a visible warning (DEV only)
+    if (document && document.body) {
+      const existing = document.getElementById("firebase-missing-warning");
+      if (!existing) {
+        const warn = document.createElement("div");
+        warn.id = "firebase-missing-warning";
+        warn.style =
+          "background:#7c3aed;color:#fff;padding:20px 18px;z-index:99999;position:fixed;top:0;left:0;right:0;font-size:1.0rem;font-family:sans-serif;text-align:center;border-bottom:3px solid #e87a41";
+        warn.innerHTML =
+          `<b>Firebase configuration missing keys:</b> ${missingKeys.join(
+            ", "
+          )}.<br/>Check your .env, restart dev/build, and see console for import.meta.env dump.<br/>The app will run in DEGRADATION MODE and may crash or fail authentication.`;
+        document.body.prepend(warn);
+      }
+    }
   }
-  // Optionally: Throw error for critical missing config (uncomment to enforce)
-  // throw new Error("[NeuroQuest] Fatal: Missing Firebase env vars, see console for required keys and check .env.");
+  // Fallback: Optionally throw a fatal error in development (uncomment to enforce):
+  // throw new Error(`[NeuroQuest] FATAL: Firebase env vars missing: ${missingKeys.join(", ")} - see console for details.`);
+} else {
+  // All keys present - optionally log config for developer clarity
+  // eslint-disable-next-line
+  console.debug("[NeuroQuest][Firebase] Configured for Firebase with config:", firebaseConfig);
 }
 
-// Initialize Firebase app (singleton)
+// Defensive: always setup Firebase with whatever config we have (safe fallbacks)
+// This avoids "Cannot read properties of undefined" errors.
+
 let firebaseApp;
 try {
   firebaseApp = initializeApp(firebaseConfig);
-} catch (e) {
-  // App may already be initialized; ignore error.
+} catch (err) {
+  // Firebase may throw if already initialized, ignore such error.
+  if (
+    !(
+      err &&
+      typeof err.message === "string" &&
+      err.message.includes("already exists")
+    )
+  ) {
+    // eslint-disable-next-line
+    console.error(
+      "[NeuroQuest] Firebase failed to initialize! See the error below and check your .env variables.",
+      err,
+      "Config used: ",
+      firebaseConfig
+    );
+    // Optionally throw if desired for fatal failure.
+    // throw err;
+  }
 }
 const auth = getAuth();
 const db = getFirestore();
