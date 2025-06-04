@@ -9,6 +9,7 @@ import NeonButton from "../components/NeonButton";
 import FloatingOrb from "../components/FloatingOrb";
 import Toast from "../components/Toast";
 import LottieAnim from "../components/LottieAnim";
+import { useApiKey } from "../context/ApiKeyContext";
 
 // Fantasy icons (Ensure these assets exist or fallback)
 const questIcons = [
@@ -145,15 +146,16 @@ function useSectionDragDrop({ quests, setQuests }) {
   };
 }
 
-// =======================
-// PUBLIC_INTERFACE
-/**
- * QuestLog - Immersive RPG quest journal. Drag/drop sections, Firestore CRUD, AI quest rewrite, animations.
- */
+ // =======================
+ // PUBLIC_INTERFACE
+ /**
+  * QuestLog - Immersive RPG quest journal. Drag/drop sections, Firestore CRUD, AI quest rewrite, animations.
+  */
 export default function QuestLog() {
   const { user } = useUser();
   const { game, updateGame } = useGame();
   const db = getFirestore();
+  const { getKey } = useApiKey();
 
   // State
   const [quests, setQuests] = useState([]);

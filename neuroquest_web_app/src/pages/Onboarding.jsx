@@ -121,7 +121,7 @@ export default function Onboarding() {
     // eslint-disable-next-line
   }, [goal, deadline]);
 
-  // Call to OpenAI (browser-safe; assumes public key, customizable)
+  // Call to OpenAI (browser-safe; assumes user/runtime key with .env fallback, via ApiKeyContext)
   async function generateRoadmap(goal, deadline) {
     // Use browser fetch, call OpenAI API directly
     // (Client-side exposure: best to use test key or a proxy if needed!)
@@ -141,13 +141,10 @@ Step 5: ...
 Final Quest: ... (the last challenge before victory!)
 `;
 
-    // Uses OpenAI API key from environment.
-    // REQUIRED: Set REACT_APP_OPENAI_API_KEY in your .env file for production/development.
-    // Example: REACT_APP_OPENAI_API_KEY=sk-xxxx...
-    // No longer using any window/global fallbacks.
-    const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+    // Securely get the key using the required pattern: from runtime context (user-supplied if present), with fallback to .env, via getKey().
+    const apiKey = getKey();
 
-    // fallback for dev (if missing .env key, this block only used in dev; don't remove)
+    // fallback for dev (if missing all keys, this block only used in dev; don't remove)
     if (!apiKey) {
       // Demo fallback for local or no-key dev: Return fake roadmap
       await rpgDelay(1400);
