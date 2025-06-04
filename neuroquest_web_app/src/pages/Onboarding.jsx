@@ -8,6 +8,7 @@ import Avatar from "../components/Avatar";
 import FloatingOrb from "../components/FloatingOrb";
 import Toast from "../components/Toast";
 import LottieAnim from "../components/LottieAnim";
+import { useApiKey } from "../context/ApiKeyContext";
 
 // Demo Lottie asset (replace with actual in /src/assets/)
 const WIZARD_LOTTIE = "/src/assets/epic-wizard-intro.json";
@@ -46,6 +47,7 @@ export default function Onboarding() {
   const { user, profile, updateProfile, loading: userLoading } = useUser();
   const navigate = useNavigate();
   const db = getFirestore();
+  const { getKey } = useApiKey();
 
   // Auto-redirect if onboarding done
   useEffect(() => {
