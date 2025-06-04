@@ -28,6 +28,31 @@ See `.env.example` for details and copy/paste.
 
 NeuroQuest now supports secure runtime injection and persistence of user-supplied API keys (e.g., for OpenAI) using a dedicated React Context.
 
+---
+
+## Error Handling, Boundaries, and UX Fail-Safes
+
+**Error Boundaries**:
+
+All major app routes and top-level critical flows (authentication, Quest/AI, calendar sync, inventory/cosmetics, music/audio) are wrapped in a reusable `<ErrorBoundary />` component. This ensures:
+
+- Any unhandled error in a subtree is caught and does not crash the entire app.
+- The user is presented with immersive, RPG neon-styled error feedback, with actionable prompts and retry/self-heal options.
+- Error states are designed to maintain the RPG theme, feedback clarity, and navigational recovery.
+
+**Policy for Error and Edge-Case Handling:**
+- Every API call, user action, and critical rendering flow must provide:
+  - Descriptive error messages on failure, styled consistently with the neon RPG/UX.
+  - Self-healing/retry flows (where possible) – e.g., prompt to reload, try again, or proceed to support.
+  - Recovery UI: Never dead-end the user; always permit app navigation even after major errors.
+  - Documentation in code comments for all error/recovery logic.
+
+**Developer Instructions:**
+- For new pages/features: wrap the main component in `<ErrorBoundary>`.
+- For all async/API logic: catch errors, set error state, and display feedback using RPG event/toast modals, NOT browser alerts.
+
+See `src/components/ErrorBoundary.jsx` for details and usage.
+
 ### How API Key Storage Works
 
 - **User-supplied key:** Entered via the Settings or Onboarding UI, and stored securely in React Context and browser `localStorage` (never sent to any backend).
