@@ -1,4 +1,4 @@
-/* global setInterval, clearInterval, setTimeout */
+/* global setInterval, clearInterval */
 import React, { useEffect, useRef, useState } from "react";
 import FocusMeter from "./FocusMeter";
 import FloatingOrb from "./FloatingOrb";

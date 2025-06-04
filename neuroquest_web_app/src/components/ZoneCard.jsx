@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
  * ZoneCard – RPG fantasy zone: glow frame, zone art bg, responsive, immersive.
  * @param {string} name - Name of the zone
  * @param {string} description
- * @param {string} image - Fantasy image – provide a URL or import from /src/assets.
+ * @param {string} image - Fantasy image - provide a URL or import from /src/assets.
  * @param {function} onClick
  */
 // PUBLIC_INTERFACE
