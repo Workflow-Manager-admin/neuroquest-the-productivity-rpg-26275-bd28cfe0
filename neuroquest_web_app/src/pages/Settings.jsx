@@ -1,3 +1,4 @@
+/* global setTimeout */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useUser } from "../context/UserContext";
@@ -80,7 +81,7 @@ NeonSwitch.propTypes = {
 export default function Settings() {
   // User and global preferences context
   const { user, logout: contextLogout } = useUser();
-  const { game, updateGame, loading: gameLoading } = useGame();
+  const { game, updateGame } = useGame();
   const { apiKey, setApiKey, clearApiKey, getKey } = useApiKey();
 
   // Preferences from context/game
