@@ -36,39 +36,58 @@ function RPGNeonGradient() {
       }}
     ></div>
   );
-}
-/**
- * Fantasy hero/zones image logic:
- * - HERO_BANNER: public domain fantasy wizard/forest as example. Replace URL with your own asset for polish.
- * - ZONES: each uses a fantasy public URL demo image. Drop your own PNGs/SVGs in /src/assets and update here.
+}/*
+ * Dashboard page constants: demo art/zone listings – swap out for game art!
  */
 const HERO_BANNER =
-  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"; // Fantasy woods/hero (Unsplash, demo)
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80";
 
 const ZONES = [
   {
     name: "Focus Forest",
     description: "Enter deep work, earn XP, defeat distractions.",
-    image: "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=320&q=80", // Fantasy forest
-    // TODO: Drop your zone art in /src/assets and update image value for production!
+    image:
+      "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=320&q=80",
     to: "/focus",
   },
   {
     name: "Deadline Dungeon",
     description: "Face your deadlines in dramatic RPG boss fights.",
-    image: "https://opengameart.org/sites/default/files/preview_128.png", // Dungeon (Opengameart)
-    // TODO: Swap with /src/assets/zone_dungeon.png if added!
+    image: "https://opengameart.org/sites/default/files/preview_128.png",
     to: "/bossbattle",
   },
   {
     name: "Daily Hills",
     description: "Complete daily quests for streak and coin rewards.",
-    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=320&q=80", // Fantasy hills Unsplash
-    // TODO: Swap with /src/assets/zone_hills.png
+    image:
+      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=320&q=80",
     to: "/questlog",
   },
 ];
 
+function DashboardHeader() {
+  return (
+    <header className="w-full flex flex-col items-center mt-2 px-2 mb-0">
+      <h1
+        className="font-cinzel text-4xl md:text-5xl neon-glow text-accent mb-2 text-center drop-shadow-2xl"
+        style={{
+          textShadow:
+            "0 0 26px #c084fc99, 0 0 82px #ad54f544, 0 0 16px #ffccfa66",
+          fontFamily: "'Cinzel Decorative','UnifrakturCook','Poppins',serif",
+          letterSpacing: "0.03em",
+        }}
+      >
+        The Kingdom
+      </h1>
+      <div className="text-base sm:text-lg font-semibold text-brand-orange text-center select-none animate-fadeIn mb-2">
+        Welcome to your <span className="text-accent font-bold">Legendary Dashboard</span>.
+        <span className="block text-textFaded font-normal mt-1">
+          <span className="text-accent">Track your XP, quests, and heroic progress.</span>
+        </span>
+      </div>
+    </header>
+  );
+}
 /* Removed unused getEquippedItems. */
 
 // PUBLIC_INTERFACE
