@@ -2,42 +2,43 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /**
- * FocusMeter: Animated RPG/fantasy focus bar, modular for use in FocusEngine, stats, and overlays.
- * - Glowing neon fantasy style; flexible for use as stats bar, overlay, etc.
- * - Modular: sizing, label, and easy effect integration.
- * - Suitable for animation overlays (pulse/glow with high focus)
- *
- * @param {number} focus - Current focus value (0-100).
- * @param {number} maxFocus - Max value (default 100).
- * @param {boolean} showLabel
- * @param {number} barHeight - px override for bar height (default 5)
+ * PUBLIC_INTERFACE
+ * FocusMeter – RPG/fantasy style focus/progress meter.
+ * Animated/fancy for immersive productivity game UI.
+ * @param {number} focus - Focus/energy value
+ * @param {number} maxFocus - Max focus/energy
+ * @param {boolean} showLabel - Show "Focus" label
+ * @param {string} className - Custom className (optional)
  */
-// PUBLIC_INTERFACE
-export default function FocusMeter({ focus = 0, maxFocus = 100, showLabel = false, barHeight = 5 }) {
-  // Clamp percent and set neon effect
-  const pct = maxFocus > 0 ? Math.max(0, Math.min(100, (focus / maxFocus) * 100)) : 0;
-  let barGlow = "drop-shadow(0 0 12px #7c3aedaa)";
-  if (pct > 80) barGlow = "drop-shadow(0 0 24px #e87a41dd) drop-shadow(0 0 9px #7c3aed99)";
-
+export default function FocusMeter({
+  focus = 45,
+  maxFocus = 100,
+  showLabel = false,
+  className = ""
+}) {
+  // Clamp percent for display
+  const percent = maxFocus > 0 ? Math.max(0, Math.min(100, (focus / maxFocus) * 100)) : 0;
   return (
     <div
-      className="relative w-full bg-[#181032] border border-accent/40 rpg-rounded overflow-hidden shadow-neon-accent"
-      style={{ minWidth: 78, height: barHeight }}
+      className={`relative h-4 w-full bg-[#18132b] border border-accent/50 rpg-rounded shadow-neon-accent overflow-hidden ${className}`}
+      style={{ minWidth: 80 }}
+      aria-label="Focus Meter"
     >
       <div
-        className="absolute left-0 top-0 h-full neon-glow"
+        className="absolute left-0 top-0 h-full neon-accent"
         style={{
-          width: `${pct}%`,
-          background: `linear-gradient(90deg,#f472b6 6%,#7c3aed 93%)`,
-          filter: barGlow,
-          transition: "width 0.86s cubic-bezier(.29,1.27,.57,.67)"
+          width: `${percent}%`,
+          transition: "width 0.7s cubic-bezier(.39,1.18,.58,.77)",
+          background:
+            "linear-gradient(90deg,#98f5e1bb 0%, #a78bfa 72%, #91c2ff 100%)",
+          boxShadow: "0 0 15px #38bdf8, 0 0 24px #a78bfa99",
         }}
       />
-      <div
-        className="relative z-10 font-bold text-xs text-accent py-0.5 px-2 flex items-center justify-between font-poppins select-none"
-      >
-        {showLabel && <span>Focus</span>}
-        <span>{maxFocus > 0 ? `${Math.round(pct)}%` : focus}</span>
+      <div className="relative z-10 font-bold text-xs text-white px-2 flex items-center justify-between font-poppins select-none">
+        {showLabel && <span className="pr-2 text-accent">Focus</span>}
+        <span>
+          {percent.toFixed(0)}%
+        </span>
       </div>
     </div>
   );
@@ -47,5 +48,5 @@ FocusMeter.propTypes = {
   focus: PropTypes.number,
   maxFocus: PropTypes.number,
   showLabel: PropTypes.bool,
-  barHeight: PropTypes.number,
+  className: PropTypes.string
 };
