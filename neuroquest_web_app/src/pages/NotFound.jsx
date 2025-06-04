@@ -1,43 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Lottie from "lottie-react"; // Ensure 'lottie-react' is installed in your project
+import Lottie from "lottie-react";
 import lostPortal from "../assets/lostPortal.json";
+import NeonButton from "../components/NeonButton";
 
-// NeonButton: import first tries shared button, fallback to local.
-import PropTypes from "prop-types";
-let NeonButton;
-try {
-  // Try to import global NeonButton component if available
-  // eslint-disable-next-line
-  // @ts-ignore
-  NeonButton = require("../components/NeonButton").default;
-} catch {
-  // Fallback: define a local neon button if the shared isn't available
-  NeonButton = function NeonButton({ children, onClick, className = "", ...props }) {
-    return (
-      <button
-        className={`px-7 py-3 bg-gradient-to-tr from-violet-700 to-fuchsia-600 border-2 border-fuchsia-300 rounded-lg neon-glow text-fuchsia-100 shadow-xl transition-all focus:outline-none hover:brightness-125 focus:ring-2 focus:ring-fuchsia-400 font-bold text-lg ${className}`}
-        onClick={onClick}
-        {...props}
-      >
-        {children}
-        <style>{`
-        .neon-glow {
-          box-shadow: 0 0 12px #910ad9, 0 0 32px #910ad97c, 0 0 2px #fff inset;
-          text-shadow: 0 0 6px #fc86ff, 0 0 12px #9663db;
-        }
-        `}</style>
-      </button>
-    );
-  };
-  NeonButton.displayName = "NeonButton";
-  NeonButton.propTypes = {
-    children: PropTypes.node,
-    onClick: PropTypes.func,
-    className: PropTypes.string,
-  };
-}
-
+/**
+ * NotFound – Neon-glow RPG 404 page: fantasy visuals, portal Lottie, styled copy.
+ */
 const NotFound = () => {
   const navigate = useNavigate();
 
@@ -51,10 +20,10 @@ const NotFound = () => {
           src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=550&q=80"
           alt="Lost mystical portal ruins"
           className="w-full max-w-sm mx-auto mt-2 mb-4 rounded-xl border-2 border-accent shadow-lg object-cover"
-          onError={e=>{e.target.style.display='none'}}
-          style={{background: "#261239"}}
+          onError={e => { e.target.style.display = 'none' }}
+          style={{ background: "#261239" }}
         />
-        <span className="block text-5xl text-accent my-2" aria-label="Portal" style={{display:'none'}}>🌀</span>
+        <span className="block text-5xl text-accent my-2" aria-label="Portal" style={{ display: 'none' }}>🌀</span>
         {/* Dramatic animated portal */}
         <div
           className="w-[70vw] max-w-[410px] xs:max-w-[300px] mx-auto drop-shadow-lg"
