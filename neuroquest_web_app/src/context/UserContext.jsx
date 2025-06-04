@@ -18,18 +18,69 @@ import { initializeApp } from "firebase/app";
  * 
  * These should be copied from your Firebase Console, never hardcoded.
  * IMPORTANT: If your variables started with REACT_APP_, rename them to VITE_ (see docs).
+ *
+ * This file now includes runtime checks and diagnostics for environment variables.
  */
-// Debug log removed: console.log("DEBUG VITE ENV:", import.meta.env);
 
-const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
-  appId: import.meta.env.VITE_FIREBASE_APP_ID,
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
-};
+// Debug: log the entire env object for easier diagnostics
+if (typeof window !== "undefined" && import.meta && import.meta.env) {
+  // You may comment this console log for production if desired.
+  // eslint-disable-next-line
+  console.debug("Firebase ENV config at runtime:", import.meta.env);
+}
+
+// Collect essential keys
+const getFirebaseEnvVal = (key) => import.meta.env[key];
+// List required keys
+const REQUIRED_FIREBASE_KEYS = [
+  "VITE_FIREBASE_API_KEY",
+  "VITE_FIREBASE_AUTH_DOMAIN",
+  "VITE_FIREBASE_PROJECT_ID",
+  "VITE_FIREBASE_STORAGE_BUCKET",
+  "VITE_FIREBASE_MESSAGING_SENDER_ID",
+  "VITE_FIREBASE_APP_ID",
+];
+
+let anyMissing = false;
+const firebaseConfig = {};
+for (const key of REQUIRED_FIREBASE_KEYS) {
+  let value = getFirebaseEnvVal(key);
+  if (typeof value === "undefined") {
+    anyMissing = true;
+    // Fallback to empty string and warn.
+    value = "";
+    if (typeof window !== "undefined") {
+      // eslint-disable-next-line
+      console.warn(
+        `[NeuroQuest] ENV WARNING: The environment variable ${key} is undefined at runtime. Please verify your .env file. Firebase may fail to initialize.`
+      );
+    }
+  }
+  firebaseConfig[
+    key.replace("VITE_FIREBASE_", "").replace(/_/g, "").replace("MESSAGINGSENDERID", "messagingSenderId").replace("APPID", "appId") // for clarity
+  ] = value;
+}
+// Explicit map to required Firebase config field names
+firebaseConfig.apiKey = getFirebaseEnvVal("VITE_FIREBASE_API_KEY") || "";
+firebaseConfig.authDomain = getFirebaseEnvVal("VITE_FIREBASE_AUTH_DOMAIN") || "";
+firebaseConfig.projectId = getFirebaseEnvVal("VITE_FIREBASE_PROJECT_ID") || "";
+firebaseConfig.storageBucket = getFirebaseEnvVal("VITE_FIREBASE_STORAGE_BUCKET") || "";
+firebaseConfig.messagingSenderId = getFirebaseEnvVal("VITE_FIREBASE_MESSAGING_SENDER_ID") || "";
+firebaseConfig.appId = getFirebaseEnvVal("VITE_FIREBASE_APP_ID") || "";
+firebaseConfig.measurementId = getFirebaseEnvVal("VITE_FIREBASE_MEASUREMENT_ID") || "";
+
+// Throw if any are critically missing to avoid silent misconfig
+if (anyMissing) {
+  // For dev, warn not crash; change to throw if you prefer hard fail
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line
+    console.error(
+      "[NeuroQuest] Firebase configuration is incomplete! At least one required environment variable is missing. See console warnings for details and check your .env."
+    );
+  }
+  // Optionally: Throw error for critical missing config (uncomment to enforce)
+  // throw new Error("[NeuroQuest] Fatal: Missing Firebase env vars, see console for required keys and check .env.");
+}
 
 // Initialize Firebase app (singleton)
 let firebaseApp;
