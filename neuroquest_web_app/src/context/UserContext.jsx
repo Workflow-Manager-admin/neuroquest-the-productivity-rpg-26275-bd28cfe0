@@ -4,6 +4,8 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 
+
+
 /**
  * Firebase configuration for NeuroQuest.
  * 
