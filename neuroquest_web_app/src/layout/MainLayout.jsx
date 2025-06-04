@@ -1,6 +1,8 @@
 import React from "react";
 import { Outlet, NavLink, useLocation } from "react-router-dom";
 import Avatar from "../components/Avatar";
+import { useUser } from "../context/UserContext";
+import { useGame } from "../context/GameContext";
 
 // NAVIGATION ITEMS for RPG fantasy nav bar
 const NAV_LINKS = [
