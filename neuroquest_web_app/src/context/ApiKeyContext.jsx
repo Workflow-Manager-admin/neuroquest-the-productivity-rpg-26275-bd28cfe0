@@ -1,4 +1,3 @@
-/* global process */
 import React, { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 

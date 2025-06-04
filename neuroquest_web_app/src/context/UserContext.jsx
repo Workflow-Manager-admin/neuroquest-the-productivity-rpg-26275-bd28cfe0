@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-
+import { getAnalytics } from "firebase/analytics";
 /**
  * Firebase configuration for NeuroQuest.
  * 
@@ -22,13 +22,13 @@ import { initializeApp } from "firebase/app";
 /* Debug log removed: console.log("DEBUG VITE ENV:", import.meta.env); */
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY, // required
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN, // required
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID, // required
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET, // required
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID, // required
-  appId: import.meta.env.VITE_FIREBASE_APP_ID, // required
-  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID, // optional (for analytics)
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
 // Initialize Firebase app (singleton)
@@ -38,6 +38,7 @@ try {
 } catch (e) {
   // App may already be initialized; ignore error.
 }
+const analytics = getAnalytics(firebaseApp);
 const auth = getAuth();
 const db = getFirestore();
 

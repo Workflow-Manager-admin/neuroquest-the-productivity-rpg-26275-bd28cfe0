@@ -1,4 +1,3 @@
-/* global fetch, setTimeout */
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 // import { getFirestore } from "firebase/firestore"; // Unused db removal per lint
