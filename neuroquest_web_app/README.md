@@ -1,82 +1,62 @@
-# Lightweight React Template for KAVIA
+# neuroquest-the-productivity-rpg-26275-bd28cfe0
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+## User-Supplied API Key Management (OpenAI, etc.)
 
-## Features
+NeuroQuest now supports secure runtime injection and persistence of user-supplied API keys (e.g., for OpenAI) using a dedicated React Context.
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+### How API Key Storage Works
 
-## Getting Started
+- **User-supplied key:** Entered via the Settings or Onboarding UI, and stored securely in React Context and browser `localStorage` (never sent to any backend).
+- **Persistence:** Key survives page reloads and browser restarts via localStorage.
+- **Fallback:** If the user does NOT set a key, the app will use the key from `.env` (i.e., `process.env.REACT_APP_OPENAI_API_KEY`).
+- **Update at Runtime:** Changing/removing the key via UI triggers updates everywhere, and falls back to .env as needed.
+- **Security:** Never display or log user API keys in plain text. Input fields for the API key should use `type="password"` for safety.
 
-In the project directory, you can run:
+### Retrieving the Effective Key (for API calls)
 
-### `npm start`
+**Example:**
+```js
+import { useApiKey } from "./context/ApiKeyContext";
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+// in a component or service
+const { getKey } = useApiKey();
+const apiKey = getKey(); // Most up-to-date, user-supplied or .env
 
-### `npm test`
-
-Launches the test runner in interactive watch mode.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-## Customization
-
-### Colors
-
-The main brand colors are defined as CSS variables in `src/App.css`:
-
-```css
-:root {
-  --kavia-orange: #E87A41;
-  --kavia-dark: #1A1A1A;
-  --text-color: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.7);
-  --border-color: rgba(255, 255, 255, 0.1);
-}
+// ...use apiKey in your API requests
 ```
 
-### Components
+### Adding/Updating the API Key (e.g., from UI)
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+**Example (Settings UI):**
+```js
+const { setApiKey, clearApiKey, apiKey } = useApiKey();
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+// Update to new user-supplied value:
+setApiKey("sk-user-entry...");
 
-## Learn More
+// Clear the user key (fallback to env):
+clearApiKey();
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Note:** To wrap the app,
+```js
+import { ApiKeyProvider } from "./src/context/ApiKeyContext";
+...
+<ApiKeyProvider>
+  <App />
+</ApiKeyProvider>
+```
 
-### Code Splitting
+### Best Practices
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Keys are always kept on the client—never displayed or sent elsewhere.
+- .env keys are only suitable for test, non-sensitive, or client-safe API secrets.
+- Users can manage/change their API key in-app at any time.
 
-### Analyzing the Bundle Size
+### For Developers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The context is located at `/src/context/ApiKeyContext.jsx`.
+- Use `useApiKey()` anywhere within a child component to retrieve or update the key.
+- Full docstrings and usage examples are in the source code of `ApiKeyContext.jsx`.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
