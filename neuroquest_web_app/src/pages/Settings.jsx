@@ -187,7 +187,7 @@ export default function Settings() {
                 <div className="text-textFaded max-w-lg">
                   Reset your current major quest and start a new adventure. 
                   <span className="text-brand-orange font-semibold ml-1">
-                    This action will clear your onboarding progress, but keeps your XP/items.
+                    This action will clear your onboarding progress, but keep your XP/items.
                   </span>
                 </div>
                 <NeonButton
@@ -276,7 +276,7 @@ export default function Settings() {
                   </NeonButton>
                 </div>
                 <div className="text-textFaded mt-1">
-                  Leave NeuroQuest — You'll stay logged out until you return.
+                  Leave NeuroQuest — You&apos;ll stay logged out until you return.
                 </div>
               </section>
               {/* Future: Add Email update, Account deletion etc */}
