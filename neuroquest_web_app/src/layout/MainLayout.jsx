@@ -43,9 +43,6 @@ const NAV_LINKS = [
   },
 ];
 
-import { useUser } from "../context/UserContext";
-import { useGame } from "../context/GameContext";
-
 // Fantasy hero banner asset handling
 const heroBannerUrl =
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"; // Example fantasy woods (Unsplash)
@@ -100,7 +97,7 @@ export default function MainLayout() {
         aria-label="Main navigation"
         role="navigation"
       >
-        {/* Avatar area (goes to settings?) */}
+        {/* Avatar area (goes to kingdom) */}
         <NavLink
           to="/dashboard"
           className={({ isActive }) =>
