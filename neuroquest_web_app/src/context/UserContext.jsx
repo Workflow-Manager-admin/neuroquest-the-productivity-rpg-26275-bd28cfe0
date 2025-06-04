@@ -19,7 +19,7 @@ import { initializeApp } from "firebase/app";
  * These should be copied from your Firebase Console, never hardcoded.
  * IMPORTANT: If your variables started with REACT_APP_, rename them to VITE_ (see docs).
  */
-console.log("DEBUG VITE ENV:", import.meta.env);
+/* Debug log removed: console.log("DEBUG VITE ENV:", import.meta.env); */
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY, // required

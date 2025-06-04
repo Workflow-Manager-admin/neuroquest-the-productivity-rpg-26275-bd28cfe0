@@ -39,7 +39,7 @@ function playSound(src, volume = 1.0) {
 /** BossBattle.jsx: Intense RPG dungeon/boss fight with Lottie boss, timer, music, themed visuals, live XP/HP, rewarding/failure logic. */
 export default function BossBattle() {
   const { game, updateGame } = useGame();
-  const { user } = useUser();
+  // const { user } = useUser(); // Unused variable
   const navigate = useNavigate();
 
   const [timer, setTimer] = useState(BOSS_CONFIG.combatTime);
