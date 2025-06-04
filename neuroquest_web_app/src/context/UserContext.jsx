@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-/**
- * Firebase configuration for NeuroQuest.
  * 
  * REQUIRED: You must set the following variables in your .env (Vite requires VITE_ prefix) before running the app:
  * - VITE_FIREBASE_API_KEY
