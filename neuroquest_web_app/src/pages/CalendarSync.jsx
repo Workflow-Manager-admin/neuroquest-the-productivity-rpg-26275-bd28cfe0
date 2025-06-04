@@ -1,4 +1,3 @@
-/* global process */
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import NeonButton from "../components/NeonButton";
