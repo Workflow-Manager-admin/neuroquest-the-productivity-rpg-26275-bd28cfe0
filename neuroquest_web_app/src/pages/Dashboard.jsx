@@ -1,4 +1,7 @@
-// Dashboard – fantasy hero polish, RPG neon assets, responsive
+/*
+  Dashboard (The Kingdom) – fantasy RPG dashboard with XP/HP bars, glowing avatar, core zones (Focus Forest, Deadline Dungeon, Daily Hills),
+  floating quest orb, and RPG neon/fantasy visuals. Responsive and mobile-ready.
+*/
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
@@ -11,6 +14,29 @@ import FloatingOrb from "../components/FloatingOrb";
 import NeonButton from "../components/NeonButton";
 import ZoneCard from "../components/ZoneCard";
 
+/*
+  ASSET NOTE:
+  Replace the zone/hero/skin images with your own art in /src/assets for full-fantasy immersion.
+  Current demo uses public domain art. ZoneCard will fallback to fantasy stock if image fails.
+*/
+
+// Main RPG neon background/overlay
+function RPGNeonGradient() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none -z-10"
+      aria-hidden
+      style={{
+        background: `
+          radial-gradient(ellipse at 55% 12%, #9f63f236 0%, transparent 54%),
+          radial-gradient(ellipse at 30% 80%, #fbbf2462 0%, transparent 74%),
+          linear-gradient(135deg, #1d1632 70%, #6047a888 100%)
+        `,
+        opacity: 0.97,
+      }}
+    ></div>
+  );
+}
 /**
  * Fantasy hero/zones image logic:
  * - HERO_BANNER: public domain fantasy wizard/forest as example. Replace URL with your own asset for polish.
