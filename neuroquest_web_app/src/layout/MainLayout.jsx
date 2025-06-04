@@ -41,12 +41,12 @@ const NAV_LINKS = [
   },
 ];
 
+import { useUser } from "../context/UserContext";
+import { useGame } from "../context/GameContext";
+
 // Fantasy hero banner asset handling
 const heroBannerUrl =
   "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80"; // Example fantasy woods (Unsplash)
-
-import { useUser } from "../context/UserContext";
-import { useGame } from "../context/GameContext";
 
 export default function MainLayout() {
   const location = useLocation();
