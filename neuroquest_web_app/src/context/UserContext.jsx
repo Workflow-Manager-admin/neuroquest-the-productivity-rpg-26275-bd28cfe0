@@ -22,10 +22,9 @@ import { initializeApp } from "firebase/app";
  * This file now includes robust runtime checks and diagnostics for environment variables.
  */
 
-// Runtime DEBUG log for all env variables before Firebase setup
+ // Runtime DEBUG log for all env variables before Firebase setup
 if (
   typeof window !== "undefined" &&
-  typeof import !== "undefined" &&
   import.meta &&
   import.meta.env
 ) {
