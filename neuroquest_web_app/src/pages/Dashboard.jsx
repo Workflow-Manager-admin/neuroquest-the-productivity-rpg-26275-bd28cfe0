@@ -43,11 +43,7 @@ const ZONES = [
   },
 ];
 
-function getEquippedItems(inventory = []) {
-  // Inventory shape: [{ name, slot, image, equipped }]
-  // For future extension: return array of items where equipped===true, grouped by slot
-  return (inventory || []).filter((item) => item.equipped);
-}
+/* Removed unused getEquippedItems. */
 
 // PUBLIC_INTERFACE
 /**

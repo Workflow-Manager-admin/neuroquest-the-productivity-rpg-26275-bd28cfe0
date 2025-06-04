@@ -121,7 +121,7 @@ function rarityOrder(r) {
  */
 export default function Inventory() {
   const { game, updateGame } = useGame();
-  const { user } = useUser();
+  // const { user } = useUser(); // Unused variable
   const [selected, setSelected] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [activeRarity, setActiveRarity] = useState("all");

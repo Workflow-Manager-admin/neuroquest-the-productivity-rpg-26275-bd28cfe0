@@ -1,4 +1,4 @@
-/* global setTimeout, clearTimeout, fetch, process */
+/* global setTimeout, clearTimeout, fetch */
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";

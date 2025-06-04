@@ -148,7 +148,7 @@ RPGEventCard.propTypes = {
  * CalendarSync - RPG themed Google Calendar bi-directional sync
  */
 export default function CalendarSync() {
-  const [gapiLoaded, setGapiLoaded] = useState(false);
+  // removed gapiLoaded, user, db (no-unused-vars)
   const [authInst, setAuthInst] = useState(null);
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [events, setEvents] = useState([]);
@@ -159,9 +159,9 @@ export default function CalendarSync() {
   const [modal, setModal] = useState({ open: false, content: null });
   const [error, setError] = useState("");
   const [userEmail, setUserEmail] = useState("");
-  const { user } = useUser();
+  // const { user } = useUser();
   const { game, updateGame } = useGame();
-  const db = getFirestore();
+  // const db = getFirestore();
 
   // ======= GAPI INIT + OAUTH ============
   async function initGapi() {
