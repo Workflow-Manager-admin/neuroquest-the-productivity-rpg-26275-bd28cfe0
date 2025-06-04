@@ -1,5 +1,24 @@
 # neuroquest-the-productivity-rpg-26275-bd28cfe0
 
+## Quick Start: Environment Variables
+
+To configure this app, **copy `.env.example` to `.env`** in the `neuroquest_web_app/` folder and set all required values.
+You **must** fill in your own Firebase credentials as environment variables for local development and deployment.
+
+**Required `.env` variables for Firebase:**
+```
+REACT_APP_FIREBASE_API_KEY=...
+REACT_APP_FIREBASE_AUTH_DOMAIN=...
+REACT_APP_FIREBASE_PROJECT_ID=...
+REACT_APP_FIREBASE_STORAGE_BUCKET=...
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=...
+REACT_APP_FIREBASE_APP_ID=...
+REACT_APP_FIREBASE_MEASUREMENT_ID=...   # (optional, for analytics)
+```
+See `.env.example` for details and copy/paste.
+
+---
+
 ## User-Supplied API Key Management (OpenAI, etc.)
 
 NeuroQuest now supports secure runtime injection and persistence of user-supplied API keys (e.g., for OpenAI) using a dedicated React Context.
