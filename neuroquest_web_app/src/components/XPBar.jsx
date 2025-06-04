@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
 // PUBLIC_INTERFACE
 /**
  * XPBar RPG-style neon-glow, animated, styled with fantasy themes.
