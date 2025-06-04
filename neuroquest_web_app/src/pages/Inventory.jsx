@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useGame } from "../context/GameContext";
+import { useAudio } from "../components/AudioPlayer";
 
 import NeonButton from "../components/NeonButton";
 import FloatingOrb from "../components/FloatingOrb";
@@ -114,7 +115,7 @@ function rarityOrder(r) {
   }
 }
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 /**
  * Inventory.jsx – RPG grid for cosmetics, Soul tokens, item equip, rarity filter,
  * interactive tooltips, Lottie FX for rare/unlock, and Firestore sync.
@@ -122,6 +123,12 @@ function rarityOrder(r) {
 export default function Inventory() {
   const { game, updateGame } = useGame();
   // const { user } = useUser(); // Unused variable
+  const { switchTheme } = useAudio();
+
+  useEffect(() => {
+    switchTheme("inventory");
+    // eslint-disable-next-line
+  }, []);
   const [selected, setSelected] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const [activeRarity, setActiveRarity] = useState("all");

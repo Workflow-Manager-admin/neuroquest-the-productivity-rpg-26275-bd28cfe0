@@ -7,10 +7,11 @@ import Modal from '../components/Modal';
 import { useGame } from '../context/GameContext';
 import { useUser } from '../context/UserContext';
 import { useApiKey } from '../context/ApiKeyContext';
+import { useAudio } from '../components/AudioPlayer';
 
 const ANIM_LOTTIE = '/src/assets/magic-fantasy-particles.json';
 
-// PUBLIC_INTERFACE
+ // PUBLIC_INTERFACE
 /**
  * Settings – RPG panel for user preferences. Context-integrated toggles (dark/light mode, animation effects), Start New Quest (onboarding reset), Logout action.
  * Modern RPG/fantasy themed, responsive, and immersive.
@@ -29,10 +30,16 @@ export default function Settings() {
   const [userApiInput, setUserApiInput] = useState(apiKey || '');
   const [apiSaved, setApiSaved] = useState(false);
   const navigate = useNavigate();
+  const { switchTheme } = useAudio();
 
   useEffect(() => {
     setThemeState(game.theme || 'auto');
   }, [game.theme]);
+
+  useEffect(() => {
+    switchTheme("settings");
+    // eslint-disable-next-line
+  }, []);
 
   // Apply animation toggle globally
   useEffect(() => {
