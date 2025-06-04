@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import PropTypes from "prop-types";
 import FocusMeter from "./FocusMeter";
 import FloatingOrb from "./FloatingOrb";
 import NeonButton from "./NeonButton";
@@ -14,7 +15,6 @@ const FOCUS_GAIN_RATE = { min: 6, max: 18 }; // XP per tick
 const STREAK_GAIN = 1; // streak per focus
 const FOCUS_INTERVAL_SEC = 15; // sec per simulation tick
 
-import PropTypes from "prop-types";
 // PUBLIC_INTERFACE
 /**
  * FocusEngine.jsx: RPG overlay/side-panel with animated FocusMeter,
