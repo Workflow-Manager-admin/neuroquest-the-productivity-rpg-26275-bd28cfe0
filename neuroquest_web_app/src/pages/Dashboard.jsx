@@ -159,6 +159,11 @@ export default function Dashboard() {
       );
     }
   }
+  // PropTypes validation for QuickQuestOrb
+  import PropTypes from "prop-types";
+  QuickQuestOrb.propTypes = {
+    asMobile: PropTypes.bool,
+  };
 
   // Decorative overlay lines or particle accents (further immersion)
   function RPGZoneBottomAccent() {
