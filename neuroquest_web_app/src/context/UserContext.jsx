@@ -37,7 +37,6 @@ try {
 } catch (e) {
   // App may already be initialized; ignore error.
 }
-const analytics = getAnalytics(firebaseApp);
 const auth = getAuth();
 const db = getFirestore();
 
