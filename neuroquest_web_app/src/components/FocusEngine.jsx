@@ -5,20 +5,20 @@ import NeonButton from "./NeonButton";
 import LottieAnim from "./LottieAnim";
 import { useGame } from "../context/GameContext";
 
-const PARTICLE_LOTTIE = "/src/assets/magic-fantasy-particles.json"; // Place a JSON in assets, fallback below
-const DEMO_BG = PARTICLE_LOTTIE || "/src/assets/starfield.json"; // fallback
+// Demo/fallback RPG particle effect (can be swapped with any fantasy Lottie)
+const PARTICLE_LOTTIE = "/src/assets/magic-fantasy-particles.json";
+const DEMO_BG = PARTICLE_LOTTIE || "/src/assets/starfield.json";
 
-const CALM_MODE_THRESH = 60; // % focus required for Calm
-const FOCUS_GAIN_RATE = { min: 6, max: 18 }; // XP per interval
-const STREAK_GAIN = 1; // streak per focus session
-const FOCUS_INTERVAL_SEC = 15; // how many sec per simulation tick
+const CALM_MODE_THRESH = 60; // % focus for Calm Mode
+const FOCUS_GAIN_RATE = { min: 6, max: 18 }; // XP per tick
+const STREAK_GAIN = 1; // streak per focus
+const FOCUS_INTERVAL_SEC = 15; // sec per simulation tick
 
 // PUBLIC_INTERFACE
 /**
- * FocusEngine.jsx: RPG overlay/side-panel with glowing animated FocusMeter,
- * streak tracker, Calm Mode badge, Lottie particle/fantasy visual,
- * and live focus simulation (setInterval, tab visibility, Math.random).
- * XP/streak persist to context and Firestore in real time.
+ * FocusEngine.jsx: RPG overlay/side-panel with animated FocusMeter,
+ * streak tracker, Calm Mode badge, particle fantasy visual,
+ * and real-time focus simulation. XP/streak sync to context.
  * Immersive neon-glow/fantasy polish and mobile-friendliness built-in.
  */
 export default function FocusEngine({
@@ -27,15 +27,14 @@ export default function FocusEngine({
   overlay = false, // Use side overlay or embed mode
 }) {
   const { game, updateGame, incrementStreak } = useGame();
-  // State for live simulation
-  const [focus, setFocus] = useState(70); // percent, fake starting value
+  const [focus, setFocus] = useState(70); // percent, mock starting value
   const [isFocus, setIsFocus] = useState(true);
   const [isCalm, setIsCalm] = useState(true);
   const [streak, setStreak] = useState(game.streak || 0);
   const [xp, setXP] = useState(game.xp || 0);
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-  // Removed setBgAnimLoaded (was unused per linter)
+  // Removed setBgAnimLoaded (was unused)
   const [bgAnimLoaded] = useState(true); // Assume exists, not used directly
 
   // Refs for tab visibility/etc.
@@ -47,18 +46,18 @@ export default function FocusEngine({
     // On mount, restore from context
     setStreak(game.streak || 0);
     setXP(game.xp || 0);
-    setFocus(70 + Math.floor(Math.random() * 20)); // Fresh each visit
+    setFocus(70 + Math.floor(Math.random() * 20));
 
-    // Cleanup and visibility tracking
+    // Cleanup and tab visibility tracking
     function handleVis() {
       visibleRef.current = document.visibilityState;
     }
     document.addEventListener("visibilitychange", handleVis);
 
-    // Main interval: Simulate focus/distraction and XP gain
+    // Main interval: simulate focus/distraction and XP gain/loss
     focusTimer.current = setInterval(() => {
       let nowVis = visibleRef.current === "visible";
-      // Randomly simulate distraction (10-20% chance)
+      // Random simulate distraction
       const distracted = Math.random() > 0.81 || !nowVis;
       if (distracted) {
         setIsFocus(false);
@@ -67,7 +66,6 @@ export default function FocusEngine({
         setFocus((prev) => Math.max(0, prev - 22 - Math.random() * 6));
         setIsCalm(false);
       } else {
-        // Simulate gain
         setIsFocus(true);
         const focusGain =
           FOCUS_GAIN_RATE.min +
@@ -99,15 +97,12 @@ export default function FocusEngine({
     // eslint-disable-next-line
   }, []);
 
-  // Live sync to Firestore/context
+  // Live sync to Firestore/context on XP/streak update
   useEffect(() => {
-    // XP & Streak already saving on set via updateGame,
-    // here mainly update localState in effect of Firestore/context remote updates
     setXP(game.xp || 0);
     setStreak(game.streak || 0);
   }, [game.xp, game.streak]);
 
-  // Responsive/overlay classes
   const panelStyle = [
     "fixed",
     "top-0",
@@ -192,7 +187,7 @@ export default function FocusEngine({
     return (
       <button
         onClick={() => {
-          // For overlays: Navigate away or close panel in parent
+          // For overlays: try back or close panel parent
           if (window.history.length > 1) window.history.back();
         }}
         className="absolute top-4 right-5 z-50 text-3xl text-accent bg-black/60 rpg-rounded px-3 py-2 neon-accent font-bold shadow"
@@ -244,7 +239,7 @@ export default function FocusEngine({
     );
   }
 
-  // === RPG/Neon UI Styles (CSS-in-JS) ===
+  // Neon/Glow CSS (injected at mount)
   useEffect(() => {
     const style = document.createElement("style");
     style.innerHTML = `
@@ -286,7 +281,7 @@ export default function FocusEngine({
       style={{
         ...style,
         boxShadow: "0 0 44px 10px #a78bfa88,0 0 4px 2px #a78bfa,0 1px 41px #7c3aed44",
-        minHeight: "360px", // fallback for mobile
+        minHeight: "360px",
         maxWidth: "420px",
         borderTopLeftRadius: "28px",
         borderBottomLeftRadius: "28px",
@@ -342,7 +337,7 @@ export default function FocusEngine({
           </span>
         </div>
       </div>
-      {/* Toast - fantasy themed, floating at bottom */}
+      {/* Toast – fantasy themed, floating at bottom */}
       {showToast && (
         <div className="fixed left-1/2 bottom-[8dvh] z-[99] px-8 py-3 rpg-rounded shadow-xl border-2 border-accent/30 bg-[#180c2d] font-bold text-brand-orange neon-accent text-lg transform -translate-x-1/2 animate-fadeIn">
           <span>{toastMsg}</span>
