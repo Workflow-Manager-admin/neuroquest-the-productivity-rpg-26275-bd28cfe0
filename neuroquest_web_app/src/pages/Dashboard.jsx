@@ -3,6 +3,7 @@
   floating quest orb, and RPG neon/fantasy visuals. Responsive and mobile-ready.
 */
 import React from "react";
+import PropTypes from "prop-types";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../context/UserContext";
 import { useGame } from "../context/GameContext";
@@ -160,7 +161,6 @@ export default function Dashboard() {
     }
   }
   // PropTypes validation for QuickQuestOrb
-  import PropTypes from "prop-types";
   QuickQuestOrb.propTypes = {
     asMobile: PropTypes.bool,
   };
