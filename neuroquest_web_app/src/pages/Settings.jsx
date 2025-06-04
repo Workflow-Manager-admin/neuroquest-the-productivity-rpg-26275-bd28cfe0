@@ -246,7 +246,7 @@ export default function Settings() {
                       className="ml-1 font-bold text-accent"
                       aria-label="Close API key input"
                       onClick={() => setShowApi(false)}
-                    >&apos;✕&apos;</button>
+                    >{"✕"}</button>
                   </div>
                 )}
                 {apiSaved && (
