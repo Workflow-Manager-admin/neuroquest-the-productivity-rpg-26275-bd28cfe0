@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { useGame } from "../context/GameContext";
-import { useUser } from "../context/UserContext";
+
 import NeonButton from "../components/NeonButton";
 import FloatingOrb from "../components/FloatingOrb";
 import LottieAnim from "../components/LottieAnim";

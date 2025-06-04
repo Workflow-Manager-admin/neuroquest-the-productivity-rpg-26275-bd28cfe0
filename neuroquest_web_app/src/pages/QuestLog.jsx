@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-// import { getFirestore } from "firebase/firestore"; // Unused db removal per lint
 import { useGame } from "../context/GameContext";
 import { useUser } from "../context/UserContext";
 import QuestCard from "../components/QuestCard";

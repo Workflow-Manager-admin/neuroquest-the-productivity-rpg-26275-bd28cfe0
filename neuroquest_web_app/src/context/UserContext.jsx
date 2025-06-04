@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 /**
  * Firebase configuration for NeuroQuest.
  * 

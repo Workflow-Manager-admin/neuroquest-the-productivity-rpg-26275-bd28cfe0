@@ -4,9 +4,7 @@ import NeonButton from "../components/NeonButton";
 import Toast from "../components/Toast";
 import FloatingOrb from "../components/FloatingOrb";
 import Modal from "../components/Modal";
-import { useUser } from "../context/UserContext";
 import { useGame } from "../context/GameContext";
-import { getFirestore } from "firebase/firestore";
 
 // Google APIs
 // Note: OAuth is not persisted for long, so refresh if page reloads.
