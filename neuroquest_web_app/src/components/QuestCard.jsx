@@ -42,7 +42,7 @@ export default function QuestCard({
               e.target.src =
                 "https://opengameart.org/sites/default/files/styles/medium/public/scroll_17.png";
               // On double-fail, fallback to emoji/text
-              setTimeout(() => {
+              window.setTimeout(() => {
                 if (e.target.offsetParent && e.target.style.display !== "none") {
                   e.target.style.display = "none";
                   e.target.offsetParent.innerHTML +=
