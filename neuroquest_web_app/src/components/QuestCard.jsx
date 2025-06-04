@@ -1,171 +1,120 @@
 import React from "react";
 import PropTypes from "prop-types";
-import NeonButton from "./NeonButton";
 
 /**
- * QuestCard – Displays a single quest or task in RPG/fantasy theme.
- * Features:
- *  - Modular for main quest, side quest, or microtask.
- *  - Shows status, XP, order, type, and reordering/AI rewrite actions.
- *  - Neon-glow, immersive fantasy, responsive.
- *  - Interactive: Complete, Edit, AI Rewrite, Move Up/Down.
+ * PUBLIC_INTERFACE
+ * QuestCard – RPG/fantasy quest/task card with glowing effects,
+ * animation hooks, and modular handlers for actions.
+ * Accepts title, description, XP, and handlers for complete/edit/reorder/AI rewrite.
  */
-// PUBLIC_INTERFACE
 export default function QuestCard({
   title,
-  description,
-  xp,
-  completed,
+  description = "",
+  completed = false,
+  xp = 0,
+  order,
   onComplete,
   onAIRewrite,
   onMoveUp,
   onMoveDown,
-  type, // "main" | "side" | "micro"
-  order,
   onEdit,
   className = "",
+  style = {},
+  ...props
 }) {
-  // Type-based accent color/icons
-  const TYPE = {
-    main: {
-      bg: "bg-gradient-to-br from-accent/10 via-[#2e284c] to-[#271755]",
-      border: "border-accent/80",
-      icon: "🧭",
-      label: "Main Quest",
-    },
-    side: {
-      bg: "bg-gradient-to-br from-brand-orange/20 via-[#7c3aed22] to-[#251947]",
-      border: "border-brand-orange",
-      icon: "📝",
-      label: "Side Quest",
-    },
-    micro: {
-      bg: "bg-gradient-to-tr from-[#95feec22] via-[#6366f177] to-[#7c3aed33]",
-      border: "border-cyan-300",
-      icon: "💠",
-      label: "Microtask",
-    },
-  }[type] || TYPE["main"];
-
   return (
     <div
-      className={[
-        "relative flex flex-col rpg-rounded neon-accent shadow-lg border-2",
-        TYPE.bg,
-        TYPE.border,
-        className,
-        completed ? "opacity-55 filter grayscale" : "opacity-100",
-      ].join(" ")}
+      className={`relative neon-accent bg-[#1B1432de] shadow-xl border-2 border-accent/30 rpg-rounded px-4 py-3 mb-1 flex flex-col transition ${className} ${
+        completed ? "opacity-50 grayscale" : ""
+      }`}
       style={{
-        padding: "1.2rem 1.2rem 1rem 1.2rem",
-        marginBottom: "0.7rem",
-        minHeight: "98px",
-        boxShadow:
-          "0 0 18px 4px #7c3aed47, 0 0 8px #e87a4130, 0 2px 9px #000b",
-        borderLeft: `6px solid var(--tw-color-accent, #7c3aed)`,
-        borderBottom: `2.5px solid #7c3aed22`,
-        transition: "box-shadow 0.3s",
-        userSelect: "none",
+        boxShadow: "0 0 13px 2px #7c3aed55,0 0 7px 3px #a78bfa99",
+        ...style,
       }}
       tabIndex={0}
-      aria-label={`${TYPE.label}: ${title}`}
+      aria-label="Quest Card"
+      {...props}
     >
-      <div className="flex gap-3 items-center justify-between mb-1">
-        <div className="flex items-center gap-2">
-          <span className="text-2xl sm:text-3xl">{TYPE.icon}</span>
-          <span
-            className="font-bold text-accent text-lg sm:text-xl font-poppins drop-shadow"
-            style={{ color: "var(--tw-color-accent, #7c3aed)" }}
-          >
+      <div className="flex flex-row gap-3 items-center justify-between mb-0">
+        <div className="flex flex-col gap-0">
+          <div className="text-accent font-bold text-lg font-poppins">
             {title}
-          </span>
-          {type !== "main" && (
-            <span className="ml-2 text-brand-orange text-md font-bold px-2 py-0.5 rpg-rounded bg-[#251947cc] border border-accent/30 shadow-inner">
-              {TYPE.label}
-            </span>
+          </div>
+          {!!description && (
+            <div className="text-xs text-textFaded mt-0.5 max-w-[90vw] truncate">
+              {description}
+            </div>
           )}
         </div>
-        <div className="flex flex-col gap-0 items-end">
-          {typeof order === "number" && (
-            <span className="text-sm text-textFaded font-mono opacity-60">
-              #{order + 1}
+        <div className="flex flex-row gap-1 items-center">
+          {typeof xp === "number" && xp > 0 && (
+            <span className="bg-gradient-to-br from-accent to-brand-orange text-xs font-bold text-white px-3 py-1 rounded-full shadow-neon-gold neon-accent border border-accent/50 ml-2">
+              +{xp} XP
             </span>
           )}
-          <span
-            className="text-xs font-bold text-lime-200 border py-0.5 px-2 rounded select-none bg-neutral-900/60"
-            style={{
-              borderColor: "#a78bfa",
-              color: completed ? "#a1a1aa" : "#c3ffe2",
-              opacity: 0.93,
-            }}
-          >
-            {xp ?? 10} XP
-          </span>
         </div>
       </div>
-      {description && (
-        <div
-          className="text-textFaded text-[0.98em] mb-2 mt-1 px-2 font-inter"
-          style={{ minHeight: "16px" }}
-        >
-          {description}
-        </div>
-      )}
-      <div className="flex flex-wrap gap-2 mt-auto pt-2 justify-end">
-        {!completed && (
-          <NeonButton
+      <div className="flex flex-row gap-2 mt-3 mb-0 items-center">
+        {/* Complete button */}
+        {onComplete && !completed && (
+          <button
+            className="py-0.5 px-3 font-bold text-sm bg-accent/90 text-white neon-accent rounded shadow transition hover:scale-110"
             onClick={onComplete}
-            variant="accent"
-            size="sm"
-            className="font-semibold px-4 py-1"
-            aria-label="Mark as complete"
+            type="button"
           >
-            ✅ Complete
-          </NeonButton>
+            Complete
+          </button>
         )}
-        <NeonButton
-          onClick={onEdit}
-          variant="orange"
-          size="sm"
-          className="font-semibold px-3 py-1"
-          aria-label="Edit"
-        >
-          ✏️ Edit
-        </NeonButton>
-        <NeonButton
-          onClick={onAIRewrite}
-          variant="accent"
-          size="sm"
-          className="font-semibold px-3 py-1"
-          aria-label="AI Rewrite"
-        >
-          🪄 AI Rewrite
-        </NeonButton>
-        <NeonButton
-          onClick={onMoveUp}
-          disabled={order === 0}
-          variant="accent"
-          size="sm"
-          className="px-2 py-1"
-          aria-label="Move Up"
-        >
-          ↑
-        </NeonButton>
-        <NeonButton
-          onClick={onMoveDown}
-          variant="accent"
-          size="sm"
-          className="px-2 py-1"
-          aria-label="Move Down"
-        >
-          ↓
-        </NeonButton>
+        {/* Edit */}
+        {onEdit && (
+          <button
+            className="py-0.5 px-2 font-bold text-sm bg-black/60 text-accent border-accent neon-accent rounded shadow transition"
+            onClick={onEdit}
+            type="button"
+            aria-label="Edit"
+          >
+            ✏️
+          </button>
+        )}
+        {/* Move up/down */}
+        {onMoveUp && (
+          <button
+            className="p-1 px-2 text-xs text-accent bg-black/30 neon-accent rounded"
+            onClick={onMoveUp}
+            type="button"
+            aria-label="Move Up"
+          >
+            ▲
+          </button>
+        )}
+        {onMoveDown && (
+          <button
+            className="p-1 px-2 text-xs text-accent bg-black/30 neon-accent rounded"
+            onClick={onMoveDown}
+            type="button"
+            aria-label="Move Down"
+          >
+            ▼
+          </button>
+        )}
+        {/* AI-rewrite */}
+        {onAIRewrite && (
+          <button
+            className="py-0.5 px-2 font-bold text-xs bg-gradient-to-l from-brand-orange to-fuchsia-400 text-white neon-accent border border-accent/40 rounded shadow ml-2 transition"
+            onClick={onAIRewrite}
+            type="button"
+            aria-label="Rewrite with AI"
+            title="Rewrite in RPG style"
+          >
+            💡 AI
+          </button>
+        )}
+        {completed && (
+          <span className="ml-auto text-green-400 font-bold text-xs animate-pulse">
+            DONE
+          </span>
+        )}
       </div>
-      {completed && (
-        <span className="absolute top-2 right-4 text-green-400 font-bold text-xs animate-glowPulse">
-          Completed
-        </span>
-      )}
     </div>
   );
 }
@@ -173,14 +122,14 @@ export default function QuestCard({
 QuestCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
-  xp: PropTypes.number,
   completed: PropTypes.bool,
+  xp: PropTypes.number,
+  order: PropTypes.number,
   onComplete: PropTypes.func,
   onAIRewrite: PropTypes.func,
   onMoveUp: PropTypes.func,
   onMoveDown: PropTypes.func,
-  type: PropTypes.oneOf(["main", "side", "micro"]),
-  order: PropTypes.number,
   onEdit: PropTypes.func,
   className: PropTypes.string,
+  style: PropTypes.object,
 };
