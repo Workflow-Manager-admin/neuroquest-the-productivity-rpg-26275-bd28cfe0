@@ -299,6 +299,8 @@ export default function QuestLog() {
   );
 }
 
+import PropTypes from "prop-types"; // <-- Add import at top if not yet present
+
 // Quest Add form
 function AddQuestForm({ type, onCancel, onAdd, initial = {} }) {
   const [title, setTitle] = useState(initial.title || "");
@@ -335,6 +337,16 @@ function AddQuestForm({ type, onCancel, onAdd, initial = {} }) {
     </form>
   );
 }
+AddQuestForm.propTypes = {
+  type: PropTypes.oneOf(["main", "side", "micro"]).isRequired,
+  onCancel: PropTypes.func.isRequired,
+  onAdd: PropTypes.func.isRequired,
+  initial: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    type: PropTypes.string,
+  }),
+};
 
 // Quest Edit form (for modal)
 function EditQuestForm({ task, onSave, onCancel }) {
@@ -369,3 +381,15 @@ function EditQuestForm({ task, onSave, onCancel }) {
   );
 }
 EditQuestForm.defaultProps = { onCancel: () => {} };
+EditQuestForm.propTypes = {
+  task: PropTypes.shape({
+    title: PropTypes.string,
+    description: PropTypes.string,
+    completed: PropTypes.bool,
+    xp: PropTypes.number,
+    type: PropTypes.oneOf(["main", "side", "micro"]),
+    order: PropTypes.number,
+  }).isRequired,
+  onSave: PropTypes.func.isRequired,
+  onCancel: PropTypes.func,
+};
