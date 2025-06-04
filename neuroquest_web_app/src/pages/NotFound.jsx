@@ -1,4 +1,3 @@
-/* global require */
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Lottie from "lottie-react"; // Ensure 'lottie-react' is installed in your project
