@@ -181,7 +181,7 @@ export default function CalendarSync() {
         clientId: CLIENT_ID,
         scope: SCOPES,
       });
-      setGapiLoaded(true);
+      // setGapiLoaded(true); // Removed, as gapiLoaded is unused and setter is undefined
       const auth2 = gapi.auth2.getAuthInstance();
       setAuthInst(auth2);
       setIsSignedIn(auth2.isSignedIn.get());
