@@ -1,3 +1,4 @@
+/* global setInterval, clearInterval, setTimeout */
 import React, { useEffect, useRef, useState } from "react";
 import FocusMeter from "./FocusMeter";
 import FloatingOrb from "./FloatingOrb";
@@ -35,7 +36,8 @@ export default function FocusEngine({
   const [xp, setXP] = useState(game.xp || 0);
   const [showToast, setShowToast] = useState(false);
   const [toastMsg, setToastMsg] = useState("");
-  const [bgAnimLoaded, setBgAnimLoaded] = useState(true); // Assume exists
+  // Removed setBgAnimLoaded (was unused per linter)
+  const [bgAnimLoaded] = useState(true); // Assume exists, not used directly
 
   // Refs for tab visibility/etc.
   const focusTimer = useRef(null);
