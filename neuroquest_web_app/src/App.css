@@ -6,11 +6,83 @@
   --border-color: rgba(255, 255, 255, 0.1);
 }
 
+/* === RPG Neon-Glow and Fantasy Styling Enhancements === */
+
+body {
+  font-family: 'Cinzel Decorative', 'UnifrakturCook', 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: var(--kavia-dark);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  letter-spacing: 0.01em;
+}
+
+/* Fantasy neon border and highlight */
+.rpg-neon-bar {
+  background: linear-gradient(90deg, #7c3aed, #4ade80 90%);
+  border-radius: 14px;
+  height: 5px;
+  box-shadow: 0 0 30px 10px #7c3aed25, 0 0 2px #4ade80cc;
+  margin: 1.5rem 0 2rem 0;
+  width: 90%;
+}
+
+/* Neon fantasy shadow and animation */
+.neon-flicker {
+  animation: neon-flicker 1.35s infinite alternate;
+}
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 48%, 100% {
+    text-shadow: 0 0 20px #9f62ff, 0 0 8px #26e1b3, 0 0 9px #2230e8b0;
+    filter: blur(0.5px);
+  }
+  20%, 22%, 49% {
+    text-shadow: 0 0 6px #fff, 0 0 1px #fff, 0 0 32px #ba4fff;
+    filter: blur(0.6px) brightness(1.19);
+  }
+}
+
+/* Lottie container for responsive fantasy glow */
+.rpg-lottie-portal {
+  background: radial-gradient(circle at 60% 40%, #7c3aed30 0%, #4ade80 65%, #120a25 100%);
+  border-radius: 22px 35px 28px 33px/24px 19px 30px 25px;
+  border: 2.5px solid #7c3aed99;
+  box-shadow: 0 0 34px 6px #4ade8099, 0 0 14px 2.5px #7c3aed55;
+  max-width: 350px;
+  margin: 0 auto 1.2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Fantasy panel glass neon effect */
+.rpg-panel-glass {
+  background: linear-gradient(122deg, #21153b 85%, #6ae6e622 100%);
+  box-shadow: 0 0 28px 2px #7c3aed99, 0 0 7px 4px #4ade8055;
+  backdrop-filter: blur(15px) brightness(0.97);
+  border-radius: 1.35rem;
+  border: 2.2px solid #9f62ff99;
+  padding: 1.5rem 2.1rem;
+  margin-bottom: 2.1rem;
+}
+
+/* Responsive panel improvements for settings/cards */
+@media (max-width: 700px) {
+  .rpg-panel-glass {
+    padding: 1.07rem 0.4rem;
+  }
+  .rpg-lottie-portal {
+    max-width: 98vw;
+    padding: 10px 0;
+  }
+}
+
 /* Hero banner style - replaced missing image with fallback gradient */
 .hero-banner {
   width: 100%;
   height: 260px;
-  /* background-image: url('./assets/hero_banner_wizard.png'); */
   background: linear-gradient(120deg, var(--kavia-dark) 50%, var(--kavia-orange) 100%);
   background-repeat: no-repeat;
   background-size: cover;
@@ -18,15 +90,6 @@
   border-radius: 2.5rem;
   margin-bottom: 2.5rem;
   box-shadow: 0 1px 10px 0 var(--border-color), 0 0.25rem 2rem 0 #4c19e8b3;
-}
-
-/* Additional app global styles (retained original content) */
-body {
-  font-family: 'Rubik', 'Segoe UI', Arial, Helvetica, sans-serif;
-  background: var(--kavia-dark);
-  color: var(--text-color);
-  margin: 0;
-  padding: 0;
 }
 
 .main-bg {
@@ -60,25 +123,26 @@ body {
 }
 
 /* Neon button style */
-.btn, .btn-large {
+.btn, .btn-large, .neon-btn-fantasy, .rpg-fantasy-btn {
   display: inline-block;
-  background: var(--kavia-orange);
-  color: var(--kavia-dark);
+  background: linear-gradient(90deg, #7c3aed 35%, #4ade80 90%);
+  color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 2rem;
   padding: 0.68rem 2rem;
-  font-size: 1.15rem;
+  font-size: 1.19rem;
   cursor: pointer;
-  box-shadow: 0 0 12px 2px var(--kavia-orange), 0 2px 4px 0 var(--border-color);
-  transition: background 0.2s, color 0.2s, transform 0.1s, box-shadow 0.18s;
+  box-shadow: 0 0 18px 2px #7c3aed, 0 3px 8px 0 #4ade80cc, 0 0.5rem 1.3rem 0 #b3f6e444;
+  transition: background 0.21s, color 0.2s, transform 0.12s, box-shadow 0.23s;
+  font-family: 'Cinzel Decorative', 'Poppins', serif;
+  letter-spacing: 0.02em;
 }
-
-.btn:hover, .btn:active, .btn-large:hover, .btn-large:active {
-  background: #ea923a;
+.btn:hover, .btn:active, .btn-large:hover, .btn-large:active, .neon-btn-fantasy:hover, .rpg-fantasy-btn:hover {
+  background: linear-gradient(90deg,#13fcd2 40%, #a43efa 100%);
   color: #fff;
-  transform: translateY(-2px) scale(1.03) rotate(-1deg);
-  box-shadow: 0 4px 22px 3px #e87a41a0;
+  transform: translateY(-3px) scale(1.035) rotate(-1.5deg);
+  box-shadow: 0 4px 27px 9px #7c3aeddd, 0 0 16px 5px #4ade80a7;
 }
 
 .btn-large {
@@ -87,16 +151,22 @@ body {
 }
 
 /* Neon accent text */
-.neon-accent, .text-accent {
+.neon-accent, .text-accent, .fantasy-neon {
   color: #9f62ff;
-  text-shadow: 0 0 8px #cdaaee, 0 0 8px #723beb38;
+  text-shadow: 0 0 12px #cdaaee, 0 0 8px #723beb38, 0 0 20px #26e1b360;
+}
+
+.fantasy-label {
+  font-family: "Cinzel Decorative", "UnifrakturCook", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* Card style */
-.card {
-  background: #23213a;
+.card, .fantasy-card {
+  background: linear-gradient(133deg, #23213a 85%, #2ad8fb11 95%);
   border-radius: 1.5rem;
-  box-shadow: 0 1px 8px 0 var(--border-color), 0 0.15rem 0.6rem 0 #4c19e860;
+  box-shadow: 0 1px 12px 0 var(--border-color), 0 0.25rem 0.7rem 0 #4c19e860, 0 0 8px 3px #4ade8038;
   padding: 1.2rem 2rem;
   margin-bottom: 2rem;
 }
@@ -120,7 +190,7 @@ body {
 }
 .nav-link.active, .nav-link:hover {
   color: var(--kavia-orange);
-  text-shadow: 0 0 7px #e87a4190;
+  text-shadow: 0 0 11px #e87a4190, 0 0 20px #facc1530;
 }
 
 /* XP/HP bar style */
@@ -129,7 +199,7 @@ body {
   background: #27244e;
   border-radius: 13px;
   margin-bottom: 0.8rem;
-  box-shadow: 0 1.5px 10px 0 #6e30f030;
+  box-shadow: 0 1.5px 10px 0 #6e30f030, 0 0 12px #7c3aed33;
 }
 .xp-bar > .fill {
   background: linear-gradient(90deg, #ffb03a, #ba6e38);
@@ -147,14 +217,46 @@ body {
 /* Avatar frame style */
 .avatar-frame {
   border: 3px solid var(--kavia-orange);
-  box-shadow: 0 0 12px 3px #e87a41c0;
+  box-shadow: 0 0 16px 5px #e87a41c0, 0 0 6px 2px #7c3aed66;
   border-radius: 2.5rem;
   padding: 7px;
   background: #291f38c9;
 }
 
+/* === Responsive settings/fantasy === */
+@media (max-width: 670px) {
+  .fantasy-card, .card, .rpg-panel-glass {
+    padding: 1.05rem 0.5rem;
+    margin-bottom: 1.3rem;
+  }
+  .btn, .btn-large, .neon-btn-fantasy, .rpg-fantasy-btn {
+    padding: 0.765rem 1.35rem;
+    font-size: 1.08rem;
+  }
+}
+
+/* RPG panel border aura */
+.rpg-border-aura {
+  border: 2.7px solid #9f62ff88;
+  box-shadow: 0 0 18px 9px #a56bff32, 0 0 28px 4px #22d3ee33;
+  border-radius: 2.2rem;
+}
+
+/* Animate background subtle starfield effect (best for fantasy dash or settings) */
+@media (min-width: 641px) {
+  .rpg-starfield {
+    background-image: url('https://assets.lottiefiles.com/packages/lf20_9VDKBN1Mmv.json');
+    background-color: #120a25;
+    background-repeat: repeat;
+    background-size: cover;
+    min-height: 220px;
+    border-radius: 2.1rem;
+  }
+}
+
+/* Scrollbar style for fantasy immersion */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 9px;
   background: #1a1a1a;
 }
 ::-webkit-scrollbar-thumb {
