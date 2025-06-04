@@ -10,6 +10,12 @@ import PropTypes from "prop-types";
  *  - Allows updating (and clearing) the key live via a UI (Settings).
  *  - **Fallback:** If no user key is present, uses the .env key (e.g., process.env.REACT_APP_OPENAI_API_KEY).
  * 
+ * == IMPORTANT REQUIRED PATTERN ==
+ * All OpenAI (and Google, if needed) API calls in all components/services/pages MUST obtain the key by calling useApiKey().getKey().
+ * Do NOT access process.env, global variables, or .env-based keys for API calls directly in any runtime or logic code.
+ * The only fallback/access to .env should happen inside ApiKeyContext and nowhere else.
+ * This ensures user-supplied keys always override and are used everywhere without app reload.
+ *
  * Usage (see examples below):
  * 1. Wrap your app in <ApiKeyProvider>.
  * 2. Use the useApiKey() hook to access and update the API key anywhere in the app.
