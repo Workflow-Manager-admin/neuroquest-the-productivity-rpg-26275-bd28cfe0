@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { useGame } from "../context/GameContext";
 import QuestCard from "../components/QuestCard";
 import NeonButton from "../components/NeonButton";
