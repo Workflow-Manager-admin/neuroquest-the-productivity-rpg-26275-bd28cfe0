@@ -3,6 +3,9 @@ import PropTypes from "prop-types";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { initializeApp } from "firebase/app";
+
+/**
+ * Firebase configuration for NeuroQuest.
  * 
  * REQUIRED: You must set the following variables in your .env (Vite requires VITE_ prefix) before running the app:
  * - VITE_FIREBASE_API_KEY
@@ -16,7 +19,7 @@ import { initializeApp } from "firebase/app";
  * These should be copied from your Firebase Console, never hardcoded.
  * IMPORTANT: If your variables started with REACT_APP_, rename them to VITE_ (see docs).
  */
-/* Debug log removed: console.log("DEBUG VITE ENV:", import.meta.env); */
+// Debug log removed: console.log("DEBUG VITE ENV:", import.meta.env);
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
@@ -44,6 +47,7 @@ const db = getFirestore();
  * - value: { user, profile, loading, logout }
  */
 const UserContext = createContext();
+
 // PUBLIC_INTERFACE
 export function useUser() {
   return useContext(UserContext);
