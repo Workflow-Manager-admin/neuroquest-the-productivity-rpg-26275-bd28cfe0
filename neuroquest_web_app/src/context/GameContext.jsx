@@ -2,6 +2,8 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { getFirestore, doc, setDoc, onSnapshot } from "firebase/firestore";
 import { useUser } from "./UserContext";
+// Import Toast for global RPG feedback
+import Toast from "../components/Toast";
 
 const db = getFirestore();
 
