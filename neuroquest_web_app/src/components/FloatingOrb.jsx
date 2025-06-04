@@ -2,54 +2,48 @@ import React from "react";
 import PropTypes from "prop-types";
 
 /**
- * FloatingOrb: Modular fantasy/neon-glow orb, suitable for stats, tokens, avatars, and magical UI elements.
- * - RPG styled, animated float, and modular
- * - Accepts child content (icon, label, badge, etc)
- * - Can be themed by color/size
- *
- * @param {number} size - diameter px (default 68)
- * @param {string} color - accent border/glow color
- * @param {React.ReactNode} children - icon, stat, overlay, etc
+ * PUBLIC_INTERFACE
+ * FloatingOrb – Animated/fantasy orb or circle container for stats, icons, XP, etc.
+ * RPG style; accepts children (icon, text, etc), size, color.
  */
-// PUBLIC_INTERFACE
 export default function FloatingOrb({
-  size = 68,
-  color = "#7c3aed",
-  children = null,
+  size = 58,
+  color = "#c084fc",
+  className = "",
+  style = {},
+  children,
+  ...props
 }) {
-  // Animated orb: glass/fantasy highlight, neon-shadow
   return (
     <div
-      tabIndex={0}
-      className="floating-orb shadow-neon-accent flex items-center justify-center pointer-events-auto"
+      className={`relative flex items-center justify-center rpg-rounded overflow-visible ${className}`}
       style={{
         width: size,
         height: size,
         minWidth: size,
         minHeight: size,
-        background:
-          "radial-gradient(circle, #1b132c 82%, rgba(124,58,237,0.09) 105%)",
         borderRadius: "50%",
-        border: `3.4px solid ${color}`,
-        boxShadow: `0 0 25px 8px ${color}38, 0 0 9px 2px ${color}`,
-        animation: "floatOrb 4.2s ease-in-out infinite alternate",
-        filter:
-          "drop-shadow(0 0 24px #c084fc44) drop-shadow(0 0 10px #7c3aed88)",
-        zIndex: 3,
-        position: "relative",
+        boxShadow: `0 0 24px 5px ${color}55, 0 0 6px 2px ${color}57`,
+        background:
+          "radial-gradient(circle at 60% 40%, #9f82fac1 20%, #271755 80%)",
+        ...style,
       }}
-      aria-label="Floating RPG Orb"
+      aria-label="Floating Magic Orb"
+      {...props}
     >
-      {children}
-      <style>
-        {`
-          @keyframes floatOrb {
-            0% { transform: translateY(0);}
-            66% { transform: translateY(-5px);}
-            100% { transform: translateY(-11px);}
-          }
-        `}
-      </style>
+      {/* Orb particles/shine */}
+      <span
+        className="absolute inset-0 rounded-full animate-orbPulse pointer-events-none"
+        aria-hidden
+        style={{
+          background:
+            "radial-gradient(circle at 78% 24%, #fbbf2498 0%, #c084fc31 42%, #27175500 96%)",
+          opacity: 0.37,
+          boxShadow: `0 0 16px 8px ${color}22, 0 0 4px 2px ${color}36`,
+          zIndex: 0,
+        }}
+      />
+      <span className="relative z-10">{children}</span>
     </div>
   );
 }
@@ -57,5 +51,7 @@ export default function FloatingOrb({
 FloatingOrb.propTypes = {
   size: PropTypes.number,
   color: PropTypes.string,
+  className: PropTypes.string,
+  style: PropTypes.object,
   children: PropTypes.node,
 };
