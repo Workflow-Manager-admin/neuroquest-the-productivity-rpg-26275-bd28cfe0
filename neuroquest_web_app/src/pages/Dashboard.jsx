@@ -10,7 +10,6 @@ import StatsPanel from "../components/StatsPanel";
 import FloatingOrb from "../components/FloatingOrb";
 import NeonButton from "../components/NeonButton";
 import ZoneCard from "../components/ZoneCard";
-import classNames from "classnames";
 
 /**
  * Fantasy hero/zones image logic:
@@ -56,8 +55,8 @@ function getEquippedItems(inventory = []) {
  */
 export default function Dashboard() {
   const navigate = useNavigate();
-  const { user, profile, loading: loadingUser } = useUser();
-  const { game, loading: loadingGame } = useGame();
+  const { profile } = useUser();
+  const { game } = useGame();
 
   // fallback for quick skeleton state
   const XP = game?.xp ?? 0;
@@ -67,7 +66,6 @@ export default function Dashboard() {
   const Level = game?.level ?? 1;
   const Streak = game?.streak ?? 0;
   const Coins = game?.coins ?? 0;
-  const equippedItems = getEquippedItems(game?.inventory);
   const avatarIdx =
     (profile && profile.onboarding && profile.onboarding.avatarIdx != null)
       ? profile.onboarding.avatarIdx
