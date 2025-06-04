@@ -1,53 +1,52 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 /**
- * FloatingOrb - glowing, fantastical float anim, inner glow, RPG orb with child icons or Lottie
- * @param {React.ReactNode} children - Content inside the orb (icon/XP/Lottie etc).
- * @param {number} size - Diameter px.
- * @param {string} color - Neon color (default accent).
+ * FloatingOrb: Modular fantasy/neon-glow orb, suitable for stats, tokens, avatars, and magical UI elements.
+ * - RPG styled, animated float, and modular
+ * - Accepts child content (icon, label, badge, etc)
+ * - Can be themed by color/size
+ *
+ * @param {number} size - diameter px (default 68)
+ * @param {string} color - accent border/glow color
+ * @param {React.ReactNode} children - icon, stat, overlay, etc
  */
- // PUBLIC_INTERFACE
-export default function FloatingOrb({ children, size = 72, color = "#7c3aed" }) {
+// PUBLIC_INTERFACE
+export default function FloatingOrb({
+  size = 68,
+  color = "#7c3aed",
+  children = null,
+}) {
+  // Animated orb: glass/fantasy highlight, neon-shadow
   return (
     <div
-      className="relative flex items-center justify-center float-anim"
+      tabIndex={0}
+      className="floating-orb shadow-neon-accent flex items-center justify-center pointer-events-auto"
       style={{
         width: size,
         height: size,
-        borderRadius: "100%",
-        background: `radial-gradient(circle at 70% 30%, ${color}cc 0%, #311657 99%)`,
-        boxShadow: `0 0 44px 2px ${color}99, 0 0 64px 22px #c084fccf, 0 0 20px 3px #fff2`,
-        border: `4px solid ${color}`,
-        animation: "orbFloat 2.5s ease-in-out infinite alternate",
-        overflow: "visible",
-        zIndex: 20,
+        minWidth: size,
+        minHeight: size,
+        background:
+          "radial-gradient(circle, #1b132c 82%, rgba(124,58,237,0.09) 105%)",
+        borderRadius: "50%",
+        border: `3.4px solid ${color}`,
+        boxShadow: `0 0 25px 8px ${color}38, 0 0 9px 2px ${color}`,
+        animation: "floatOrb 4.2s ease-in-out infinite alternate",
+        filter:
+          "drop-shadow(0 0 24px #c084fc44) drop-shadow(0 0 10px #7c3aed88)",
+        zIndex: 3,
+        position: "relative",
       }}
+      aria-label="Floating RPG Orb"
     >
-      {/* Fantasy particle/halo effect */}
-      <span
-        aria-hidden
-        className="absolute animate-pulse"
-        style={{
-          left: "50%",
-          top: "46%",
-          transform: "translate(-50%, -50%) scale(1.22)",
-          width: size * 0.83,
-          height: size * 0.83,
-          borderRadius: "100%",
-          background: "radial-gradient(circle, #c084fc66 0%, transparent 90%)",
-          filter: "blur(6px) opacity(0.81)",
-          zIndex: 3,
-        }}
-      />
-      <div className="z-30">{children}</div>
+      {children}
       <style>
         {`
-          @keyframes orbFloat {
-            0% { transform: translateY(0) scale(1);}
-            100% { transform: translateY(-20px) scale(1.04);}
-          }
-          .float-anim {
-            animation: orbFloat 2.3s ease-in-out infinite alternate;
+          @keyframes floatOrb {
+            0% { transform: translateY(0);}
+            66% { transform: translateY(-5px);}
+            100% { transform: translateY(-11px);}
           }
         `}
       </style>
@@ -56,7 +55,7 @@ export default function FloatingOrb({ children, size = 72, color = "#7c3aed" }) 
 }
 
 FloatingOrb.propTypes = {
-  children: PropTypes.node,
   size: PropTypes.number,
   color: PropTypes.string,
+  children: PropTypes.node,
 };
