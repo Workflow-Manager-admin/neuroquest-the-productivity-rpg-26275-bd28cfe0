@@ -139,9 +139,13 @@ Step 5: ...
 Final Quest: ... (the last challenge before victory!)
 `;
 
-    // Use your OpenAI API key (public/test key OK for demo)
-    const apiKey = process.env.REACT_APP_OPENAI_API_KEY || window.OPENAI_API_KEY || "";
-    // fallback for dev
+    // Uses OpenAI API key from environment.
+    // REQUIRED: Set REACT_APP_OPENAI_API_KEY in your .env file for production/development.
+    // Example: REACT_APP_OPENAI_API_KEY=sk-xxxx...
+    // No longer using any window/global fallbacks.
+    const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+
+    // fallback for dev (if missing .env key, this block only used in dev; don't remove)
     if (!apiKey) {
       // Demo fallback for local or no-key dev: Return fake roadmap
       await rpgDelay(1400);
