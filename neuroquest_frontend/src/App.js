@@ -1,7 +1,20 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, Outlet, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Outlet, Link, Navigate } from "react-router-dom";
 import "./index.css";
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { GlobalGameProvider } from "./contexts/GlobalGameContext";
 
+// --- Protected route logic ---
+/**
+ * ProtectedRoute - requires user to be authenticated.
+ * If not logged in, redirects to /login.
+ */
+function ProtectedRoute({ children }) {
+  // PUBLIC_INTERFACE
+  const { currentUser, loading } = useAuth();
+  if (loading) return null;
+  return currentUser ? children : <Navigate to="/login" replace />;
+}
 /**
  * Layout shell for routing and main navigation.
  * Includes dark mode toggle, RPG branding, and routes placeholder.
