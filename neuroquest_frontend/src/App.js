@@ -54,39 +54,70 @@ function LayoutShell() {
 }
 
 /**
- * Minimal App router setup.
+ * Advanced App router setup with context providers.
+ * - AuthProvider: provides authentication/user state
+ * - GlobalGameProvider: provides XP/HP etc. game state to all pages
+ * - Router: core routing backbone
  */
 function App() {
   // PUBLIC_INTERFACE
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LayoutShell />}>
-          {/* Add all route-specific <Route ... /> elements here */}
-          {/* Example: <Route path="dashboard" element={<DashboardPage />} /> */}
-          <Route
-            index
-            element={
-              <div className="flex flex-col items-center gap-6 py-24 text-center">
-                <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-rpg-gold drop-shadow neon mb-2">
-                  Welcome to NeuroQuest RPG
-                </h1>
-                <div className="text-violetneon text-xl mb-1 font-medium">Gamify Your Productivity Journey</div>
-                <div className="text-white/80 max-w-lg text-lg mb-3">
-                  Set epic goals, embark on quests, and conquer deadlines – all powered by AI.
-                </div>
-                <Link
-                  to="/login"
-                  className="inline-block px-8 py-3 bg-neon-cyan text-black font-bold rounded-full shadow-neon-cyan hover:bg-neon-pink hover:text-white transition"
-                >
-                  Get Started
-                </Link>
-              </div>
-            }
-          />
-        </Route>
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <GlobalGameProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LayoutShell />}>
+              {/* Home/Landing Page (Public) */}
+              <Route
+                index
+                element={
+                  <div className="flex flex-col items-center gap-6 py-24 text-center">
+                    <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-rpg-gold drop-shadow neon mb-2">
+                      Welcome to NeuroQuest RPG
+                    </h1>
+                    <div className="text-violetneon text-xl mb-1 font-medium">Gamify Your Productivity Journey</div>
+                    <div className="text-white/80 max-w-lg text-lg mb-3">
+                      Set epic goals, embark on quests, and conquer deadlines – all powered by AI.
+                    </div>
+                    <Link
+                      to="/login"
+                      className="inline-block px-8 py-3 bg-neon-cyan text-black font-bold rounded-full shadow-neon-cyan hover:bg-neon-pink hover:text-white transition"
+                    >
+                      Get Started
+                    </Link>
+                  </div>
+                }
+              />
+              {/* Example Public & Auth-protected routes for scalable structure */}
+              <Route
+                path="dashboard"
+                element={
+                  <ProtectedRoute>
+                    <div>
+                      <h2 className="font-display text-3xl drop-shadow text-rpg-gold mb-4">Dashboard (Protected)</h2>
+                      <span>You are logged in and can access XP/HP/game state here.</span>
+                      {/* Replace this with <DashboardPage /> when available */}
+                    </div>
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="login"
+                element={
+                  <div className="flex flex-col items-center mt-20">
+                    <h2 className="text-2xl text-violetneon font-bold mb-6">Login</h2>
+                    {/* Replace with actual <LoginPage /> component */}
+                    <span>Login form goes here.</span>
+                  </div>
+                }
+              />
+              {/* 404 route */}
+              <Route path="*" element={<div className="text-center py-40">404 – Not Found</div>} />
+            </Route>
+          </Routes>
+        </Router>
+      </GlobalGameProvider>
+    </AuthProvider>
   );
 }
 
