@@ -94,11 +94,10 @@ function App() {
                 path="dashboard"
                 element={
                   <ProtectedRoute>
-                    <div>
-                      <h2 className="font-display text-3xl drop-shadow text-rpg-gold mb-4">Dashboard (Protected)</h2>
-                      <span>You are logged in and can access XP/HP/game state here.</span>
-                      {/* Replace this with <DashboardPage /> when available */}
-                    </div>
+                    {/*
+                      DashboardPage: Responsive, premium, RPG dashboard with animated orb, stat bars, avatar, and zones.
+                    */}
+                    {React.createElement(require("./pages/DashboardPage").default)}
                   </ProtectedRoute>
                 }
               />
