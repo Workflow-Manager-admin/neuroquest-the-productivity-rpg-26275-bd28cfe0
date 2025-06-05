@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Outlet, Link, Navigate } from "
 import "./index.css";
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import { GlobalGameProvider } from "./contexts/GlobalGameContext";
+import LoginPage from "./pages/LoginPage"; // Import the implemented LoginPage
 
 // --- Protected route logic ---
 /**
@@ -103,13 +104,7 @@ function App() {
               />
               <Route
                 path="login"
-                element={
-                  <div className="flex flex-col items-center mt-20">
-                    <h2 className="text-2xl text-violetneon font-bold mb-6">Login</h2>
-                    {/* Replace with actual <LoginPage /> component */}
-                    <span>Login form goes here.</span>
-                  </div>
-                }
+                element={<LoginPage />}
               />
               {/* 404 route */}
               <Route path="*" element={<div className="text-center py-40">404 – Not Found</div>} />
